@@ -1,0 +1,125 @@
+ID,Name,Color,Weapon Type,Movement,Range,Damage Type,HP,ATK,SPD,DEF,RES,Total,Boon4,Bane4,Weapon,Assist,Special,SkillA,SkillB,SkillC
+1,Abel,Blue,Lance,Cavalry,Melee,Physical,39,33,27,25,25,149,RES,HP,Brave Lance+,,Aegis,HP +5,Swordbreaker 3,
+2,Alfonse,Red,Sword,Infantry,Melee,Physical,43,35,25,32,22,157,,,Fólkvangr,,Sol,Death Blow 3,,Spur Atk 3
+3,Alm,Red,Sword,Infantry,Melee,Physical,45,33,30,28,22,158,,DEF,Falchion,,Draconic Aura,Attack +3,Windsweep 3,
+4,Anna,Green,Axe,Infantry,Melee,Physical,41,29,38,22,28,158,,,Nóatún,,Astra,,Vantage,Spur Res 3
+5,Arthur,Green,Axe,Infantry,Melee,Physical,43,32,29,30,21,155,RES,SPD,Emerald Axe+,Swap,,HP +5,Lancebreaker 3,
+6,Azama,Colorless,Staff,Infantry,Ranged,Magic,43,21,26,32,25,147,SPD,,Pain,Martyr,Solid-Earth Balm,,,Threaten Atk 3
+7,Azura,Blue,Lance,Infantry,Melee,Physical,36,31,33,21,28,149,HP,RES,Sapphire Lance+,Sing,,Speed +3,,Fortify Res 3
+8,Barst,Green,Axe,Infantry,Melee,Physical,46,33,32,30,17,158,,RES,Brave Axe+,Reposition,,,Knock Back,Spur Atk 3
+9,Bartre,Green,Axe,Infantry,Melee,Physical,49,36,25,33,13,156,SPD,,Hammer+,Smite,,Fury 3,Brash Assault 3,
+10,Beruka,Green,Axe,Flier,Melee,Physical,46,29,23,37,22,157,,ATK,Killer Axe+,,Glimmer,Defiant Def 3,Lunge,
+11,Caeda,Red,Sword,Flier,Melee,Physical,36,25,37,24,34,156,"HP,ATK,DEF",,Armorslayer+,Rally Speed,,Darting Blow 3,,Fortify Fliers
+12,Cain,Red,Sword,Cavalry,Melee,Physical,42,32,32,27,21,154,DEF,,Brave Sword+,,Escutcheon,,Wings of Mercy 3,Threaten Atk 3
+13,Camilla,Green,Axe,Flier,Melee,Physical,37,30,32,28,31,158,HP,"ATK,DEF",Brave Axe+,,Draconic Aura,Darting Blow,,Savage Blow 3
+14,Camilla-S,Green,Tome,Flier,Ranged,Magic,39,35,25,30,19,148,SPD,HP,Green Egg+,Rally Attack,,Defiant Spd 3,,
+15,Catria,Blue,Lance,Flier,Melee,Physical,39,31,34,29,25,158,RES,"HP,DEF",Killer Lance+,,Luna,Armored Blow 3,Seal Atk 3,
+16,Cecilia,Green,Tome,Cavalry,Ranged,Magic,36,32,25,22,29,144,"HP,SPD",RES,Gronnraven+,Rally Resistance,,Attack +3,Escape Route 3,
+17,Cherche,Green,Axe,Flier,Melee,Physical,46,38,25,32,16,157,SPD,RES,Hammer+,Pivot,,Attack +3,,Fortify Def 3
+18,Chrom,Red,Sword,Infantry,Melee,Physical,47,37,25,31,17,157,SPD,RES,Falchion,,Aether,Defiant Def 3,,Spur Def 3
+19,Chrom-S,Green,Axe,Infantry,Melee,Physical,43,35,32,28,20,158,,DEF,Carrot Axe+,Shove,,Attack Def 3,,
+20,Clair,Blue,Lance,Flier,Melee,Physical,37,26,36,24,33,156,"ATK,DEF",,Siilver Lance+,Harsh Command,,,Hit and Run,Spur Spd 3
+21,Clarine,Colorless,Staff,Cavalry,Ranged,Magic,35,25,33,22,29,144,"HP,ATK",RES,Fear,Martyr,Swift-Winds Balm,Resistance +3,,
+22,Cordelia,Blue,Lance,Flier,Melee,Physical,40,35,35,22,25,157,RES,HP,Brave Lance+,,Astra,Triangle Adept 3,Pass 3,
+23,Corrin-F,Blue,Dragonstone,Infantry,Melee,Magic,41,27,34,34,21,157,ATK,HP,Dark Breath+,,Draconic Aura,,Seal Res 3,Hone Atk 3
+24,Corrin-M,Red,Sword,Infantry,Melee,Physical,42,32,32,28,24,158,RES,"HP,DEF",Yato,,Dragon Fang,Defense +3,Obstruct 3,
+25,Donnel,Blue,Lance,Infantry,Melee,Physical,43,35,29,32,23,162,RES,,Brave Lance+,Reciprocal Aid,,HP +5,Drag Back,
+26,Draug,Red,Sword,Armored,Melee,Physical,50,30,32,39,18,169,,ATK,Brave Sword+,,Pavise,,Lunge,Ward Armor
+27,Effie,Blue,Lance,Armored,Melee,Physical,50,40,22,33,23,168,RES,DEF,Silver Lance+,Smite,,Death Blow 3,Wary Fighter,
+28,Eirika,Red,Sword,Infantry,Melee,Physical,42,26,35,26,28,157,"ATK,DEF",RES,Sieglinde,Pivot,,,Drag Back,Hone Spd 3
+29,Eldigan,Red,Sword,Cavalry,Melee,Physical,45,32,24,34,19,154,SPD,RES,Mystletainn,,Growing Light,Fury 3,Lunge,
+30,Elise,Colorless,Staff,Cavalry,Ranged,Magic,30,32,32,19,32,145,,,Gravity,Recover,Kindled-Fire Balm,,Live to Serve 3,
+31,Eliwood,Red,Sword,Cavalry,Melee,Physical,39,31,30,23,32,155,,"HP,SPD",Durandal,,Sacred Cowl,,Axebreaker 3,Ward Cavalry
+32,Ephraim,Blue,Lance,Infantry,Melee,Physical,45,35,25,32,20,157,SPD,,Siegmund,,Moonbow,,Seal Def 3,Threaten Def 3
+33,Est,Blue,Lance,Infantry,Melee,Physical,36,35,30,24,32,157,"HP,DEF",SPD,Heavy Spear+,Shove,,Defiant Res 3,Seal Spd 3,
+34,Fae,Green,Dragonstone,Infantry,Melee,Magic,46,33,28,25,30,162,"HP,DEF",RES,Light Breath+,Draw Back,,,Renewal 3,Threaten Atk 3
+35,Faye,Colorless,Bow,Infantry,Ranged,Physical,42,30,25,26,31,154,,"SPD,DEF",Firesweep Bow+,,Noontime,,Wings of Mercy 3,
+36,Felicia,Colorless,Dagger,Infantry,Ranged,Physical,34,23,37,18,35,147,HP,,Silver Dagger+,,Glacies,Resistance +3,,Breath of Life 3
+37,Fir,Red,Sword,Infantry,Melee,Physical,41,25,36,24,31,157,"ATK,DEF",HP,Killing Edge+,,Glacies,Speed +3,Pass 3,
+38,Florina,Blue,Lance,Flier,Melee,Physical,42,29,27,25,34,157,"SPD,DEF",ATK,Heavy Spear+,Ardent Sacrifice,,Darting Blow 3,,Breath of Life 3
+39,Frederick,Green,Axe,Cavalry,Melee,Physical,43,35,25,36,14,153,"SPD,RES",,Hammer+,,Luna,,Wings of Mercy 3,Fortify Def 3
+40,Gaius,Colorless,Dagger,Infantry,Ranged,Physical,39,32,36,22,19,148,,ATK,Rogue Dagger+,Rally Speed,,Defiant Atk 3,Pass 3,
+41,Gordin,Colorless,Bow,Infantry,Ranged,Physical,43,31,25,32,17,148,SPD,RES,Brave Bow+,Shove,,Attack +3,Vantage 3,
+42,Gunter,Green,Axe,Cavalry,Melee,Physical,42,32,24,33,18,149,,"HP,ATK,DEF,RES",Silver Axe+,Harsh Command,,Armored Blow 3,,Hone Cavalry
+43,Gwendolyn,Blue,Lance,Armored,Melee,Physical,49,30,24,38,28,169,"HP,SPD","ATK,RES",Killer Lance+,,Escutcheon,,Drag Back,Hone Armor
+44,Hana,Red,Sword,Infantry,Melee,Physical,37,35,36,23,26,157,HP,RES,Armorslayer+,Rally Attack,,Life and Death 3,Obstruct 3,
+45,Hawkeye,Green,Axe,Infantry,Melee,Physical,45,33,22,28,30,158,,DEF,Killer Axe+,,Growing Light,Death Blow 3,,Threaten Atk 3
+46,Hector,Green,Axe,Armored,Melee,Physical,52,36,24,37,19,168,SPD,,Armads,,Pavise,Distant Counter,,Goad Armor
+47,Henry,Red,Tome,Infantry,Ranged,Magic,45,23,22,32,25,147,RES,,Rauðrraven+,,Ignis,Defiant Def 3,G Tomebreaker 3,
+48,Hinata,Red,Sword,Infantry,Melee,Physical,47,32,24,36,18,157,SPD,,Ruby Sword+,,Pavise,Fury 3,Brash Assault 3,
+49,Hinoka,Blue,Lance,Infantry,Melee,Physical,41,35,32,25,24,157,DEF,HP,Brave Lance+,,Blazing Wind,Defiant Def 3,,Hone Fliers
+50,Ike,Red,Sword,Infantry,Melee,Physical,42,35,31,32,18,158,,,Ragnell,,Aether,Heavy Blade 3,Swordbreaker 3,
+51,Jaffar,Colorless,Dagger,Infantry,Ranged,Physical,41,26,33,25,22,147,"ATK,DEF",,Deathly Dagger,,Glimmer,Life and Death 3,,Threaten Spd 3
+52,Jagen,Blue,Lance,Cavalry,Melee,Physical,37,27,24,25,35,148,ATK,,Silver Lance+,,Aegis,Fury 3,,Fortify Cavalry
+53,Jakob,Colorless,Dagger,Infantry,Ranged,Physical,39,29,31,25,24,148,"DEF,RES","HP,ATK,SPD",Silver Dagger+,Rally Resistance,,Defense +3,Renewal 3,
+54,Jeorge,Colorless,Bow,Infantry,Ranged,Physical,37,32,32,24,22,147,"HP,DEF",,Parthia,,Blazing Flame,,Seal Atk 3,Spur Spd 3
+55,Julia,Green,Tome,Infantry,Ranged,Magic,38,35,26,17,32,148,SPD,"HP,DEF",Naga,,Dragon Fang,Resistance +3,,Breath of Life 3
+56,Kagero,Colorless,Dagger,Infantry,Ranged,Physical,31,35,32,22,28,148,,RES,Poison Dagger+,,Reprisal,Warding Blow 3,Daggerbreaker 3,
+57,Karel,Red,Sword,Infantry,Melee,Physical,47,30,35,25,20,157,DEF,ATK,Wo Dao+,,Reprisal,Defiant Atk 3,Desperation 3,
+58,Klein,Colorless,Bow,Infantry,Ranged,Physical,40,31,33,20,24,148,RES,"HP,ATK",Brave Bow+,,Glacies,Death Blow 3,Quick Riposte 3,
+59,Lachesis,Colorless,Staff,Infantry,Ranged,Magic,39,32,25,22,30,148,,"HP,RES",Absord,Physic,Solid-Earth Balm,,,Spur Res 3
+60,Laslow,Red,Sword,Infantry,Melee,Physical,41,35,26,33,22,157,SPD,,Silver Sword+,,Noontime,Axebreaker 3,,Hone Spd 3
+61,Leo,Red,Tome,Cavalry,Ranged,Magic,39,29,22,25,30,145,DEF,"HP,ATK,RES",Brynhildr,,Blazing Light,Quick Riposte 3,,Savage Blow 3
+62,Lilina,Red,Tome,Infantry,Ranged,Magic,35,37,25,19,31,147,"HP,SPD",RES,Bolganone+,,Growing Flame,,Attack +3,Spur Atk 3
+63,Linde,Blue,Tome,Infantry,Ranged,Magic,35,35,36,14,27,147,"HP,DEF",RES,Aura,Ardent Sacrifice,,,Speed +3,Fortify Res 3
+64,Lissa,Colorless,Staff,Infantry,Ranged,Magic,39,26,25,28,30,148,ATK,"HP,DEF,RES",Gravity,Rehabilitiate,Kindled-Fire Balm,Renewal 3,,
+65,Lon'qu,Red,Sword,Infantry,Melee,Physical,45,29,39,22,22,157,,ATK,Killing Edge+,,Glimmer,Vantage 3,Speed +3,
+66,Lucina,Red,Sword,Infantry,Melee,Physical,43,34,36,25,19,157,DEF,,Falchion,,Aether,,Defiant Spd 3,Spur Atk 3
+67,Lucina-S,Blue,Tome,Infantry,Ranged,Magic,35,29,36,22,25,147,"HP,RES",ATK,Blue Egg+,Rally Speed,,Seal Res 3,Swift Sparrow 2,
+68,Lucius,Colorless,Staff,Infantry,Ranged,Magic,37,32,30,13,35,147,"HP,DEF",SPD,Pain,Martyr,Miracle,,HP+5,
+69,Lukas,Blue,Lance,Infantry,Melee,Physical,45,35,22,38,17,157,,RES,Killer Lance+,Sacred Cowl,Fortress Def 3,,Obstruct 3,
+70,Lyn,Red,Sword,Infantry,Melee,Physical,37,28,37,26,29,157,"HP,DEF",ATK,Sol Katti,,Astra,,Defiant Atk 3,Spur Spd 3
+71,Maria,Colorless,Staff,Infantry,Ranged,Magic,36,27,34,19,32,148,HP,"ATK,RES",Panic,Physic,Miracle,,,Fortify Res 3
+72,Marth,Red,Sword,Infantry,Melee,Physical,41,31,34,29,29,164,,"HP,DEF",Falchion,Pivot,,Escape Route 3,,Spur Spd 3
+73,Matthew,Colorless,Dagger,Infantry,Ranged,Physical,41,25,34,30,18,148,ATK,RES,Rogue Dagger+,Reciprocal Aid,,Poison Strike 3,,Hone Spd 3
+74,Merric,Green,Tome,Infantry,Ranged,Magic,43,26,32,28,19,148,ATK,DEF,Excalibur,,Growing Wing,,HP +5,Spur Res 3
+75,Michalis,Green,Axe,Flier,Melee,Physical,43,34,26,35,19,157,,,Hauteclere,,Blazing Thunder,,Iote's Shield,Threaten Def 3
+76,Minerva,Green,Axe,Flier,Melee,Physical,40,31,33,32,22,158,,HP,Hauteclere,,Sacred Cowl,,Life and Death 3,Ward Fliers
+77,Mist,Colorless,Staff,Infantry,Ranged,Magic,39,27,28,20,34,148,ATK,"HP,SPD",Slow,Recover,Miracle,,,Spur Def Res 2
+78,Narcian,Green,Axe,Flier,Melee,Physical,42,29,29,32,26,158,,,Emerald Axe+,,Vengeance,Lancebreaker 3,,Savage Blow 3
+79,Navarre,Red,Sword,Infantry,Melee,Physical,42,31,37,23,24,157,,,Killing Edge+,,Blazing Wind,Desperation 3,,Threaten Spd 3
+80,Niles,Colorless,Bow,Infantry,Ranged,Physical,37,25,34,17,34,147,"HP,ATK",DEF,Killer Bow+,,Iceberg,,Warding Blow 3,Spur Res 3
+81,Ninian,Blue,Dragonstone,Infantry,Melee,Magic,42,24,33,23,27,149,ATK,RES,Light Breath+,Dance,,Escape Route 3,,Fortify Dragons
+82,Nino,Green,Tome,Infantry,Ranged,Magic,33,33,36,19,26,147,RES,,Gronnblade+,Draw Back,,,Resistance +3,Hone Atk 3
+83,Nowi,Blue,Dragonstone,Infantry,Melee,Magic,45,34,27,30,27,163,,"SPD,RES",Lightning Breath+,Rally Defense,,,Defense +3,Threaten Res 3
+84,Oboro,Blue,Lance,Infantry,Melee,Physical,40,32,26,35,24,157,"SPD,RES",HP,Heavy Spear+,Rally Defense,,Seal Def 3,,Threaten Res 3
+85,Odin,Blue,Tome,Infantry,Ranged,Magic,43,22,32,25,25,147,"DEF,RES",,Blárblade+,,Moonbow,R Tomebreaker 3,Defiant Atk 3,
+86,Ogma,Red,Sword,Infantry,Melee,Physical,47,35,34,28,13,157,RES,DEF,Brave Sword+,,Noontime,,Defiant Atk 3,Spur Atk  3
+87,Olivia,Red,Sword,Infantry,Melee,Physical,36,28,33,27,26,150,HP,"ATK,DEF,RES",Silver Sword+,Dance,,,Knock Back,Hone Atk 3
+88,Olwen,Blue,Tome,Cavalry,Ranged,Magic,34,26,34,20,30,144,ATK,,Dire Thunder,Reposition,,Warding Blow 3,,Ward Cavalry
+89,Palla,Red,Sword,Flier,Melee,Physical,42,31,31,28,26,158,RES,"SPD,DEF",Ruby Sword+,,Moonbow,,Wings of Mercy 3,Goad Fliers
+90,Peri,Blue,Lance,Cavalry,Melee,Physical,35,33,33,23,30,154,HP,,Killer Lance+,,Glimmer,Resistance +3,,Threaten Def 3
+91,Priscilla,Colorless,Staff,Cavalry,Ranged,Magic,36,29,29,19,32,145,HP,"ATK,SPD",Panic,Rehabilitate,Still-Water Balm,,,Spur Def 3
+92,Raigh,Red,Tome,Infantry,Ranged,Magic,36,32,29,22,29,148,HP,"SPD,RES",Rauðrwolf+,Rally Attack,,HP +5,Seal Res 3,
+93,Raven,Green,Axe,Infantry,Melee,Physical,41,34,35,25,22,157,DEF,HP,Brave Axe+,,Sol,Defiant Spd 3,,Threaten Def 3
+94,Rebecca,Colorless,Bow,Infantry,Ranged,Physical,37,29,34,21,27,148,HP,"ATK,RES",Silver Bow+,Ardent Sacrifice,,Darting Blow 3,Seal Atk 3,
+95,Reinhardt,Blue,Tome,Cavalry,Ranged,Magic,38,32,23,27,25,145,,"HP,DEF",Dire Thunder,,Blazing Thunder,,Vantage 3,Goad Cavalry
+96,Robin-F,Green,Tome,Infantry,Ranged,Magic,40,29,29,29,22,149,,,Gronnwolf+,,Ignis,Defiant Res 3,B Tomebreaker 3,
+97,Robin-M,Blue,Tome,Infantry,Ranged,Magic,40,29,29,29,22,149,,"HP,ATK,SPD,DEF",Blárraven+,,Bonfire,Defiant Spd 3,,Spur Def 3
+98,Roy,Red,Sword,Infantry,Melee,Physical,44,30,31,25,28,158,DEF,"ATK,SPD",Binding Blade,Shove,,Triangle Adept 3,Seal Def 3,
+99,Ryoma,Red,Sword,Infantry,Melee,Physical,41,34,35,27,21,158,,"HP,DEF",Raijinto,,Astra,,Vantage 3,Hone Spd 3
+100,Saizo,Colorless,Dagger,Infantry,Ranged,Physical,36,29,34,33,16,148,HP,"ATK,RES",Smoke Dagger+,Harsh Command,,,Poison Strike 3,Spur Spd 3
+101,Sakura,Colorless,Staff,Infantry,Ranged,Magic,36,28,30,24,30,148,"HP,DEF","ATK,SPD,RES",Fear,Physic,Still-Water Balm,,,Fortify Def 3
+102,Sanaki,Red,Tome,Infantry,Ranged,Magic,33,37,26,17,34,147,SPD,DEF,Cymbeline,Harsh Command,,Triangle Adept 3,,Hone Atk 3
+103,Selena,Red,Sword,Infantry,Melee,Physical,37,25,35,32,28,157,"HP,ATK",RES,Armorslayer+,Reposition,,Triangle Adept 3,,Threaten Spd 3
+104,Seliph,Red,Sword,Infantry,Melee,Physical,47,34,24,30,22,157,,DEF,Tyrfing,Rally Speed,,HP +5,Brash Assault 3,
+105,Serra,Colorless,Staff,Infantry,Ranged,Magic,33,30,31,21,33,148,,SPD,Absorb,Recover,Swift-Winds Balm,,,Hone Atk 3
+106,Setsuna,Colorless,Bow,Infantry,Ranged,Physical,37,28,37,22,23,147,HP,ATK,Assassin's Bow+,Ardent Sacrifice,,HP +5,Bowbreaker 3,
+107,Shanna,Blue,Lance,Flier,Melee,Physical,39,30,35,25,29,158,DEF,"HP,ATK,RES",Killer Lance+,,Iceberg,,Desperation 3,Threaten Spd 3
+108,Sharena,Blue,Lance,Infantry,Melee,Physical,43,32,32,29,22,158,,,Fensalir,Rally Attack,,Speed +3,,Fortify Def 3
+109,Sheena,Green,Axe,Armored,Melee,Physical,45,30,25,36,33,169,SPD,ATK,Killer Axe+,,Escutcheon,Svalinn Shield,,Fortify Armor
+110,Sophia,Red,Tome,Infantry,Ranged,Magic,40,33,19,28,29,149,,RES,Fenrir+,,Dragon Fang,Warding Blow 3,,Fortify Res 3
+111,Soren,Green,Tome,Infantry,Ranged,Magic,36,33,33,17,29,148,"HP,","DEF,RES",Rexcalibur+,,Growing Wind,,Watersweep 3,Fortify Res 3
+112,Stahl,Red,Sword,Cavalry,Melee,Physical,45,31,26,30,22,154,SPD,DEF,Ruby Sword+,Swap,,Defense +3,Obstruct 3,
+113,Subaki,Blue,Lance,Flier,Melee,Physical,40,25,35,35,22,157,ATK,HP,Sapphire Lance+,Swap,,Resistance +3,Quick Riposte 3,
+114,Sully,Blue,Lance,Cavalry,Melee,Physical,42,26,34,24,28,154,ATK,RES,Sapphire Lance+,Draw Back,,,Swordbreaker 3,Spur Def 3
+115,Takumi,Colorless,Bow,Infantry,Ranged,Physical,40,32,33,25,18,148,DEF,"HP,RES",Fujin Yumi,,Vengeance,Close Counter,,Threaten Spd 3
+116,Tharja,Red,Tome,Infantry,Ranged,Magic,39,32,34,23,20,148,,HP,Rauðrblade+,,Vengeance,Darting Blow 3,,Spur Res 3
+117,Tiki-A,Red,Dragonstone,Infantry,Melee,Magic,40,35,23,35,24,157,,HP,Lightning Breath+,,Bonfire,Defiant Atk 3,,Spur Res 3
+118,Tiki-Y,Red,Dragonstone,Infantry,Melee,Magic,41,31,30,32,29,163,,RES,Flametongue+,,Growing Flame,Armored Blow 3,,Breath of Life 3
+119,Titania,Green,Axe,Cavalry,Melee,Physical,37,28,34,25,30,154,"HP,DEF","ATK,RES",Emerald Axe+,Reciprocal Aid,,Armored Blow 3,Guard 3,
+120,Ursula,Blue,Tome,Cavalry,Ranged,Magic,35,29,32,19,30,145,,,Blárwolf+,,Growing Thunder,Death Blow 3,,Threaten Res 3
+121,Virion,Colorless,Bow,Infantry,Ranged,Physical,46,31,31,26,13,147,"DEF,RES",,Silver Bow+,,Astra,Defiant Res 3,Seal Spd 3,
+122,Wrys,Colorless,Staff,Infantry,Ranged,Magic,42,24,23,23,37,149,ATK,,Slow,Rehabilitate,Heavenly Light,,Live to Serve 3,
+123,Xander-S,Blue,Lance,Cavalry,Melee,Physical,40,25,28,35,26,154,"ATK,RES","HP,SPD",Carrot Lance+,Swap,,,,Fortify Def 3
+124,Zephiel,Red,Sword,Armored,Melee,Physical,55,35,16,38,24,168,,,Eckesachs,,Reprisal,Life and Death 3,Wary Fighter 3,

@@ -1,0 +1,58 @@
+ID,Name,Type,Effect,Desc
+1,Breath of Life 1,heal,3,"If unit initiates attack, adjacent allies recover 3 HP after combat."
+2,Breath of Life 2,heal,5,"If unit initiates attack, adjacent allies recover 5 HP after combat."
+3,Breath of Life 3,heal,7,"If unit initiates attack, adjacent allies recover 7 HP after combat."
+4,Fortify Armor,fort,"DEF+6,RES+6,Armored",Grants adjacent armored allies Def/Res+6 through their next actions at the start of each turn.
+5,Fortify Cavalry,fort,"DEF+6,RES+6,Cavalry",Grants adjacent cavalry allies Def/Res+6 through their next actions at the start of each turn.
+6,Fortify Def 1,fort,DEF+2,Grants adjacent allies Def+2 through their next actions at the start of each turn.
+7,Fortify Def 2,fort,DEF+3,Grants adjacent allies Def+3 through their next actions at the start of each turn.
+8,Fortify Def 3,fort,DEF+4,Grants adjacent allies Def+4 through their next actions at the start of each turn.
+9,Fortify Dragons,fort,"DEF+6,RES+6,Dragonstone",Grants adjacent dragon allies Def/Res +6 through their next actions at the start of each turn.
+10,Fortify Fliers,fort,"DEF+6,RES+6,Flier",Grants adjacent flying allies Def/Res+6 through their next actions at the start of each turn.
+11,Fortify Res 1,fort,RES+1,Grants adajacent allies Res+2 through their next actions at the start of each turn.
+12,Fortify Res 2,fort,RES+2,Grants adajacent allies Res+3 through their next actions at the start of each turn.
+13,Fortify Res 3,fort,RES+3,Grants adajacent allies Res+4 through their next actions at the start of each turn.
+14,Goad Armor,spur,"ATK+4,SPD+4,Armored",Grants armored allies within 2 spaces Spd/Atk+4 during combat. Required: Spur Atk 2
+15,Goad Cavalry,spur,"ATK+4,SPD+4,Cavalry",Grants cavalry allies within 2 spaces Spd/Atk+4 during combat.
+16,Goad Fliers,spur,"ATK+4,SPD+4,Flier",Grants flying allies within 2 spaces Spd/Atk+4 during combat.
+17,Hone Armor,hone,"ATK+6,SPD+6,Armored",Grants adjacent armored allies Atk/Spd+6 through their next actions at the start of each turn.
+18,Hone Atk 1,hone,ATK+1,Grants adjacent allies Atk+2 through their next actions at the start of each turn.
+19,Hone Atk 2,hone,ATK+2,Grants adjacent allies Atk+3 through their next actions at the start of each turn.
+20,Hone Atk 3,hone,ATK+3,Grants adjacent allies Atk+4 through their next actions at the start of each turn.
+21,Hone Cavalry,hone,"ATK+6,SPD+6,Cavalry",Grants adjacent cavalry allies Atk/Spd+6 through their next actions at the start of each turn.
+22,Hone Fliers,hone,"ATK+6,SPD+6,Fliers",Grants adjacent flying allies Atk/Spd+6 through their next actions at the start of each turn.
+23,Hone Spd 1,hone,SPD+1,Grants adjacent allies Spd+2 through their next actions at the start of each turn.
+24,Hone Spd 2,hone,SPD+2,Grants adjacent allies Spd+3 through their next actions at the start of each turn.
+25,Hone Spd 3,hone,SPD+3,Grants adjacent allies Spd+4 through their next actions at the start of each turn.
+26,Savage Blow 1,post,3,"If unit initiates attack, foes within 2 spaces of target take 3 damage after combat."
+27,Savage Blow 2,post,5,"If unit initiates attack, foes within 2 spaces of target take 5 damage after combat."
+28,Savage Blow 3,post,7,"If unit initiates attack, foes within 2 spaces of target take 7 damage after combat."
+29,Spur Atk 1,spur,ATK+2,Grants adjacent allies Atk+2 during combat.
+30,Spur Atk 2,spur,ATK+3,Grants adjacent allies Atk+3 during combat.
+31,Spur Atk 3,spur,ATK+4,Grants adjacent allies Atk+4 during combat.
+32,Spur Def 1,spur,DEF+2,Grants adjacent allies Def+2 during combat.
+33,Spur Def 2,spur,DEF+3,Grants adjacent allies Def+3 during combat.
+34,Spur Def 3,spur,DEF+4,Grants adjacent allies Def+4 during combat.
+35,Spur Def Res 1,spur,"DEF+2,RES+2",Grants adjacent allies Def/Res +2 during combat
+36,Spur Def Res 2,spur,"DEF+3,RES+3",Grants adjacent allies Def/Res +3 during combat
+37,Spur Res 1,spur,RES+2,Grants adjacent allies Res+2 during combat
+38,Spur Res 2,spur,RES+3,Grants adjacent allies Res+3 during combat
+39,Spur Res 3,spur,RES+4,Grants adjacent allies Res+4 during combat
+40,Spur Spd 1,spur,SPD+2,Grants adjacent allies Spd+2 during combat.
+41,Spur Spd 2,spur,SPD+3,Grants adjacent allies Spd+3 during combat.
+42,Spur Spd 3,spur,SPD+4,Grants adjacent allies Spd+4 during combat.
+43,Threaten Atk 1,threat,ATK-3,Inflicts Atk-3 on foes within 2 spaces through their next actions at the start of each turn.
+44,Threaten Atk 2,threat,ATK-4,Inflicts Atk-4 on foes within 2 spaces through their next actions at the start of each turn.
+45,Threaten Atk 3,threat,ATK-5,Inflicts Atk-5 on foes within 2 spaces through their next actions at the start of each turn.
+46,Threaten Def 1,threat,DEF-3,Inflicts Def-3 on foes within 2 spaces through their next actions at the start of each turn
+47,Threaten Def 2,threat,DEF-4,Inflicts Def-4 on foes within 2 spaces through their next actions at the start of each turn
+48,Threaten Def 3,threat,DEF-5,Inflicts Def-5 on foes within 2 spaces through their next actions at the start of each turn
+49,Threaten Res 1,threat,RES-3,Inflicts Res-3 on foes within 2 spaces through their next actions at the start of each turn.
+50,Threaten Res 2,threat,RES-4,Inflicts Res-4 on foes within 2 spaces through their next actions at the start of each turn.
+51,Threaten Res 3,threat,RES-5,Inflicts Res-5 on foes within 2 spaces through their next actions at the start of each turn.
+52,Threaten Spd 1,threat,SPD-3,Inflicts Spd-3 on foes within 2 spaces through their next actions at the start of each turn.
+53,Threaten Spd 2,threat,SPD-4,Inflicts Spd-4 on foes within 2 spaces through their next actions at the start of each turn.
+54,Threaten Spd 3,threat,SPD-5,Inflicts Spd-5 on foes within 2 spaces through their next actions at the start of each turn.
+55,Ward Armor,spur,"DEF+4,RES+4,Armored",Grants armored allies within 2 spaces Def/Res+4 during combat.
+56,Ward Cavalry,spur,"DEF+4,RES+4,Cavalry",Grants cavalry allies within 2 spaces Def/Res+4 during combat.
+57,Ward Fliers,spur,"DEF+4,RES+4,Flier",Grants flying allies within 2 spaces Def/Res+4 during combat.

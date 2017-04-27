@@ -1,0 +1,23 @@
+ID,Name,Tags,Desc
+1,Ardent Sacrifice,heal,Heals adjacent ally 10 HP. Unit loses 10HP (but cannot reach 0 this way)
+2,Dance,dance,Makes the target unit active.
+3,Draw Back,mobility,"Unit moves 1 space away from target ally, who moves to unit's former position."
+4,Harsh Command,buff,Converts penalties on target into bonuses.
+5,Heal,heal,Restores 5 HP.
+6,Martyr,heal,Restores HP=7+this unit's suffered damage. Unit heals HP=half suffered damge. Slows Special trigger (cooldown count+1).
+7,Mend,heal,Restores 10 HP.
+8,Physic,heal,Restores 8 HP to target and all allies within 2 spaces of target.
+9,Pivot,mobility,Unit moves to opposite side of adjacent ally.
+10,Rally Attack,buff,Grants Atk+4 to an adjacent ally until the end of the turn.
+11,Rally Defense,buff,Grants Def+4 to an adjacent ally until the end of the turn.
+12,Rally Resistance,buff,Grants Res+4 to an adjacent ally until the end of the turn.
+13,Rally Speed,buff,Grants Spd +4 to an adjacent ally until the end of the turn
+14,Reciprocal Aid,heal,Swap HP with adjacent ally (neither unit can go above their max HP).
+15,Reconcile,heal,Restores 7 HP each to target and this unit.
+16,Recover,heal,Restores 15 HP. Slows Special trigger (cooldown count +1)
+17,Rehabilitate,heal,Restores 7 HP or more the further below 50% the target's HP is. Slows special trigger (cooldown count+1).
+18,Reposition,mobility,Moves adjacent ally to opposite side of unit.
+19,Shove,mobility,Push adjacent ally 1 space farther away.
+20,Sing,dance,Enables target to take another action. Cannot be used on units with Sing or Dance
+21,Smite,mobility,Push adjacent ally 2 spaces farther away.
+22,Swap,mobility,Swap places with an adjacent ally.

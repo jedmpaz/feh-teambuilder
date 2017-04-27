@@ -1,0 +1,44 @@
+#nav {
+    margin: 10px;
+    overflow: scroll;
+}
+
+.results {
+    height: 600px;
+    overflow: scroll;
+}
+
+#search[type=text] {
+    width: 71%;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+#search[type=text]:focus {
+    width: 75%;
+}
+
+.ui-autocomplete {
+    max-height: 300px;
+    overflow: scroll;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 2px;
+}
+
+.stats1 {
+    float: left;
+    width: 57%;
+    margin: 2px;
+}
+
+.stats2 {
+    float: left;
+    width: 37%;
+    margin: 2px;
+}
