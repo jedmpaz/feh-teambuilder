@@ -12,7 +12,7 @@
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
-    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
     <script src="js/index.js"></script>
     <script src="js/jquery-ui.min.js"></script>
 
@@ -27,17 +27,37 @@
 
 <div id="container">
     <div class="row">
-
         <div class="col-md-3" id="nav">
             <h1>Find a Hero</h1>
             <input type="text" name="search" id="search" placeholder="Search..">
-            <button id="searchButton" class="button" onclick="heroSearch()" style="float:right">Search</button>
+            <button id="searchButton" class="sbutton" onclick="heroSearch()" style="float:right">Search</button>
             <br>
             <div class="results">
 
             </div>
         </div>
+        <div class="col-md-1" id="scatter-controls">
+            <h3>Stat</h3>
+            <button id="hpButton" class="button">HP</button>
+            <br>
+            <button id="atkButton" class="button">ATK</button>
+            <br>
+            <button id="spdButton" class="button">SPD</button>
+            <br>
+            <button id="defButton" class="button">DEF</button>
+            <br>
+            <button id="resButton" class="button">RES</button>
 
+            <h3>Color</h3>
+            <button id="redButton" class="button">RED</button>
+            <br>
+            <button id="blueButton" class="button">BLUE</button>
+            <br>
+            <button id="greenButton" class="button">GREEN</button>
+        </div>
+        <div id="shift" class="col-md-5">
+            <div id="scatter"></div>
+        </div>
     </div>
 </div>
 </body>

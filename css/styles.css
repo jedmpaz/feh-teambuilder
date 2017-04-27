@@ -18,6 +18,39 @@
     width: 75%;
 }
 
+.tooltip {
+    position: absolute;
+    text-align: center;
+    width: 90px;
+    height: 180px;
+    padding: 10px;
+    font: 12px sans-serif;
+    background: lightsteelblue;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+.button {
+    background-color: #d8d165;
+    width: 90%;
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    display: inline-block;
+    font-size: 10px;
+    margin: 5px;
+    border-radius: 15px;
+    font-family: Lato, Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#scatter-controls {
+    margin-top: 65px;
+}
+
 .ui-autocomplete {
     max-height: 300px;
     overflow: scroll;
@@ -35,6 +68,10 @@ th, td {
     float: left;
     width: 57%;
     margin: 2px;
+}
+
+#scatter {
+    height: 1000px;
 }
 
 .stats2 {
