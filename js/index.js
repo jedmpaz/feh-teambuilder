@@ -88,6 +88,7 @@ function start() {
                 data[i].Boon4 = boon4s;
                 data[i].Bane4 = bane4s;
                 units[unit] = data[i];
+                units[unit]["selected"] = 0;
                 names.push(unit);
             }
         }
@@ -115,6 +116,9 @@ function start() {
         scatterplot.selectAll(".dot").data(data)
             .enter().append("circle")
             .attr("class", "dot")
+            .attr("id", function(d) {
+                return "dot-"+d.Name;
+            })
             .style("fill", function (d) {
                 if (d.Color == "Red") {return colors[d.Color]};
                 if (d.Color == "Blue") {return colors[d.Color]};
@@ -149,8 +153,18 @@ function start() {
                      d3.select(this)
                          .transition()
                          .duration(300)
-                         .attr("r", 5)
+                         .attr("r", function(d) {
+                            if(d.selected) {
+                                return 10;
+                            } else {
+                                return 5;
+                            }
+                         })
                          .style("stroke", "969696");
+            })
+            .on("click", function(d) {
+                console.log("hi");
+                heroSearch(d.Name);
             });
 
         scatterplot.append("g")
@@ -346,7 +360,6 @@ function start() {
                     }
                  });
         })
-
         console.log(units);
     });
 }
@@ -382,8 +395,13 @@ $(function() {
     });
 });
 
-function heroSearch() {
-    var hero = $("#search").val();
+function heroSearch(input) {
+    var hero;
+    if(input == null) {
+        hero = $("#search").val();
+    } else {
+        hero = input;
+    }
 
     var heroStats = statBlock(units[hero]);
 
@@ -473,6 +491,15 @@ function heroSearch() {
     +"</div>";
 
     $(newElement).prependTo('.results').hide().slideDown(200);
+
+    units[hero].selected = 1;
+
+    d3.select("#dot-"+hero)
+        .transition()
+        .duration(400)
+        .attr("r", function(d) {
+            return 10;
+        });
 }
 
 function statBlock(hero) {
