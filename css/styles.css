@@ -8,6 +8,16 @@
     overflow: scroll;
 }
 
+.hero-search-table-red,
+.hero-search-table-blue,
+.hero-search-table-green,
+.hero-search-table-colorless {
+    width: 98%;
+    padding: 5px;
+    margin: 2px;
+    border-radius: 10px;
+}
+
 #search[type=text] {
     width: 71%;
     -webkit-transition: width 0.4s ease-in-out;
@@ -16,6 +26,26 @@
 
 #search[type=text]:focus {
     width: 75%;
+}
+
+.hero-search-table-red:hover {
+    background-color: #a52512;
+    color: white;
+}
+
+.hero-search-table-blue:hover {
+    background-color: #1c2777;
+    color: white;
+}
+
+.hero-search-table-green:hover {
+    background-color: #0e7a2d;
+    color: white;
+}
+
+.hero-search-table-colorless:hover {
+    background-color: gray;
+    color: white;
 }
 
 .tooltip {
@@ -92,7 +122,7 @@ th, td {
 
 .stats2 {
     float: left;
-    width: 37%;
+    width: 40%;
     margin: 2px;
 }
 

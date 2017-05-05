@@ -351,6 +351,17 @@ function start() {
     });
 }
 
+/* Search result functions */
+
+//$(".hero-search-table").hover(
+//    function() {
+//        $(this).css("background-color", "steelblue");
+//    },
+//    function() {
+//        $(this).css("background-color", "none");
+//    }
+//);
+
 /* Stat, Color Buttons Functions */
 
 function resetStatButtons() {
@@ -376,8 +387,20 @@ function heroSearch() {
 
     var heroStats = statBlock(units[hero]);
 
+    var bgcolor;
+
+    if(units[hero].Color == "Red") {
+        bgcolor = "red";
+    } else if(units[hero].Color == "Blue") {
+        bgcolor = "blue";
+    } else if(units[hero].Color == "Green") {
+        bgcolor = "green";
+    } else if(units[hero].Color == "Colorless") {
+        bgcolor = "colorless";
+    }
+
     var newElement =
-    "<div class='hero-search-table' id='"+hero+"'>"
+    "<div class='hero-search-table-"+bgcolor+"' id='"+hero+"' style='display:table'>"
         +"<h3>"+hero+"</h3>"
             +"<table class='stats1'>"
                 +"<thead>"
