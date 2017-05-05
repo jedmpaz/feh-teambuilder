@@ -31,12 +31,12 @@
     pointer-events: none;
 }
 
-.button {
-    background-color: #d8d165;
+.stat-button, .color-button {
     width: 90%;
-    border: none;
+    border-style: none;
+    border-width: 1px;
     color: white;
-    padding: 10px 10px;
+    padding: 10px 7px;
     text-align: center;
     display: inline-block;
     font-size: 10px;
@@ -47,8 +47,24 @@
     letter-spacing: 2px;
 }
 
+.stat-button {
+    background-color: #d8d165;
+}
+
+#redButton {
+    background-color: #a52512;
+}
+
+#blueButton {
+    background-color: #1c2777;
+}
+
+#greenButton {
+    background-color: #0e7a2d;
+}
+
 #scatter-controls {
-    margin-top: 65px;
+    margin-top: 35px;
 }
 
 .ui-autocomplete {
@@ -71,11 +87,18 @@ th, td {
 }
 
 #scatter {
-    height: 1000px;
+    height: 700px;
 }
 
 .stats2 {
     float: left;
     width: 37%;
     margin: 2px;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
 }

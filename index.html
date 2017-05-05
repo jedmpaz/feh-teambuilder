@@ -30,7 +30,7 @@
         <div class="col-md-3" id="nav">
             <h1>Find a Hero</h1>
             <input type="text" name="search" id="search" placeholder="Search..">
-            <button id="searchButton" class="sbutton" onclick="heroSearch()" style="float:right">Search</button>
+            <button id="searchButton" class="button" onclick="heroSearch()" style="float:right">Search</button>
             <br>
             <div class="results">
 
@@ -38,22 +38,24 @@
         </div>
         <div class="col-md-1" id="scatter-controls">
             <h3>Stat</h3>
-            <button id="hpButton" class="button">HP</button>
+            <button id="hpButton" class="stat-button">HP</button>
             <br>
-            <button id="atkButton" class="button">ATK</button>
+            <button id="atkButton" class="stat-button" style="background-color:steelblue">ATK</button>
             <br>
-            <button id="spdButton" class="button">SPD</button>
+            <button id="spdButton" class="stat-button">SPD</button>
             <br>
-            <button id="defButton" class="button">DEF</button>
+            <button id="defButton" class="stat-button">DEF</button>
             <br>
-            <button id="resButton" class="button">RES</button>
+            <button id="resButton" class="stat-button">RES</button>
 
             <h3>Color</h3>
-            <button id="redButton" class="button">RED</button>
+            <button id="redButton" class="color-button">RED</button>
             <br>
-            <button id="blueButton" class="button">BLUE</button>
+            <button id="blueButton" class="color-button">BLUE</button>
             <br>
-            <button id="greenButton" class="button">GREEN</button>
+            <button id="greenButton" class="color-button">GREEN</button>
+            <br>
+            <button id="colorlessButton" class="color-button">GREY</button>
         </div>
         <div id="shift" class="col-md-5">
             <div id="scatter"></div>
