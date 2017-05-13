@@ -18,6 +18,7 @@
     text-decoration: none;
     background-color: Transparent;
     border: none;
+    outline: none;
 }
 
 li > button:hover {
@@ -27,6 +28,10 @@ li > button:hover {
 #nav {
     margin: 10px;
     overflow: scroll;
+}
+
+#team-row {
+    margin: 10px;
 }
 
 .results {
@@ -206,4 +211,10 @@ th, td {
     fill: none;
     stroke: black;
     shape-rendering: crispEdges;
+}
+
+#hero1, #hero2, #hero3, #hero4 {
+    border-radius: 15px;
+    border: 2px solid black;
+    margin: 2px;
 }

@@ -1,5 +1,7 @@
 window.onload = start;
 
+$.getScript("js/simulator.js");
+
 /* global arrays for csvs */
 var raw_data = [];
 var units = {};
@@ -50,7 +52,8 @@ function start() {
 
     tip = d3.select("body").append("div")
         .attr("class", "tooltip")
-        .style("opacity", 0);
+        .style("opacity", 0)
+        .style("display", "none");
 
     var scatterplot = d3.select("#scatterplot")
         .attr("width",s_width)
@@ -141,6 +144,7 @@ function start() {
             .on("mouseover", function (d) {
                 tip.transition()
                     .duration(300)
+                    .style("display", "inline")
                     .style("opacity", .8);
                 tip.html("<p><b>" + d.Name + "</b></p><p><b>Weapon:</b> <br>" + d.Weapon + "</p><p><b>Range:<br></b>" + d.Range + "</p><p><b>Damage Type:<br></b> " + d["Damage Type"])
                     .style("left", (d3.event.pageX)+5 + "px")
@@ -351,16 +355,85 @@ function start() {
                 .transition()
                 .duration(200)
                 .style("display", function(d) {
-                    if(!redClicked && d.Color == "Red" && !d.results) {
+                    if(!redClicked && d.Color == "Red" && !d.results & !d.onTeam) {
                         return "none";
                     }
-                    if(!blueClicked && d.Color == "Blue" && !d.results) {
+                    if(!blueClicked && d.Color == "Blue" && !d.results & !d.onTeam) {
                         return "none";
                     }
-                    if(!greenClicked && d.Color == "Green" && !d.results) {
+                    if(!greenClicked && d.Color == "Green" && !d.results & !d.onTeam) {
                         return "none";
                     }
-                    if(!colorlessClicked && d.Color == "Colorless" && !d.results) {
+                    if(!colorlessClicked && d.Color == "Colorless" && !d.results & !d.onTeam) {
+                        return "none";
+                    }
+                 });
+        })
+
+        d3.selectAll(".type-button").on("click", function() {
+            if(d3.select(this).attr('id') == "physicalButton") {
+                physClicked = !physClicked;
+            } else if(d3.select(this).attr('id') == "magicalButton") {
+                magicClicked = !magicClicked;
+            }
+
+            d3.select(this)
+                .transition()
+                .duration(200)
+                .style("background-color", function() {
+                    if(d3.select(this).attr('id') == "physicalButton") {
+                        if(physClicked) {
+                            return colors.Colorless;
+                        } else {
+                            return "white";
+                        }
+                    } else if(d3.select(this).attr('id') == "magicalButton") {
+                        if(magicClicked) {
+                            return colors.Colorless;
+                        } else {
+                            return "white";
+                        }
+                    }
+                })
+                .style("color", function() {
+                    if(d3.select(this).attr('id') == "physicalButton") {
+                        if(physClicked) {
+                            return "white";
+                        } else {
+                            return "black";
+                        }
+                    } else if(d3.select(this).attr('id') == "magicalButton") {
+                        if(magicClicked) {
+                            return "white";
+                        } else {
+                            return "black";
+                        }
+                    }
+                })
+                .style("border-color", function() {
+                    if(d3.select(this).attr('id') == "physicalButton") {
+                        if(physClicked) {
+                            return "white";
+                        } else {
+                            return "black";
+                        }
+                    } else if(d3.select(this).attr('id') == "magica;Button") {
+                        if(magicClicked) {
+                            return "white";
+                        } else {
+                            return "black";
+                        }
+                    }
+                });
+
+            d3.selectAll(".dot")
+                .transition()
+                .duration(200)
+                .style("display", function(d) {
+                    if(!physClicked && d["Damage Type"] == "Physical" && !d.results & !d.onTeam) {
+                        return "none";
+                    }
+                    if(!magicClicked && d["Damage Type"] == "Magic" && !d.results & !d.onTeam) {
                         return "none";
                     }
                  });
@@ -398,7 +471,11 @@ function heroClear(e) {
         .transition()
         .duration(400)
         .attr("r", function(d) {
-            return 5;
+           if(!d.onTeam) {
+               return 5;
+           } else {
+               return 10;
+           }
         });
 
     $(e).parent().remove();
@@ -612,15 +689,20 @@ function statLine(hero,stat) {
 
 $(document).ready(function(){
     $("#sim-button").click(function() {
-        $("#build-container").fadeToggle("slow");
-        $("#sim-container").fadeToggle("slow");
+        if($("#sim-container").css("display") == "none") {
+            $("#build-container").fadeToggle("slow");
+            $("#sim-container").fadeToggle("slow");
+            importTeam(units,team,colors);
+        }
     })
 })
 
 $(document).ready(function(){
     $("#build-button").click(function() {
-        $("#build-container").fadeToggle("slow");
-        $("#sim-container").fadeToggle("slow");
+        if($("#build-container").css("display") == "none") {
+            $("#sim-container").fadeToggle("slow");
+            $("#build-container").fadeToggle("slow");
+        }
     })
 })
 
