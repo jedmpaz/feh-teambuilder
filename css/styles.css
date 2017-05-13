@@ -9,6 +9,18 @@
     overflow: scroll;
 }
 
+#team-list {
+    top: 0;
+    right: 0;
+    position: absolute;
+}
+
+#team {
+    height: 650px;
+    width: 340px;
+    overflow: scroll;
+}
+
 .hero-search-table-red,
 .hero-search-table-blue,
 .hero-search-table-green,
@@ -17,6 +29,7 @@
     padding: 5px;
     margin: 2px;
     border-radius: 10px;
+    border: 2px solid white;
 }
 
 #search[type=text] {
@@ -42,26 +55,24 @@
     font-family: Lato, Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
+    outline: none;
 }
 
 .hero-search-table-red:hover {
-    background-color: #a52512;
-    color: white;
+    border-color: #a52512;
+
 }
 
 .hero-search-table-blue:hover {
-    background-color: #1c2777;
-    color: white;
+    border-color: #1c2777;
 }
 
 .hero-search-table-green:hover {
-    background-color: #0e7a2d;
-    color: white;
+    border-color: #0e7a2d;
 }
 
 .hero-search-table-colorless:hover {
-    background-color: gray;
-    color: white;
+    border-color: gray;
 }
 
 .tooltip {
@@ -77,24 +88,45 @@
     pointer-events: none;
 }
 
-.stat-button, .color-button {
+.stat-button, .color-button, .type-button, .range-button {
     width: 90%;
-    border-style: none;
+    border-style: solid;
     border-width: 1px;
     color: white;
     padding: 10px 7px;
     text-align: center;
     display: inline-block;
     font-size: 10px;
-    margin: 5px;
+    margin: 3px;
     border-radius: 15px;
     font-family: Lato, Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
+    outline: none;
+}
+
+.remove-button, .add-button, .team-remove-button {
+    border-style: none;
+    border-width: 1px;
+    color: white;
+    padding: 5px 5px;
+    text-align: center;
+    display: inline-block;
+    font-size: 10px;
+    margin: 0px 2px;
+    border-radius: 15px;
+    font-family: Lato, Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    float: right;
+    padding: 9px 9px;
 }
 
 .stat-button {
-    background-color: #d8d165;
+    background-color: white;
+    color: black;
+    border-style: solid;
 }
 
 #redButton {
@@ -110,7 +142,9 @@
 }
 
 #scatter-controls {
-    margin-top: 35px;
+    margin-top: 15px;
+    height: 700px;
+    overflow: scroll;
 }
 
 .ui-autocomplete {

@@ -11,6 +11,7 @@ var skillsB = {};
 var skillsC = {};
 var skillsS = {};
 var names = [];
+var team = [];
 
 var colors = {Red: "#a52512", Blue: "#1c2777", Green: "#0e7a2d", Colorless: "gray", Stat: "#d8d165"};
 
@@ -38,6 +39,8 @@ var redClicked = true;
 var blueClicked = true;
 var greenClicked = true;
 var colorlessClicked = true;
+var physClicked = true;
+var magicClicked = true;
 
 function start() {
     d3.select("#scatter")
@@ -220,7 +223,7 @@ function start() {
                 .delay(function (d, i) {
                     return i * 100;
                 })
-                .style("background-color", "steelblue");
+                .style("background-color", colors.Stat);
 
             y.domain([
                 d3.min(data, function(d) {
@@ -314,30 +317,30 @@ function start() {
                         }
                     }
                 })
-                .style("border-style", function() {
+                .style("border-color", function() {
                     if(d3.select(this).attr('id') == "redButton") {
                         if(redClicked) {
-                            return "none";
+                            return "white";
                         } else {
-                            return "solid";
+                            return "black";
                         }
                     } else if(d3.select(this).attr('id') == "blueButton") {
                         if(blueClicked) {
-                            return "none";
+                            return "white";
                         } else {
-                            return "solid";
+                            return "black";
                         }
                     } else if(d3.select(this).attr('id') == "greenButton") {
                         if(greenClicked) {
-                          return "none";
+                          return "white";
                         } else {
-                          return "solid";
+                          return "black";
                         }
                     } else if(d3.select(this).attr('id') == "colorlessButton") {
                         if(colorlessClicked) {
-                          return "none";
+                          return "white";
                         } else {
-                          return "solid";
+                          return "black";
                         }
                     }
                 });
@@ -383,7 +386,7 @@ function resetStatButtons() {
     spdClicked = false;
     defClicked = false;
     resClicked = false;
-    d3.selectAll(".stat-button").style("background-color", colors.Stat);
+    d3.selectAll(".stat-button").style("background-color", "white");
 }
 
 /* Search & results functions */
@@ -394,6 +397,62 @@ $(function() {
         minLength: 0
     });
 });
+
+function heroClear(e) {
+    var hero = e.id.split("-")[1];
+
+    d3.select("#dot-"+hero)
+        .transition()
+        .duration(400)
+        .attr("r", function(d) {
+            return 5;
+        });
+
+    $(e).parent().remove();
+}
+
+function heroAdd(e) {
+    var hero = e.id.split("-")[1];
+    team.push(hero);
+    var buttons = "<button id='remove-"+hero+"' class='team-remove-button' onclick='teamClear(this)'>x</button>"
+    $($(e).parent()).prependTo('#team').hide().slideDown(200);
+
+    $($(e).parent()).prepend(buttons);
+    $($(e).parent()).find(".remove-button").remove()
+    $($(e).parent()).find(".add-button").remove()
+}
+
+function resultsClear() {
+    $('.hero-search-table-red').remove();
+    $('.hero-search-table-blue').remove();
+    $('.hero-search-table-green').remove();
+    $('.hero-search-table-colorless').remove();
+
+    d3.selectAll(".dot")
+        .transition()
+        .duration(400)
+        .attr("r", function(d) {
+            return 5;
+        });
+}
+
+function teamClear(e) {
+    var hero = e.id.split("-")[1];
+
+    d3.select("#dot-"+hero)
+        .transition()
+        .duration(400)
+        .attr("r", function(d) {
+            return 5;
+        });
+
+    console.log(team);
+    var hero = e.id.split("-")[1];
+    var i = team.indexOf(hero);
+    team.splice(i,1);
+    $(e).parent().remove();
+    console.log(team);
+}
 
 function heroSearch(input) {
     var hero;
@@ -419,75 +478,79 @@ function heroSearch(input) {
 
     var newElement =
     "<div class='hero-search-table-"+bgcolor+"' id='"+hero+"' style='display:table'>"
-        +"<h3>"+hero+"</h3>"
-            +"<table class='stats1'>"
-                +"<thead>"
-                    +"<tr>"
-                        +"<th>Skill</th>"
-                        +"<th>Name</th>"
-                    +"</tr>"
-                +"</thead>"
-                +"<tbody>"
-                    +"<tr>"
-                        +"<td>Weapon</td>"
-                        +"<td>"+units[hero].Weapon+"</td>"
-                    +"</tr>"
-                    +"<tr>"
-                        +"<td>Assist</td>"
-                        +"<td>"+units[hero].Assist+"</td>"
-                    +"</tr>"
-                    +"<tr>"
-                        +"<td>Special</td>"
-                        +"<td>"+units[hero].Special+"</td>"
-                    +"</tr>"
-                    +"<tr>"
-                        +"<td>A Slot</td>"
-                        +"<td>"+units[hero].SkillA+"</td>"
-                    +"</tr>"
-                    +"<tr>"
-                        +"<td>B Slot</td>"
-                        +"<td>"+units[hero].SkillB+"</td>"
-                    +"</tr>"
-                    +"<tr>"
-                        +"<td>C Slot</td>"
-                        +"<td>"+units[hero].SkillC+"</td>"
-                    +"</tr>"
-                +"</tbody>"
-            +"</table>"
-            +"<table class='stats2'>"
-                +"<thead>"
-                    +"<tr>"
-                        +"<th>Stat</th>"
-                        +"<th>Value</th>"
-                    +"</tr>"
-                +"</thead>"
-                +"<tbody>"
-                    +"<tr>"
-                        +"<td>HP</td>"
-                        +"<td>"+heroStats.HP+"</td>"
-                    +"</tr>"
-                    +"<tr>"
-                        +"<td>ATK</td>"
-                        +"<td>"+heroStats.ATK+"</td>"
-                    +"</tr>"
-                    +"<tr>"
-                        +"<td>SPD</td>"
-                        +"<td>"+heroStats.SPD+"</td>"
-                    +"</tr>"
-                    +"<tr>"
-                        +"<td>DEF</td>"
-                        +"<td>"+heroStats.DEF+"</td>"
-                    +"</tr>"
-                    +"<tr>"
-                        +"<td>RES</td>"
-                        +"<td>"+heroStats.RES+"</td>"
-                    +"</tr>"
-                    +"<tr>"
-                        +"<td>Total</td>"
-                        +"<td>"+units[hero].Total+"</td>"
-                    +"</tr>"
-                +"</tbody>"
-            +"</table>"
+        +"<h3 style='display:inline-flex;'>"+hero+"</h3>"
+        +"<button id='remove-"+hero+"' class='remove-button' onclick='heroClear(this)'>X</button>"
+        +"<button id='add-"+hero+"' class='add-button' onclick='heroAdd(this)'>+</button>"
+            +"<div class='stats-tables'>"
+                +"<table class='stats1'>"
+                    +"<thead>"
+                        +"<tr>"
+                            +"<th>Skill</th>"
+                            +"<th>Name</th>"
+                        +"</tr>"
+                    +"</thead>"
+                    +"<tbody>"
+                        +"<tr>"
+                            +"<td>Weapon</td>"
+                            +"<td>"+units[hero].Weapon+"</td>"
+                        +"</tr>"
+                        +"<tr>"
+                            +"<td>Assist</td>"
+                            +"<td>"+units[hero].Assist+"</td>"
+                        +"</tr>"
+                        +"<tr>"
+                            +"<td>Special</td>"
+                            +"<td>"+units[hero].Special+"</td>"
+                        +"</tr>"
+                        +"<tr>"
+                            +"<td>A Slot</td>"
+                            +"<td>"+units[hero].SkillA+"</td>"
+                        +"</tr>"
+                        +"<tr>"
+                            +"<td>B Slot</td>"
+                            +"<td>"+units[hero].SkillB+"</td>"
+                        +"</tr>"
+                        +"<tr>"
+                            +"<td>C Slot</td>"
+                            +"<td>"+units[hero].SkillC+"</td>"
+                        +"</tr>"
+                    +"</tbody>"
+                +"</table>"
+                +"<table class='stats2'>"
+                    +"<thead>"
+                        +"<tr>"
+                            +"<th>Stat</th>"
+                            +"<th>Value</th>"
+                        +"</tr>"
+                    +"</thead>"
+                    +"<tbody>"
+                        +"<tr>"
+                            +"<td>HP</td>"
+                            +"<td>"+heroStats.HP+"</td>"
+                        +"</tr>"
+                        +"<tr>"
+                            +"<td>ATK</td>"
+                            +"<td>"+heroStats.ATK+"</td>"
+                        +"</tr>"
+                        +"<tr>"
+                            +"<td>SPD</td>"
+                            +"<td>"+heroStats.SPD+"</td>"
+                        +"</tr>"
+                        +"<tr>"
+                            +"<td>DEF</td>"
+                            +"<td>"+heroStats.DEF+"</td>"
+                        +"</tr>"
+                        +"<tr>"
+                            +"<td>RES</td>"
+                            +"<td>"+heroStats.RES+"</td>"
+                        +"</tr>"
+                        +"<tr>"
+                            +"<td>Total</td>"
+                            +"<td>"+units[hero].Total+"</td>"
+                        +"</tr>"
+                    +"</tbody>"
+                +"</table>"
+            +"</div>"
     +"</div>";
 
     $(newElement).prependTo('.results').hide().slideDown(200);

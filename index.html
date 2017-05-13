@@ -30,7 +30,7 @@
         <div class="col-md-3" id="nav">
             <h1>Find a Hero</h1>
             <input type="text" name="search" id="search" placeholder="Search..">
-            <button id="clearButton" class="button" style="float:right">CLEAR</button>
+            <button id="clearButton" class="button" onclick="resultsClear()" style="float:right">CLEAR</button>
             <button id="searchButton" class="button" onclick="heroSearch()" style="float:right">SEARCH</button>
             <br>
             <div class="results">
@@ -40,7 +40,7 @@
             <h3>Stat</h3>
             <button id="hpButton" class="stat-button">HP</button>
             <br>
-            <button id="atkButton" class="stat-button" style="background-color:steelblue">ATK</button>
+            <button id="atkButton" class="stat-button" style="background-color:#d8d165">ATK</button>
             <br>
             <button id="spdButton" class="stat-button">SPD</button>
             <br>
@@ -56,9 +56,24 @@
             <button id="greenButton" class="color-button">GREEN</button>
             <br>
             <button id="colorlessButton" class="color-button">GREY</button>
+
+            <h3>Range</h3>
+            <button id="meleeButton" class="range-button">MELEE</button>
+            <br>
+            <button id="rangedButton" class="range-button">RANGED</button>
+
+            <h3>Type</h3>
+            <button id="physicalButton" class="type-button">PHYS</button>
+            <br>
+            <button id="magicalButton" class="type-button">MAGIC</button>
+
         </div>
         <div id="shift" class="col-md-5">
             <div id="scatter"></div>
+        </div>
+        <div id="team-list" class="col-md-3">
+            <h1>Team</h1>
+            <div id="team"></div>
         </div>
     </div>
 </div>
