@@ -11,6 +11,7 @@ var skillsB = {};
 var skillsC = {};
 var skillsS = {};
 var names = [];
+var results = [];
 var team = [];
 
 var colors = {Red: "#a52512", Blue: "#1c2777", Green: "#0e7a2d", Colorless: "gray", Stat: "#d8d165"};
@@ -91,7 +92,8 @@ function start() {
                 data[i].Boon4 = boon4s;
                 data[i].Bane4 = bane4s;
                 units[unit] = data[i];
-                units[unit]["selected"] = 0;
+                units[unit]["results"] = false;
+                units[unit]["onTeam"] = false;
                 names.push(unit);
             }
         }
@@ -157,7 +159,7 @@ function start() {
                          .transition()
                          .duration(300)
                          .attr("r", function(d) {
-                            if(d.selected) {
+                            if(d.results) {
                                 return 10;
                             } else {
                                 return 5;
@@ -349,16 +351,16 @@ function start() {
                 .transition()
                 .duration(200)
                 .style("display", function(d) {
-                    if(!redClicked && d.Color == "Red") {
+                    if(!redClicked && d.Color == "Red" && !d.results) {
                         return "none";
                     }
-                    if(!blueClicked && d.Color == "Blue") {
+                    if(!blueClicked && d.Color == "Blue" && !d.results) {
                         return "none";
                     }
-                    if(!greenClicked && d.Color == "Green") {
+                    if(!greenClicked && d.Color == "Green" && !d.results) {
                         return "none";
                     }
-                    if(!colorlessClicked && d.Color == "Colorless") {
+                    if(!colorlessClicked && d.Color == "Colorless" && !d.results) {
                         return "none";
                     }
                  });
@@ -366,17 +368,6 @@ function start() {
         console.log(units);
     });
 }
-
-/* Search result functions */
-
-//$(".hero-search-table").hover(
-//    function() {
-//        $(this).css("background-color", "steelblue");
-//    },
-//    function() {
-//        $(this).css("background-color", "none");
-//    }
-//);
 
 /* Stat, Color Buttons Functions */
 
@@ -401,6 +392,8 @@ $(function() {
 function heroClear(e) {
     var hero = e.id.split("-")[1];
 
+    units[hero].results = false;
+
     d3.select("#dot-"+hero)
         .transition()
         .duration(400)
@@ -412,27 +405,44 @@ function heroClear(e) {
 }
 
 function heroAdd(e) {
-    var hero = e.id.split("-")[1];
-    team.push(hero);
-    var buttons = "<button id='remove-"+hero+"' class='team-remove-button' onclick='teamClear(this)'>x</button>"
-    $($(e).parent()).prependTo('#team').hide().slideDown(200);
+    if(team.length < 4) {
+        var hero = e.id.split("-")[1];
+        units[hero].results = false;
+        units[hero].onTeam = true;
+        team.push(hero);
+        var buttons = "<button id='remove-"+hero+"' class='team-remove-button' onclick='teamClear(this)'>x</button>"
+        $($(e).parent()).prependTo('#team').hide().slideDown(200);
 
-    $($(e).parent()).prepend(buttons);
-    $($(e).parent()).find(".remove-button").remove()
-    $($(e).parent()).find(".add-button").remove()
+        $($(e).parent()).prepend(buttons);
+        $($(e).parent()).find(".remove-button").remove();
+        $($(e).parent()).find(".add-button").remove();
+    }
 }
 
 function resultsClear() {
-    $('.hero-search-table-red').remove();
-    $('.hero-search-table-blue').remove();
-    $('.hero-search-table-green').remove();
-    $('.hero-search-table-colorless').remove();
+    console.log(results);
+    $('.results > .hero-search-table-red').remove();
+    $('.results > .hero-search-table-blue').remove();
+    $('.results > .hero-search-table-green').remove();
+    $('.results > .hero-search-table-colorless').remove();
+
+
+    for(var i in results) {
+        units[results[i]].results = false;
+    }
+    console.log(units);
+
+    results = [];
 
     d3.selectAll(".dot")
         .transition()
         .duration(400)
         .attr("r", function(d) {
-            return 5;
+            if(!d.onTeam) {
+                return 5;
+            } else {
+                return 10;
+            }
         });
 }
 
@@ -479,7 +489,7 @@ function heroSearch(input) {
     var newElement =
     "<div class='hero-search-table-"+bgcolor+"' id='"+hero+"' style='display:table'>"
         +"<h3 style='display:inline-flex;'>"+hero+"</h3>"
-        +"<button id='remove-"+hero+"' class='remove-button' onclick='heroClear(this)'>X</button>"
+        +"<button id='remove-"+hero+"' class='remove-button' onclick='heroClear(this)'>x</button>"
         +"<button id='add-"+hero+"' class='add-button' onclick='heroAdd(this)'>+</button>"
             +"<div class='stats-tables'>"
                 +"<table class='stats1'>"
@@ -555,7 +565,9 @@ function heroSearch(input) {
 
     $(newElement).prependTo('.results').hide().slideDown(200);
 
-    units[hero].selected = 1;
+    units[hero].results = true;
+
+    results.push(hero);
 
     d3.select("#dot-"+hero)
         .transition()
@@ -563,6 +575,8 @@ function heroSearch(input) {
         .attr("r", function(d) {
             return 10;
         });
+
+    console.log(units)
 }
 
 function statBlock(hero) {
@@ -595,3 +609,18 @@ function statLine(hero,stat) {
     statline += bane + " / " + norm + " / " + boon;
     return statline;
 }
+
+$(document).ready(function(){
+    $("#sim-button").click(function() {
+        $("#build-container").fadeToggle("slow");
+        $("#sim-container").fadeToggle("slow");
+    })
+})
+
+$(document).ready(function(){
+    $("#build-button").click(function() {
+        $("#build-container").fadeToggle("slow");
+        $("#sim-container").fadeToggle("slow");
+    })
+})
+

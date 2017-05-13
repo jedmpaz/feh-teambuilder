@@ -1,22 +1,47 @@
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.navbar > li {
+    float: left;
+}
+
+.navbar > li > button {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color: Transparent;
+    border: none;
+}
+
+li > button:hover {
+    background-color: #111;
+}
+
 #nav {
     margin: 10px;
     overflow: scroll;
 }
 
 .results {
-    height: 600px;
+    height: 560px;
     width: 340px;
     overflow: scroll;
 }
 
 #team-list {
-    top: 0;
     right: 0;
     position: absolute;
 }
 
 #team {
-    height: 650px;
+    height: 610px;
     width: 340px;
     overflow: scroll;
 }
@@ -143,7 +168,7 @@
 
 #scatter-controls {
     margin-top: 15px;
-    height: 700px;
+    height: 660px;
     overflow: scroll;
 }
 
@@ -167,7 +192,7 @@ th, td {
 }
 
 #scatter {
-    height: 700px;
+    height: 660px;
 }
 
 .stats2 {
