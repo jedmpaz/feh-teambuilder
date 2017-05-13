@@ -133,14 +133,13 @@ function start() {
                 if (d.Color == "Green") {return colors[d.Color]};
                 if (d.Color == "Colorless") {return colors[d.Color]};
             })
-            .style("stroke", "#969696")
             .attr("cx", function (d) {
                 return x(+d.Total);
             })
             .attr("cy", function (d) {
                 return y(+d.ATK)
             })
-            .attr("r", 5)
+            .attr("r", 6)
             .on("mouseover", function (d) {
                 tip.transition()
                     .duration(300)
@@ -153,7 +152,6 @@ function start() {
                     .transition()
                     .duration(300)
                     .attr("r", 10)
-                    .style("stroke", "#d8d165")
             })
             .on("mouseout", function (d) {
                 tip.transition()
@@ -166,10 +164,9 @@ function start() {
                             if(d.results) {
                                 return 10;
                             } else {
-                                return 5;
+                                return 6;
                             }
                          })
-                         .style("stroke", "969696");
             })
             .on("click", function(d) {
                 console.log("hi");
@@ -472,7 +469,7 @@ function heroClear(e) {
         .duration(400)
         .attr("r", function(d) {
            if(!d.onTeam) {
-               return 5;
+               return 6;
            } else {
                return 10;
            }
@@ -516,7 +513,7 @@ function resultsClear() {
         .duration(400)
         .attr("r", function(d) {
             if(!d.onTeam) {
-                return 5;
+                return 6;
             } else {
                 return 10;
             }
@@ -530,7 +527,7 @@ function teamClear(e) {
         .transition()
         .duration(400)
         .attr("r", function(d) {
-            return 5;
+            return 6;
         });
 
     console.log(team);
@@ -712,7 +709,8 @@ $(document).ready(function(){
         var toDisplay = "#"+this.id+"-info";
         var skill = this.id.split("-")[1];
         hero = team[+hero.split("o")[1] - 1];
+        console.log(hero);
 
-        $("#hero1-weapon-info").slideToggle("slow");
+        $(toDisplay).slideToggle("slow");
     })
 })

@@ -8,11 +8,11 @@ function importTeam(units, team, colors) {
         hero = team[i];
         id = "#hero" + (i+1);
         $(id+"name").html(team[i]);
-
+        console.log(units[team[i]].HP);
+        $(id+"-HP").html(units[team[i]].HP);
+        $(id+"-ATK").html(units[team[i]].ATK);
+        $(id+"-SPD").html(units[team[i]].SPD);
+        $(id+"-DEF").html(units[team[i]].DEF);
+        $(id+"-RES").html(units[team[i]].RES);
     }
-
-    $("#hero1").css("border-color", colors[units[team[0]].Color]);
-    $("#hero2").css("border-color", colors[units[team[1]].Color]);
-    $("#hero3").css("border-color", colors[units[team[2]].Color]);
-    $("#hero4").css("border-color", colors[units[team[3]].Color]);
 }
