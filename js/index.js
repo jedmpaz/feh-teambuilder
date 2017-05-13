@@ -706,3 +706,13 @@ $(document).ready(function(){
     })
 })
 
+$(document).ready(function(){
+    $(".skill-label").click(function() {
+        var hero = this.id.split("-")[0];
+        var toDisplay = "#"+this.id+"-info";
+        var skill = this.id.split("-")[1];
+        hero = team[+hero.split("o")[1] - 1];
+
+        $("#hero1-weapon-info").slideToggle("slow");
+    })
+})

@@ -213,8 +213,60 @@ th, td {
     shape-rendering: crispEdges;
 }
 
-#hero1, #hero2, #hero3, #hero4 {
-    border-radius: 15px;
-    border: 2px solid black;
-    margin: 2px;
+#sim-team {
+    margin: 10px;
+}
+
+#sim-heroes > td {
+    padding: 10px;
+}
+
+.boon-bane {
+    margin: 10px 0px;
+}
+
+#hero1-skills > div,
+#hero2-skills > div,
+#hero3-skills > div,
+#hero4-skills > div {
+    margin: 4px 2px;
+    width: 200px;
+    display: block;
+}
+
+#hero1-stat-table,
+#hero2-stat-table,
+#hero3-stat-table,
+#hero4-stat-table {
+    border: none;
+    width: 200px;
+    text-align: center;
+    margin: 1px;
+    margin-bottom: 5px;
+}
+
+#hero1-stat-table > tbody > tr > th,
+#hero1-stat-table > tbody > tr > td,
+#hero2-stat-table > tbody > tr > th,
+#hero2-stat-table > tbody > tr > td,
+#hero3-stat-table > tbody > tr > th,
+#hero3-stat-table > tbody > tr > td,
+#hero4-stat-table > tbody > tr > th,
+#hero4-stat-table > tbody > tr > td {
+    border: none;
+    text-align: center;
+}
+
+.stat-label {
+    text-align: left !important;
+    padding: 0px !important;
+}
+
+.sim-selector {
+    width: 150px;
+    float: right;
+}
+
+.special-charge {
+    margin-left: 10px;
 }
