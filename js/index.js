@@ -823,14 +823,26 @@ $(document).ready(function(){
         var toDisplay = "#"+this.id+"-info";
         var skill = this.id.split("-")[1];
         hero = team[+hero.split("o")[1] - 1];
-        console.log(hero);
         var choice = "#"+this.id +"-choice";
+        console.log(choice);
         var text;
         if(choice.split("-")[1] == "Weapon") {
             text = "<p>Mt: "+weapons[$(choice).val()].Mt+"</p>"
             +"<p>Effect: "+weapons[$(choice).val()].Desc+"</p>";
+        } else if(choice.split("-")[1] == "Assist") {
+            text ="<p>"+assists[$(choice).val()].Desc+"</p>";
+        } else if(choice.split("-")[1] == "Special") {
+            text ="<p>"+specials[$(choice).val()].Desc+"</p>";
+        } else if(choice.split("-")[1] == "SkillA") {
+            text ="<p>"+skillsA[$(choice).val()].Desc+"</p>";
+        } else if(choice.split("-")[1] == "SkillB") {
+            text ="<p>"+skillsB[$(choice).val()].Desc+"</p>";
+        } else if(choice.split("-")[1] == "SkillC") {
+            text ="<p>"+skillsC[$(choice).val()].Desc+"</p>";
+        } else if(choice.split("-")[1] == "SkillS") {
+            text ="<p>"+skillsS[$(choice).val()].Desc+"</p>";
         }
         $(toDisplay).html(text);
         $(toDisplay).slideToggle("slow");
-    })
+    });
 })

@@ -268,6 +268,8 @@ th, td {
 .sim-selector {
     width: 150px;
     float: right;
+    size: 8;
+    overflow: auto;
 }
 
 .special-charge {
