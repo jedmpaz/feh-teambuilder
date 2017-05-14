@@ -60,10 +60,10 @@
             <br>
             <button id="colorlessButton" class="color-button">GREY</button>
 
-            <h3>Type</h3>
-            <button id="physicalButton" class="type-button">PHYS</button>
-            <br>
-            <button id="magicalButton" class="type-button">MAGIC</button>
+            <!--<h3>Type</h3>-->
+            <!--<button id="physicalButton" class="type-button">PHYS</button>-->
+            <!--<br>-->
+            <!--<button id="magicalButton" class="type-button">MAGIC</button>-->
 
         </div>
         <div id="shift" class="col-md-5">
@@ -76,533 +76,514 @@
     </div>
 </div>
 <div id="sim-container" style="display:none">
-    <!--<div class="row" id="team-row">-->
-        <!--<div class="col-md-2" id="hero1">-->
-            <!--<h2 id="hero1-name">Hero 1</h2>-->
-        <!--</div>-->
-        <!--<div class="col-md-2" id="hero2">-->
-            <!--<h2 id="hero2-name">Hero 2</h2>-->
-        <!--</div>-->
-        <!--<div class="col-md-2" id="hero3">-->
-            <!--<h2 id="hero3-name">Hero 3</h2>-->
-        <!--</div>-->
-        <!--<div class="col-md-2" id="hero4">-->
-            <!--<h2 id="hero4-name">Hero 4</h2>-->
-        <!--</div>-->
-    <!--</div>-->
-
-    <table id="sim-team">
-        <tr id="sim-heroes">
-            <td id="hero1">
-                <fieldset>
-                    <legend><h2 id="hero1-name">Hero 1</h2></legend>
-                </fieldset>
-                <div id="hero1-stats" class="sim-stats">
-                    <table id="hero1-stat-table">
-                        <tbody id="h1st">
-                            <tr>
-                                <th></th>
-                                <th>Base</th>
-                                <th>Buff</th>
-                                <th>Debuff</th>
-                                <th>Spur</th>
-                            </tr>
-                            <tr>
-                                <td class="stat-label">HP</td>
-                                <td><span id="hero1-HP">-</span></td>
-                            </tr>
-                            <tr>
-                                <td class="stat-label">ATK</td>
-                                <td><span id="hero1-ATK">-</span></td>
-                                <td><input id="hero1-atk-buff" type="number" value="0" min="0" max="7"></td>
-                                <td><input id="hero1-atk-debuff" type="number" value="0" min="-7" max="0"></td>
-                                <td><input id="hero1-atk-spur" type="number" value="0" min="0" max="12"></td>
-                            </tr>
-                            <tr>
-                                <td class="stat-label">SPD</td>
-                                <td><span id="hero1-SPD">-</span></td>
-                                <td><input id="hero1-spd-buff" type="number" value="0" min="0" max="7"></td>
-                                <td><input id="hero1-spd-debuff" type="number" value="0" min="-7" max="0"></td>
-                                <td><input id="hero1-spd-spur" type="number" value="0" min="0" max="12"></td>
-                            </tr>
-                            <tr>
-                                <td class="stat-label">DEF</td>
-                                <td><span id="hero1-DEF">-</span></td>
-                                <td><input id="hero1-def-buff" type="number" value="0" min="0" max="7"></td>
-                                <td><input id="hero1-def-debuff" type="number" value="0" min="-7" max="0"></td>
-                                <td><input id="hero1-def-spur" type="number" value="0" min="0" max="12"></td>
-                            </tr>
-                            <tr>
-                                <td class="stat-label">RES</td>
-                                <td><span id="hero1-RES">-</span></td>
-                                <td><input id="hero1-res-buff" type="number" value="0" min="0" max="7"></td>
-                                <td><input id="hero1-res-debuff" type="number" value="0" min="-7" max="0"></td>
-                                <td><input id="hero1-res-spur" type="number" value="0" min="0" max="12"></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div class="boon-bane">
-                        <div>
-                            <label>Boon/Bane</label>
-                            <select id="hero1-boon">
-                                <option value="neutral">Neutral</option>
-                                <option value="HP">HP</option>
-                                <option value="ATK">ATK</option>
-                                <option value="SPD">SPD</option>
-                                <option value="DEF">DEF</option>
-                                <option value="RES">RES</option>
-                            </select>
-                            <select id="hero1-bane">
-                                <option value="neutral">Neutral</option>
-                                <option value="HP">HP</option>
-                                <option value="ATK">ATK</option>
-                                <option value="SPD">SPD</option>
-                                <option value="DEF">DEF</option>
-                                <option value="RES">RES</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div id="hero1-skills">
-                        <div>
-                            <label id="hero1-Weapon" class="skill-label">Weapon</label>
-                            <select id="hero1-Weapon-choice" class="sim-selector"></select>
-                        </div>
-                        <div id="hero1-Weapon-info" style="display:none">
-                            <p>hi</p>
-                        </div>
-                        <div>
-                            <label>Skill A</label>
-                            <select id="hero1-SkillA-choice" class="sim-selector"></select>
-                        </div>
-                        <div id="hero1-SkillA-info" style="display:none">
-                            <p>hi</p>
-                        </div>
-                        <div>
-                            <label>Skill B</label>
-                            <select id="hero1-SkillB-choice" class="sim-selector"></select>
-                        </div>
-                        <div id="hero1-SkillB-info" style="display:none">
-                            <p>hi</p>
-                        </div>
-                        <div>
-                            <label>Skill C</label>
-                            <select id="hero1-SkillC-choice" class="sim-selector"></select>
-                        </div>
-                        <div id="hero1-SkillC-info" style="display:none">
-                            <p>hi</p>
-                        </div>
-                        <div>
-                            <label>Seal</label>
-                            <select id="hero1-SkillS-choice" class="sim-selector"></select>
-                        </div>
-                        <div id="hero1-SkillS-info" style="display:none">
-                            <p>hi</p>
-                        </div>
-                        <div>
-                            <label>Assist</label>
-                            <select id="hero1-Assist-choice" class="sim-selector"></select>
-                        </div>
-                        <div id="hero1-Assist-info" style="display:none">
-                            <p>hi</p>
-                        </div>
-                        <div>
-                            <label>Special</label>
-                            <select id="hero1-Special-choice" class="sim-selector"></select>
-                        </div>
-                        <div id="hero1-Special-info" style="display:none">
-                            <p>hi</p>
-                        </div>
-                        <div>
-                            <label>Charge</label>
-                            <input id="hero1-charge" class="special-charge" type="number" value="0" min="0" max="5">
-                            <span>/ 3</span>
-                        </div>
-                    </div>
+    <div class="col-md-2" id="hero1">
+        <fieldset>
+            <legend><h2 id="hero1-name">Hero 1</h2></legend>
+        </fieldset>
+        <div id="hero1-stats" class="sim-stats">
+            <table id="hero1-stat-table">
+                <tbody id="h1st">
+                    <tr>
+                        <th></th>
+                        <th>Base</th>
+                        <th>Buff</th>
+                        <th>Debuff</th>
+                        <th>Spur</th>
+                    </tr>
+                    <tr>
+                        <td class="stat-label">HP</td>
+                        <td><span id="hero1-HP">-</span></td>
+                    </tr>
+                    <tr>
+                        <td class="stat-label">ATK</td>
+                        <td><span id="hero1-ATK">-</span></td>
+                        <td><input id="hero1-atk-buff" type="number" value="0" min="0" max="7"></td>
+                        <td><input id="hero1-atk-debuff" type="number" value="0" min="-7" max="0"></td>
+                        <td><input id="hero1-atk-spur" type="number" value="0" min="0" max="12"></td>
+                    </tr>
+                    <tr>
+                        <td class="stat-label">SPD</td>
+                        <td><span id="hero1-SPD">-</span></td>
+                        <td><input id="hero1-spd-buff" type="number" value="0" min="0" max="7"></td>
+                        <td><input id="hero1-spd-debuff" type="number" value="0" min="-7" max="0"></td>
+                        <td><input id="hero1-spd-spur" type="number" value="0" min="0" max="12"></td>
+                    </tr>
+                    <tr>
+                        <td class="stat-label">DEF</td>
+                        <td><span id="hero1-DEF">-</span></td>
+                        <td><input id="hero1-def-buff" type="number" value="0" min="0" max="7"></td>
+                        <td><input id="hero1-def-debuff" type="number" value="0" min="-7" max="0"></td>
+                        <td><input id="hero1-def-spur" type="number" value="0" min="0" max="12"></td>
+                    </tr>
+                    <tr>
+                        <td class="stat-label">RES</td>
+                        <td><span id="hero1-RES">-</span></td>
+                        <td><input id="hero1-res-buff" type="number" value="0" min="0" max="7"></td>
+                        <td><input id="hero1-res-debuff" type="number" value="0" min="-7" max="0"></td>
+                        <td><input id="hero1-res-spur" type="number" value="0" min="0" max="12"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="boon-bane">
+                <div>
+                    <label>Boon/Bane</label>
+                    <select id="hero1-boon">
+                        <option value="neutral">-</option>
+                        <option value="HP">HP</option>
+                        <option value="ATK">ATK</option>
+                        <option value="SPD">SPD</option>
+                        <option value="DEF">DEF</option>
+                        <option value="RES">RES</option>
+                    </select>
+                    <select id="hero1-bane">
+                        <option value="neutral">-</option>
+                        <option value="HP">HP</option>
+                        <option value="ATK">ATK</option>
+                        <option value="SPD">SPD</option>
+                        <option value="DEF">DEF</option>
+                        <option value="RES">RES</option>
+                    </select>
                 </div>
-            </td>
-            <td id="hero2">
-                <fieldset>
-                    <legend><h2 id="hero2-name">Hero 2</h2></legend>
-                </fieldset>
-                <div id="hero2-stats" class="sim-stats">
-                    <table id="hero2-stat-table">
-                        <tbody>
-                        <tr>
-                            <th></th>
-                            <th>Base</th>
-                            <th>Buff</th>
-                            <th>Debuff</th>
-                            <th>Spur</th>
-                        </tr>
-                        <tr>
-                            <td class="stat-label">HP</td>
-                            <td><span id="hero2-HP">-</span></td>
-                        </tr>
-                        <tr>
-                            <td class="stat-label">ATK</td>
-                            <td><span id="hero2-ATK">-</span></td>
-                            <td><input id="hero2-atk-buff" type="number" value="0" min="0" max="7"></td>
-                            <td><input id="hero2-atk-debuff" type="number" value="0" min="-7" max="0"></td>
-                            <td><input id="hero2-atk-spur" type="number" value="0" min="0" max="12"></td>
-                        </tr>
-                        <tr>
-                            <td class="stat-label">SPD</td>
-                            <td><span id="hero2-SPD">-</span></td>
-                            <td><input id="hero2-spd-buff" type="number" value="0" min="0" max="7"></td>
-                            <td><input id="hero2-spd-debuff" type="number" value="0" min="-7" max="0"></td>
-                            <td><input id="hero2-spd-spur" type="number" value="0" min="0" max="12"></td>
-                        </tr>
-                        <tr>
-                            <td class="stat-label">DEF</td>
-                            <td><span id="hero2-DEF">-</span></td>
-                            <td><input id="hero2-def-buff" type="number" value="0" min="0" max="7"></td>
-                            <td><input id="hero2-def-debuff" type="number" value="0" min="-7" max="0"></td>
-                            <td><input id="hero2-def-spur" type="number" value="0" min="0" max="12"></td>
-                        </tr>
-                        <tr>
-                            <td class="stat-label">RES</td>
-                            <td><span id="hero2-RES">-</span></td>
-                            <td><input id="hero2-res-buff" type="number" value="0" min="0" max="7"></td>
-                            <td><input id="hero2-res-debuff" type="number" value="0" min="-7" max="0"></td>
-                            <td><input id="hero2-res-spur" type="number" value="0" min="0" max="12"></td>
-                        </tr>
-                        </tbody>
-                    </table>
-                    <div class="boon-bane">
-                        <div>
-                            <label>Boon/Bane</label>
-                            <select id="hero2-Boon">
-                                <option value="neutral">Neutral</option>
-                                <option value="HP">HP</option>
-                                <option value="ATK">ATK</option>
-                                <option value="SPD">SPD</option>
-                                <option value="DEF">DEF</option>
-                                <option value="RES">RES</option>
-                            </select>
-                            <select id="hero2-Bane">
-                                <option value="neutral">Neutral</option>
-                                <option value="HP">HP</option>
-                                <option value="ATK">ATK</option>
-                                <option value="SPD">SPD</option>
-                                <option value="DEF">DEF</option>
-                                <option value="RES">RES</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div id="hero2-skills">
-                        <div>
-                            <label id="hero2-Weapon" class="skill-label">Weapon</label>
-                            <select id="hero2-Weapon-choice" class="sim-selector"></select>
-                        </div>
-                        <div id="hero2-Weapon-info" style="display:none">
-                            <p>hi</p>
-                        </div>
-                        <div>
-                            <label>Skill A</label>
-                            <select id="hero2-SkillA-choice" class="sim-selector"></select>
-                        </div>
-                        <div id="hero2-SkillA-info" style="display:none">
-                            <p>hi</p>
-                        </div>
-                        <div>
-                            <label>Skill B</label>
-                            <select id="hero2-SkillB-choice" class="sim-selector"></select>
-                        </div>
-                        <div id="hero2-SkillB-info" style="display:none">
-                            <p>hi</p>
-                        </div>
-                        <div>
-                            <label>Skill C</label>
-                            <select id="hero2-SkillC-choice" class="sim-selector"></select>
-                        </div>
-                        <div id="hero2-SkillC-info" style="display:none">
-                            <p>hi</p>
-                        </div>
-                        <div>
-                            <label>Seal</label>
-                            <select id="hero2-SkillS-choice" class="sim-selector"></select>
-                        </div>
-                        <div id="hero2-SkillS-info" style="display:none">
-                            <p>hi</p>
-                        </div>
-                        <div>
-                            <label>Assist</label>
-                            <select id="hero2-Assist-choice" class="sim-selector"></select>
-                        </div>
-                        <div id="hero2-Assist-info" style="display:none">
-                            <p>hi</p>
-                        </div>
-                        <div>
-                            <label>Special</label>
-                            <select id="hero2-Special-choice" class="sim-selector"></select>
-                        </div>
-                        <div id="hero2-Special-info" style="display:none">
-                            <p>hi</p>
-                        </div>
-                        <div>
-                            <label>Charge</label>
-                            <input id="hero2-charge" class="special-charge" type="number" value="0" min="0" max="5">
-                            <span>/ 3</span>
-                        </div>
-                    </div>
+            </div>
+            <div id="hero1-skills">
+                <div>
+                    <label id="hero1-Weapon" class="skill-label">Weapon</label>
+                    <select id="hero1-Weapon-choice" class="sim-selector"></select>
                 </div>
-            </td>
-            <td id="hero3">
-                <fieldset>
-                    <legend><h2 id="hero3-name">Hero 3</h2></legend>
-                </fieldset>
-                <div id="hero3-stats" class="sim-stats">
-                    <table id="hero3-stat-table">
-                        <tbody>
-                        <tr>
-                            <th></th>
-                            <th>Base</th>
-                            <th>Buff</th>
-                            <th>Debuff</th>
-                            <th>Spur</th>
-                        </tr>
-                        <tr>
-                            <td class="stat-label">HP</td>
-                            <td><span id="hero3-HP">-</span></td>
-                        </tr>
-                        <tr>
-                            <td class="stat-label">ATK</td>
-                            <td><span id="hero3-ATK">-</span></td>
-                            <td><input id="hero3-ATK-buff" type="number" value="0" min="0" max="7"></td>
-                            <td><input id="hero3-ATK-debuff" type="number" value="0" min="-7" max="0"></td>
-                            <td><input id="hero3-ATK-spur" type="number" value="0" min="0" max="12"></td>
-                        </tr>
-                        <tr>
-                            <td class="stat-label">SPD</td>
-                            <td><span id="hero3-SPD">-</span></td>
-                            <td><input id="hero3-SPD-buff" type="number" value="0" min="0" max="7"></td>
-                            <td><input id="hero3-SPD-debuff" type="number" value="0" min="-7" max="0"></td>
-                            <td><input id="hero3-SPD-spur" type="number" value="0" min="0" max="12"></td>
-                        </tr>
-                        <tr>
-                            <td class="stat-label">DEF</td>
-                            <td><span id="hero3-DEF">-</span></td>
-                            <td><input id="hero3-DEF-buff" type="number" value="0" min="0" max="7"></td>
-                            <td><input id="hero3-DEF-debuff" type="number" value="0" min="-7" max="0"></td>
-                            <td><input id="hero3-DEF-spur" type="number" value="0" min="0" max="12"></td>
-                        </tr>
-                        <tr>
-                            <td class="stat-label">RES</td>
-                            <td><span id="hero3-RES">-</span></td>
-                            <td><input id="hero4-RES-buff" type="number" value="0" min="0" max="7"></td>
-                            <td><input id="hero4-RES-debuff" type="number" value="0" min="-7" max="0"></td>
-                            <td><input id="hero4-RES-spur" type="number" value="0" min="0" max="12"></td>
-                        </tr>
-                        </tbody>
-                    </table>
-                    <div class="boon-bane">
-                        <div>
-                            <label>Boon/Bane</label>
-                            <select id="hero3-Boon">
-                                <option value="neutral">Neutral</option>
-                                <option value="HP">HP</option>
-                                <option value="ATK">ATK</option>
-                                <option value="SPD">SPD</option>
-                                <option value="DEF">DEF</option>
-                                <option value="RES">RES</option>
-                            </select>
-                            <select id="hero3-Bane">
-                                <option value="neutral">Neutral</option>
-                                <option value="HP">HP</option>
-                                <option value="ATK">ATK</option>
-                                <option value="SPD">SPD</option>
-                                <option value="DEF">DEF</option>
-                                <option value="RES">RES</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div id="hero3-skills">
-                        <div>
-                            <label id="hero3-Weapon" class="skill-label">Weapon</label>
-                            <select id="hero3-Weapon-choice" class="sim-selector"></select>
-                        </div>
-                        <div id="hero3-Weapon-info" style="display:none">
-                            <p>hi</p>
-                        </div>
-                        <div>
-                            <label>Skill A</label>
-                            <select id="hero3-SkillA-choice" class="sim-selector"></select>
-                        </div>
-                        <div id="hero3-SkillA-info" style="display:none">
-                            <p>hi</p>
-                        </div>
-                        <div>
-                            <label>Skill B</label>
-                            <select id="hero3-SkillB-choice" class="sim-selector"></select>
-                        </div>
-                        <div id="hero3-SkillB-info" style="display:none">
-                            <p>hi</p>
-                        </div>
-                        <div>
-                            <label>Skill C</label>
-                            <select id="hero3-SkillC-choice" class="sim-selector"></select>
-                        </div>
-                        <div id="hero3-SkillC-info" style="display:none">
-                            <p>hi</p>
-                        </div>
-                        <div>
-                            <label>Seal</label>
-                            <select id="hero3-SkillS-choice" class="sim-selector"></select>
-                        </div>
-                        <div id="hero3-SkillS-info" style="display:none">
-                            <p>hi</p>
-                        </div>
-                        <div>
-                            <label>Assist</label>
-                            <select id="hero3-Assist-choice" class="sim-selector"></select>
-                        </div>
-                        <div id="hero3-Assist-info" style="display:none">
-                            <p>hi</p>
-                        </div>
-                        <div>
-                            <label>Special</label>
-                            <select id="hero3-Special-choice" class="sim-selector"></select>
-                        </div>
-                        <div id="hero3-Special-info" style="display:none">
-                            <p>hi</p>
-                        </div>
-                        <div>
-                            <label>Charge</label>
-                            <input id="hero3-charge" class="special-charge" type="number" value="0" min="0" max="5">
-                            <span>/ 3</span>
-                        </div>
-                    </div>
+                <div id="hero1-Weapon-info" style="display:none">
+                    <p>hi</p>
                 </div>
-            </td>
-            <td id="hero4">
-                <fieldset>
-                    <legend><h2 id="hero4-name">Hero 4</h2></legend>
-                </fieldset>
-                <div id="hero4-stats" class="sim-stats">
-                    <table id="hero4-stat-table">
-                        <tbody>
-                        <tr>
-                            <th></th>
-                            <th>Base</th>
-                            <th>Buff</th>
-                            <th>Debuff</th>
-                            <th>Spur</th>
-                        </tr>
-                        <tr>
-                            <td class="stat-label">HP</td>
-                            <td><span id="hero4-HP">-</span></td>
-                        </tr>
-                        <tr>
-                            <td class="stat-label">ATK</td>
-                            <td><span id="hero4-ATK">-</span></td>
-                            <td><input id="hero4-ATK-buff" type="number" value="0" min="0" max="7"></td>
-                            <td><input id="hero4-ATK-debuff" type="number" value="0" min="-7" max="0"></td>
-                            <td><input id="hero4-ATK-spur" type="number" value="0" min="0" max="12"></td>
-                        </tr>
-                        <tr>
-                            <td class="stat-label">SPD</td>
-                            <td><span id="hero4-SPD">-</span></td>
-                            <td><input id="hero4-SPD-buff" type="number" value="0" min="0" max="7"></td>
-                            <td><input id="hero4-SPD-debuff" type="number" value="0" min="-7" max="0"></td>
-                            <td><input id="hero4-SPD-spur" type="number" value="0" min="0" max="12"></td>
-                        </tr>
-                        <tr>
-                            <td class="stat-label">DEF</td>
-                            <td><span id="hero4-DEF">-</span></td>
-                            <td><input id="hero4-DEF-buff" type="number" value="0" min="0" max="7"></td>
-                            <td><input id="hero4-DEF-debuff" type="number" value="0" min="-7" max="0"></td>
-                            <td><input id="hero4-DEF-spur" type="number" value="0" min="0" max="12"></td>
-                        </tr>
-                        <tr>
-                            <td class="stat-label">RES</td>
-                            <td><span id="hero4-RES">-</span></td>
-                            <td><input id="hero4-RES-buff" type="number" value="0" min="0" max="7"></td>
-                            <td><input id="hero4-RES-debuff" type="number" value="0" min="-7" max="0"></td>
-                            <td><input id="hero4-RES-spur" type="number" value="0" min="0" max="12"></td>
-                        </tr>
-                        </tbody>
-                    </table>
-                    <div class="boon-bane">
-                        <div>
-                            <label>Boon/Bane</label>
-                            <select id="hero4-Boon">
-                                <option value="neutral">Neutral</option>
-                                <option value="HP">HP</option>
-                                <option value="ATK">ATK</option>
-                                <option value="SPD">SPD</option>
-                                <option value="DEF">DEF</option>
-                                <option value="RES">RES</option>
-                            </select>
-                            <select id="hero4-Bane">
-                                <option value="neutral">Neutral</option>
-                                <option value="HP">HP</option>
-                                <option value="ATK">ATK</option>
-                                <option value="SPD">SPD</option>
-                                <option value="DEF">DEF</option>
-                                <option value="RES">RES</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div id="hero4-skills">
-                        <div>
-                            <label id="hero4-Weapon" class="skill-label">Weapon</label>
-                            <select id="hero4-Weapon-choice" class="sim-selector"></select>
-                        </div>
-                        <div id="hero4-Weapon-info" style="display:none">
-                            <p>hi</p>
-                        </div>
-                        <div>
-                            <label>Skill A</label>
-                            <select id="hero4-SkillA-choice" class="sim-selector"></select>
-                        </div>
-                        <div id="hero4-SkillA-info" style="display:none">
-                            <p>hi</p>
-                        </div>
-                        <div>
-                            <label>Skill B</label>
-                            <select id="hero4-SkillB-choice" class="sim-selector"></select>
-                        </div>
-                        <div id="hero4-SkillB-info" style="display:none">
-                            <p>hi</p>
-                        </div>
-                        <div>
-                            <label>Skill C</label>
-                            <select id="hero4-SkillC-choice" class="sim-selector"></select>
-                        </div>
-                        <div id="hero4-SkillC-info" style="display:none">
-                            <p>hi</p>
-                        </div>
-                        <div>
-                            <label>Seal</label>
-                            <select id="hero4-SkillS-choice" class="sim-selector"></select>
-                        </div>
-                        <div id="hero4-SkillS-info" style="display:none">
-                            <p>hi</p>
-                        </div>
-                        <div>
-                            <label>Assist</label>
-                            <select id="hero4-Assist-choice" class="sim-selector"></select>
-                        </div>
-                        <div id="hero4-Assist-info" style="display:none">
-                            <p>hi</p>
-                        </div>
-                        <div>
-                            <label>Special</label>
-                            <select id="hero4-Special-choice" class="sim-selector"></select>
-                        </div>
-                        <div id="hero4-Special-info" style="display:none">
-                            <p>hi</p>
-                        </div>
-                        <div>
-                            <label>Charge</label>
-                            <input id="hero4-charge" class="special-charge" type="number" value="0" min="0" max="5">
-                            <span>/ 3</span>
-                        </div>
-                    </div>
+                <div>
+                    <label>Skill A</label>
+                    <select id="hero1-SkillA-choice" class="sim-selector"></select>
                 </div>
-            </td>
-        </tr>
-    </table>
+                <div id="hero1-SkillA-info" style="display:none">
+                    <p>hi</p>
+                </div>
+                <div>
+                    <label>Skill B</label>
+                    <select id="hero1-SkillB-choice" class="sim-selector"></select>
+                </div>
+                <div id="hero1-SkillB-info" style="display:none">
+                    <p>hi</p>
+                </div>
+                <div>
+                    <label>Skill C</label>
+                    <select id="hero1-SkillC-choice" class="sim-selector"></select>
+                </div>
+                <div id="hero1-SkillC-info" style="display:none">
+                    <p>hi</p>
+                </div>
+                <div>
+                    <label>Seal</label>
+                    <select id="hero1-SkillS-choice" class="sim-selector"></select>
+                </div>
+                <div id="hero1-SkillS-info" style="display:none">
+                    <p>hi</p>
+                </div>
+                <div>
+                    <label>Assist</label>
+                    <select id="hero1-Assist-choice" class="sim-selector"></select>
+                </div>
+                <div id="hero1-Assist-info" style="display:none">
+                    <p>hi</p>
+                </div>
+                <div>
+                    <label>Special</label>
+                    <select id="hero1-Special-choice" class="sim-selector"></select>
+                </div>
+                <div id="hero1-Special-info" style="display:none">
+                    <p>hi</p>
+                </div>
+                <div>
+                    <label>Charge</label>
+                    <input id="hero1-charge" class="special-charge" type="number" value="0" min="0" max="5">
+                    <span id="hero1-totalcharge">/ 3</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2" id="hero2">
+        <fieldset>
+            <legend><h2 id="hero2-name">Hero 2</h2></legend>
+        </fieldset>
+        <div id="hero2-stats" class="sim-stats">
+            <table id="hero2-stat-table">
+                <tbody>
+                <tr>
+                    <th></th>
+                    <th>Base</th>
+                    <th>Buff</th>
+                    <th>Debuff</th>
+                    <th>Spur</th>
+                </tr>
+                <tr>
+                    <td class="stat-label">HP</td>
+                    <td><span id="hero2-HP">-</span></td>
+                </tr>
+                <tr>
+                    <td class="stat-label">ATK</td>
+                    <td><span id="hero2-ATK">-</span></td>
+                    <td><input id="hero2-atk-buff" type="number" value="0" min="0" max="7"></td>
+                    <td><input id="hero2-atk-debuff" type="number" value="0" min="-7" max="0"></td>
+                    <td><input id="hero2-atk-spur" type="number" value="0" min="0" max="12"></td>
+                </tr>
+                <tr>
+                    <td class="stat-label">SPD</td>
+                    <td><span id="hero2-SPD">-</span></td>
+                    <td><input id="hero2-spd-buff" type="number" value="0" min="0" max="7"></td>
+                    <td><input id="hero2-spd-debuff" type="number" value="0" min="-7" max="0"></td>
+                    <td><input id="hero2-spd-spur" type="number" value="0" min="0" max="12"></td>
+                </tr>
+                <tr>
+                    <td class="stat-label">DEF</td>
+                    <td><span id="hero2-DEF">-</span></td>
+                    <td><input id="hero2-def-buff" type="number" value="0" min="0" max="7"></td>
+                    <td><input id="hero2-def-debuff" type="number" value="0" min="-7" max="0"></td>
+                    <td><input id="hero2-def-spur" type="number" value="0" min="0" max="12"></td>
+                </tr>
+                <tr>
+                    <td class="stat-label">RES</td>
+                    <td><span id="hero2-RES">-</span></td>
+                    <td><input id="hero2-res-buff" type="number" value="0" min="0" max="7"></td>
+                    <td><input id="hero2-res-debuff" type="number" value="0" min="-7" max="0"></td>
+                    <td><input id="hero2-res-spur" type="number" value="0" min="0" max="12"></td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="boon-bane">
+                <div>
+                    <label>Boon/Bane</label>
+                    <select id="hero2-Boon">
+                        <option value="neutral">-</option>
+                        <option value="HP">HP</option>
+                        <option value="ATK">ATK</option>
+                        <option value="SPD">SPD</option>
+                        <option value="DEF">DEF</option>
+                        <option value="RES">RES</option>
+                    </select>
+                    <select id="hero2-Bane">
+                        <option value="neutral">-</option>
+                        <option value="HP">HP</option>
+                        <option value="ATK">ATK</option>
+                        <option value="SPD">SPD</option>
+                        <option value="DEF">DEF</option>
+                        <option value="RES">RES</option>
+                    </select>
+                </div>
+            </div>
+            <div id="hero2-skills">
+                <div>
+                    <label id="hero2-Weapon" class="skill-label">Weapon</label>
+                    <select id="hero2-Weapon-choice" class="sim-selector"></select>
+                </div>
+                <div id="hero2-Weapon-info" style="display:none">
+                    <p>hi</p>
+                </div>
+                <div>
+                    <label>Skill A</label>
+                    <select id="hero2-SkillA-choice" class="sim-selector"></select>
+                </div>
+                <div id="hero2-SkillA-info" style="display:none">
+                    <p>hi</p>
+                </div>
+                <div>
+                    <label>Skill B</label>
+                    <select id="hero2-SkillB-choice" class="sim-selector"></select>
+                </div>
+                <div id="hero2-SkillB-info" style="display:none">
+                    <p>hi</p>
+                </div>
+                <div>
+                    <label>Skill C</label>
+                    <select id="hero2-SkillC-choice" class="sim-selector"></select>
+                </div>
+                <div id="hero2-SkillC-info" style="display:none">
+                    <p>hi</p>
+                </div>
+                <div>
+                    <label>Seal</label>
+                    <select id="hero2-SkillS-choice" class="sim-selector"></select>
+                </div>
+                <div id="hero2-SkillS-info" style="display:none">
+                    <p>hi</p>
+                </div>
+                <div>
+                    <label>Assist</label>
+                    <select id="hero2-Assist-choice" class="sim-selector"></select>
+                </div>
+                <div id="hero2-Assist-info" style="display:none">
+                    <p>hi</p>
+                </div>
+                <div>
+                    <label>Special</label>
+                    <select id="hero2-Special-choice" class="sim-selector"></select>
+                </div>
+                <div id="hero2-Special-info" style="display:none">
+                    <p>hi</p>
+                </div>
+                <div>
+                    <label>Charge</label>
+                    <input id="hero2-charge" class="special-charge" type="number" value="0" min="0" max="5">
+                    <span id="hero2-totalcharge">/ 3</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2" id="hero3">
+        <fieldset>
+            <legend><h2 id="hero3-name">Hero 3</h2></legend>
+        </fieldset>
+        <div id="hero3-stats" class="sim-stats">
+            <table id="hero3-stat-table">
+                <tbody>
+                <tr>
+                    <th></th>
+                    <th>Base</th>
+                    <th>Buff</th>
+                    <th>Debuff</th>
+                    <th>Spur</th>
+                </tr>
+                <tr>
+                    <td class="stat-label">HP</td>
+                    <td><span id="hero3-HP">-</span></td>
+                </tr>
+                <tr>
+                    <td class="stat-label">ATK</td>
+                    <td><span id="hero3-ATK">-</span></td>
+                    <td><input id="hero3-ATK-buff" type="number" value="0" min="0" max="7"></td>
+                    <td><input id="hero3-ATK-debuff" type="number" value="0" min="-7" max="0"></td>
+                    <td><input id="hero3-ATK-spur" type="number" value="0" min="0" max="12"></td>
+                </tr>
+                <tr>
+                    <td class="stat-label">SPD</td>
+                    <td><span id="hero3-SPD">-</span></td>
+                    <td><input id="hero3-SPD-buff" type="number" value="0" min="0" max="7"></td>
+                    <td><input id="hero3-SPD-debuff" type="number" value="0" min="-7" max="0"></td>
+                    <td><input id="hero3-SPD-spur" type="number" value="0" min="0" max="12"></td>
+                </tr>
+                <tr>
+                    <td class="stat-label">DEF</td>
+                    <td><span id="hero3-DEF">-</span></td>
+                    <td><input id="hero3-DEF-buff" type="number" value="0" min="0" max="7"></td>
+                    <td><input id="hero3-DEF-debuff" type="number" value="0" min="-7" max="0"></td>
+                    <td><input id="hero3-DEF-spur" type="number" value="0" min="0" max="12"></td>
+                </tr>
+                <tr>
+                    <td class="stat-label">RES</td>
+                    <td><span id="hero3-RES">-</span></td>
+                    <td><input id="hero4-RES-buff" type="number" value="0" min="0" max="7"></td>
+                    <td><input id="hero4-RES-debuff" type="number" value="0" min="-7" max="0"></td>
+                    <td><input id="hero4-RES-spur" type="number" value="0" min="0" max="12"></td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="boon-bane">
+                <div>
+                    <label>Boon/Bane</label>
+                    <select id="hero3-Boon">
+                        <option value="neutral">-</option>
+                        <option value="HP">HP</option>
+                        <option value="ATK">ATK</option>
+                        <option value="SPD">SPD</option>
+                        <option value="DEF">DEF</option>
+                        <option value="RES">RES</option>
+                    </select>
+                    <select id="hero3-Bane">
+                        <option value="neutral">-</option>
+                        <option value="HP">HP</option>
+                        <option value="ATK">ATK</option>
+                        <option value="SPD">SPD</option>
+                        <option value="DEF">DEF</option>
+                        <option value="RES">RES</option>
+                    </select>
+                </div>
+            </div>
+            <div id="hero3-skills">
+                <div>
+                    <label id="hero3-Weapon" class="skill-label">Weapon</label>
+                    <select id="hero3-Weapon-choice" class="sim-selector"></select>
+                </div>
+                <div id="hero3-Weapon-info" style="display:none">
+                    <p>hi</p>
+                </div>
+                <div>
+                    <label>Skill A</label>
+                    <select id="hero3-SkillA-choice" class="sim-selector"></select>
+                </div>
+                <div id="hero3-SkillA-info" style="display:none">
+                    <p>hi</p>
+                </div>
+                <div>
+                    <label>Skill B</label>
+                    <select id="hero3-SkillB-choice" class="sim-selector"></select>
+                </div>
+                <div id="hero3-SkillB-info" style="display:none">
+                    <p>hi</p>
+                </div>
+                <div>
+                    <label>Skill C</label>
+                    <select id="hero3-SkillC-choice" class="sim-selector"></select>
+                </div>
+                <div id="hero3-SkillC-info" style="display:none">
+                    <p>hi</p>
+                </div>
+                <div>
+                    <label>Seal</label>
+                    <select id="hero3-SkillS-choice" class="sim-selector"></select>
+                </div>
+                <div id="hero3-SkillS-info" style="display:none">
+                    <p>hi</p>
+                </div>
+                <div>
+                    <label>Assist</label>
+                    <select id="hero3-Assist-choice" class="sim-selector"></select>
+                </div>
+                <div id="hero3-Assist-info" style="display:none">
+                    <p>hi</p>
+                </div>
+                <div>
+                    <label>Special</label>
+                    <select id="hero3-Special-choice" class="sim-selector"></select>
+                </div>
+                <div id="hero3-Special-info" style="display:none">
+                    <p>hi</p>
+                </div>
+                <div>
+                    <label>Charge</label>
+                    <input id="hero3-charge" class="special-charge" type="number" value="0" min="0" max="5">
+                    <span id="hero3-totalcharge">/ 3</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2" id="hero4">
+        <fieldset>
+            <legend><h2 id="hero4-name">Hero 4</h2></legend>
+        </fieldset>
+        <div id="hero4-stats" class="sim-stats">
+            <table id="hero4-stat-table">
+                <tbody>
+                <tr>
+                    <th></th>
+                    <th>Base</th>
+                    <th>Buff</th>
+                    <th>Debuff</th>
+                    <th>Spur</th>
+                </tr>
+                <tr>
+                    <td class="stat-label">HP</td>
+                    <td><span id="hero4-HP">-</span></td>
+                </tr>
+                <tr>
+                    <td class="stat-label">ATK</td>
+                    <td><span id="hero4-ATK">-</span></td>
+                    <td><input id="hero4-ATK-buff" type="number" value="0" min="0" max="7"></td>
+                    <td><input id="hero4-ATK-debuff" type="number" value="0" min="-7" max="0"></td>
+                    <td><input id="hero4-ATK-spur" type="number" value="0" min="0" max="12"></td>
+                </tr>
+                <tr>
+                    <td class="stat-label">SPD</td>
+                    <td><span id="hero4-SPD">-</span></td>
+                    <td><input id="hero4-SPD-buff" type="number" value="0" min="0" max="7"></td>
+                    <td><input id="hero4-SPD-debuff" type="number" value="0" min="-7" max="0"></td>
+                    <td><input id="hero4-SPD-spur" type="number" value="0" min="0" max="12"></td>
+                </tr>
+                <tr>
+                    <td class="stat-label">DEF</td>
+                    <td><span id="hero4-DEF">-</span></td>
+                    <td><input id="hero4-DEF-buff" type="number" value="0" min="0" max="7"></td>
+                    <td><input id="hero4-DEF-debuff" type="number" value="0" min="-7" max="0"></td>
+                    <td><input id="hero4-DEF-spur" type="number" value="0" min="0" max="12"></td>
+                </tr>
+                <tr>
+                    <td class="stat-label">RES</td>
+                    <td><span id="hero4-RES">-</span></td>
+                    <td><input id="hero4-RES-buff" type="number" value="0" min="0" max="7"></td>
+                    <td><input id="hero4-RES-debuff" type="number" value="0" min="-7" max="0"></td>
+                    <td><input id="hero4-RES-spur" type="number" value="0" min="0" max="12"></td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="boon-bane">
+                <div>
+                    <label>Boon/Bane</label>
+                    <select id="hero4-Boon">
+                        <option value="neutral">-</option>
+                        <option value="HP">HP</option>
+                        <option value="ATK">ATK</option>
+                        <option value="SPD">SPD</option>
+                        <option value="DEF">DEF</option>
+                        <option value="RES">RES</option>
+                    </select>
+                    <select id="hero4-Bane">
+                        <option value="neutral">-</option>
+                        <option value="HP">HP</option>
+                        <option value="ATK">ATK</option>
+                        <option value="SPD">SPD</option>
+                        <option value="DEF">DEF</option>
+                        <option value="RES">RES</option>
+                    </select>
+                </div>
+            </div>
+            <div id="hero4-skills">
+                <div>
+                    <label id="hero4-Weapon" class="skill-label">Weapon</label>
+                    <select id="hero4-Weapon-choice" class="sim-selector"></select>
+                </div>
+                <div id="hero4-Weapon-info" style="display:none">
+                    <p>hi</p>
+                </div>
+                <div>
+                    <label>Skill A</label>
+                    <select id="hero4-SkillA-choice" class="sim-selector"></select>
+                </div>
+                <div id="hero4-SkillA-info" style="display:none">
+                    <p>hi</p>
+                </div>
+                <div>
+                    <label>Skill B</label>
+                    <select id="hero4-SkillB-choice" class="sim-selector"></select>
+                </div>
+                <div id="hero4-SkillB-info" style="display:none">
+                    <p>hi</p>
+                </div>
+                <div>
+                    <label>Skill C</label>
+                    <select id="hero4-SkillC-choice" class="sim-selector"></select>
+                </div>
+                <div id="hero4-SkillC-info" style="display:none">
+                    <p>hi</p>
+                </div>
+                <div>
+                    <label>Seal</label>
+                    <select id="hero4-SkillS-choice" class="sim-selector"></select>
+                </div>
+                <div id="hero4-SkillS-info" style="display:none">
+                    <p>hi</p>
+                </div>
+                <div>
+                    <label>Assist</label>
+                    <select id="hero4-Assist-choice" class="sim-selector"></select>
+                </div>
+                <div id="hero4-Assist-info" style="display:none">
+                    <p>hi</p>
+                </div>
+                <div>
+                    <label>Special</label>
+                    <select id="hero4-Special-choice" class="sim-selector"></select>
+                </div>
+                <div id="hero4-Special-info" style="display:none">
+                    <p>hi</p>
+                </div>
+                <div>
+                    <label>Charge</label>
+                    <input id="hero4-charge" class="special-charge" type="number" value="0" min="0" max="5">
+                    <span id="hero4-totalcharge">/ 3</span>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 </body>
 

@@ -1,146 +1,145 @@
-ID,Name,Mt,Range,Effective,Tag,Legendary,Skill
-1,Absorb,4,2,,,,
-2,Armads,16,1,,,TRUE,"SkillB,Quick Riposte 2"
-3,Armorslayer,8,1,"Movement,Armored",,,
-4,Armorslayer+,12,1,"Movement,Armored",,,
-5,Assassin's Bow,7,2,"Movement,Flier",,,"SkillB,Daggerbreaker 3"
-6,Assassin's Bow+,11,2,"Movement,Flier",,,"SkillB,Daggerbreaker 3"
-7,Assault,10,2,,,,
-8,Aura,14,2,,,TRUE,"SkillC,Breath of Life 2"
-9,Binding Blade,16,1,,,TRUE,
-10,Blue Egg,7,2,,,,
-11,Blue Egg+,11,2,,,,
-12,Blárblade,9,2,,blade,,
-13,Blárblade+,13,2,,blade,,
-14,Blárraven,7,2,"Color,Colorless",,,
-15,Blárraven+,11,2,"Color,Colorless",,,
-16,Blárwolf,10,2,"Movement,Cavalry",,,
-17,Blárwolf+,10,2,"Movement,Cavalry",,,
-18,Bolganone,9,2,,,,
-19,Bolganone+,13,2,,,,
-20,Brave Axe,5,1,,brave,,
-21,Brave Axe+,8,1,,brave,,
-22,Brave Bow,4,2,"Movement,Flier",brave,,
-23,Brave Bow +,7,2,"Movement,Flier",brave,,
-24,Brave Lance,5,1,,brave,,
-25,Brave Lance+,8,1,,brave,,
-26,Brave Sword,5,1,,brave,,
-27,Brave Sword+,8,1,,brave,,
-28,Brynhildr,14,2,,,TRUE,
-29,Carrot Axe+,13,1,,,,
-30,Carrot Lance+,13,1,,,,
-31,Cymbeline,14,2,,,TRUE,
-32,Dark Breath,9,1,,,,
-33,Dark Breath+,13,1,,,,
-34,Deathly Dagger,11,2,,,TRUE,
-35,Dire Thunder,9,2,,brave,TRUE,
-36,Durandal,16,1,,,TRUE,
-37,Eckesachs,16,1,,,TRUE,
-38,Elfire,6,2,,,,
-39,Elthunder,6,2,,,,
-40,Elwind,6,2,,,,
-41,Emerald Axe,12,1,,,,
-42,Emerald Axe+,12,1,,,,
-43,Excalibur,14,2,"""Movement,Flier""",,TRUE,
-44,Falchion,16,1,"Weapon,Dragonstone",,TRUE,
-45,Fear,5,2,,,,
-46,Fenrir,9,2,,,,
-47,Fenrir+,13,2,,,,
-48,Fensalir,16,1,,,TRUE,
-49,Fire,4,2,,,,
-50,Fire Breath,6,1,,,,
-51,Fire Breath+,8,1,,,,
-52,Firesweep Bow,7,2,"Movement,Flier",,,
-53,Firesweep Bow+,11,2,"Movement,Flier",,,
-54,Flametongue,11,1,,,,
-55,Flametongue+,15,1,,,,
-56,Flux,4,2,,,,
-57,Fujin Yumi,14,2,"Movement,Flier",,TRUE,
-58,Fólkvangr,16,1,,,TRUE,
-59,Gravity,6,2,,,,
-60,Green Egg+,11,2,,,,
-61,Gronnblade,9,2,,blade,,
-62,Gronnblade+,13,2,,blade,,
-63,Gronnraven,7,2,"Color,Colorless",,,
-64,Gronnraven+,11,2,"Color,Colorless",,,
-65,Gronnwolf,6,2,"Movement,Cavalry",,,
-66,Gronnwolf+,10,2,"Movement,Cavalry",,,
-67,Hammer,8,1,,,,
-68,Hammer+,12,1,,,,
-69,Hauteclere,16,1,,,TRUE,
-70,Heavy Spear,8,1,,,,
-71,Heavy Spear+,12,1,,,,
-72,Iron Axe,6,1,,,,
-73,Iron Bow,4,2,,,,
-74,Iron Dagger,3,2,,,,
-75,Iron Lance,6,1,,,,
-76,Iron Spear,6,1,,,,
-77,Iron Sword,6,1,,,,
-78,Killer Axe,7,1,,,,
-79,Killer Axe+,11,1,,,,
-80,Killer Bow,5,2,,,,
-81,Killer Bow+,9,2,,,,
-82,Killer Lance,7,1,,,,
-83,Killer Lance+,11,1,,,,
-84,Killing Edge,11,1,,,,
-85,Killing Edge+,11,1,,,,
-86,Light Breath,9,1,,,,
-87,Light Breath+,13,1,,,,
-88,Lightning Breath,7,1,,,,
-89,Lightning Breath+,11,1,,,,
-90,Mystletainn,16,1,,,TRUE,
-91,Naga,14,2,,,TRUE,
-92,Nosferatu,9,2,,,,
-93,Nosferatu+,13,2,,,,
-94,Nóatún,16,1,,,TRUE,
-95,Pain,3,2,,,,
-96,Panic,7,2,,,,
-97,Parthia,14,2,,,TRUE,
-98,Poison Dagger,2,2,,,,
-99,Poison Dagger+,5,2,,,,
-100,Ragnell,16,1,,,TRUE,
-101,Raijinto,16,1,,,TRUE,
-102,Rauorblade,9,2,,,,
-103,Rauorblade+,13,2,,,,
-104,Rauðrraven,11,2,,,,
-105,Rauðrraven+,11,2,,,,
-106,Rauðrwolf,6,2,,,,
-107,Rauðrwolf+,10,2,,,,
-108,Rexcalibur,9,2,,,,
-109,Rexcalibur+,13,2,,,,
-110,Rogue Dagger,4,2,,,,
-111,Rogue Dagger+,7,2,,,,
-112,Ruby Sword,8,1,,,,
-113,Ruby Sword+,12,1,,,,
-114,Ruin,6,2,,,,
-115,Sapphire Lance,8,1,,,,
-116,Sapphire Lance+,12,1,,,,
-117,Sieglinde,16,1,,,TRUE,
-118,Siegmund,16,1,,,TRUE,
-119,Silver Axe,11,1,,,,
-120,Silver Axe+,15,1,,,,
-121,Silver Bow,9,2,,,,
-122,Silver Bow+,13,2,,,,
-123,Silver Dagger,7,2,,,,
-124,Silver Dagger+,10,2,,,,
-125,Silver Lance,11,1,,,,
-126,Silver Lance+,15,1,,,,
-127,Silver Sword,11,1,,,,
-128,Silver Sword+,15,1,,,,
-129,Slow,5,2,,,,
-130,Smoke Dagger,6,2,,,,
-131,Smoke Dagger+,9,2,,,,
-132,Sol Katti,16,1,,,TRUE,
-133,Steel Axe,8,1,,,,
-134,Steel Bow,6,2,,,,
-135,Steel Dagger,5,2,,,,
-136,Steel Lance,8,1,,,,
-137,Steel Spear,8,1,,,,
-138,Steel Sword,8,1,,,,
-139,Thoron,9,2,,,,
-140,Thunder,4,2,,,,
-141,Tyrfing,16,1,,,TRUE,
-142,Wind,4,2,,,,
-143,Wo Dao,9,1,,,,
-144,Wo Dao +,13,1,,,,
-145,Yato,16,1,,,TRUE,
+ID,Name,Mt,Range,Color,Weapon Type,Effective,Tag,Legendary,Skill,Desc
+1,Absorb,4,2,Colorless,Staff,,,,,
+2,Armads,16,1,Green,Axe,,,TRUE,"SkillB,Quick Riposte 2",Unit makes a guaranteed follow-up attack when attacked at HP ≥ 80%.
+3,Armorslayer,8,1,Red,Sword,"Movement,Armored",,,,Effective against armored units.
+4,Armorslayer+,12,1,Red,Sword,"Movement,Armored",,,,Effective against armored units.
+5,Assassin's Bow,7,2,Colorless,Bow,"Movement,Flier",,,"SkillB,Daggerbreaker 3","Effective against flying units. If target has a dagger, it can't make a follow-up attack and this unit will."
+6,Assassin's Bow+,11,2,Colorless,Bow,"Movement,Flier",,,"SkillB,Daggerbreaker 3","Effective against flying units. If target has a dagger, it can't make a follow-up attack and this unit will."
+7,Assault,10,2,Colorless,Staff,,,,,
+8,Aura,14,2,Blue,Tome,,,TRUE,"SkillC,Breath of Life 2",Restores 5 HP to adjacent allies after any combat this unit initiates.
+9,Binding Blade,16,1,Red,Sword,,,TRUE,,Grants Def/Res+2 when this unit is attacked.	
+10,Blue Egg,7,2,Blue,Tome,,,,,"If unit initiates attack, unit recovers 4 HP after the battle."
+11,Blue Egg+,11,2,Blue,Tome,,,,,"If unit initiates attack, unit recovers 4 HP after the battle."
+12,Blárblade,9,2,Blue,Tome,,blade,,,Slows Special trigger (cooldown count+1). Adds total bonuses on unit to damage dealt.
+13,Blárblade+,13,2,Blue,Tome,,blade,,,Slows Special trigger (cooldown count+1). Adds total bonuses on unit to damage dealt.
+14,Blárraven,7,2,Blue,Tome,"Color,Colorless",,,,Grants weapon advantage vs. colorless foes.
+15,Blárraven+,11,2,Blue,Tome,"Color,Colorless",,,,Grants weapon advantage vs. colorless foes.
+16,Blárwolf,10,2,Blue,Tome,"Movement,Cavalry",,,,Effective against cavalry units.
+17,Blárwolf+,10,2,Blue,Tome,"Movement,Cavalry",,,,Effective against cavalry units.
+18,Bolganone,9,2,Red,Tome,,,,,
+19,Bolganone+,13,2,Red,Tome,,,,,
+20,Brave Axe,5,1,Green,Axe,,brave,,,Spd-5. Attack twice when initiating combat.
+21,Brave Axe+,8,1,Green,Axe,,brave,,,Spd-5. Attack twice when initiating combat.	
+22,Brave Bow,4,2,Colorless,Bow,"Movement,Flier",brave,,,Spd-5. Attack twice when initiating combat.	
+23,Brave Bow +,7,2,Colorless,Bow,"Movement,Flier",brave,,,Spd-5. Attack twice when initiating combat.
+24,Brave Lance,5,1,Blue,Lance,,brave,,,Spd-5. Attack twice when initiating combat.	
+25,Brave Lance+,8,1,Blue,Lance,,brave,,,Spd-5. Attack twice when initiating combat.	
+26,Brave Sword,5,1,Red,Sword,,brave,,,Spd-5. Attack twice when initiating combat.
+27,Brave Sword+,8,1,Red,Sword,,brave,,,Spd-5. Attack twice when initiating combat.	
+28,Brynhildr,14,2,Red,Tome,,,TRUE,,"If unit initiates attack, restricts foe's next-turn movement to 1 space or less."
+29,Carrot Axe+,13,1,Green,Axe,,,,,"If unit initiates attack, unit recovers 4 HP after the battle."
+30,Carrot Lance+,13,1,Blue,Lance,,,,,"If unit initiates attack, unit recovers 4 HP after the battle."
+31,Cymbeline,14,2,Red,Tome,,,TRUE,,Grants adjacent allies Atk+4 through their next actions after any combat this unit initiates.
+32,Dark Breath,9,1,Blue,Dragonstone,,,,,"After this unit attacks, foes within 2 spaces of target suffer Atk/Spd-5 through their next actions."
+33,Dark Breath+,13,1,Blue,Dragonstone,,,,,"After this unit attacks, foes within 2 spaces of target suffer Atk/Spd-5 through their next actions."
+34,Deathly Dagger,11,2,Colorless,Dagger,,,TRUE,,"After combat, inflicts Def/Res-7 on foe through its next action. If unit initiated combat, 7 damage to foe after battle."
+35,Dire Thunder,9,2,Blue,Tome,,brave,TRUE,,Spd-5. Attack twice when initiating combat.
+36,Durandal,16,1,Red,Sword,,,TRUE,,Grants Atk+4 during combat if unit initiates attack.
+37,Eckesachs,16,1,Red,Sword,,,TRUE,,Inflicts Def-4 on foes within 2 spaces through their next actions at the start of each turn.
+38,Elfire,6,2,Red,Tome,,,,,
+39,Elthunder,6,2,Blue,Tome,,,,,
+40,Elwind,6,2,Green,Tome,,,,,
+41,Emerald Axe,12,1,Green,Axe,,wta,,,"Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage."
+42,Emerald Axe+,12,1,Green,Axe,,wta,,,"Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage."
+43,Excalibur,14,2,Green,Tome,"Movement,Flier",,TRUE,,Effective against flying units.
+44,Falchion,16,1,Red,Sword,"Weapon,Dragonstone",,TRUE,,"Effective against dragons. At the start of every third turn, unit recovers 10 HP."
+45,Fear,5,2,Colorless,Staff,,,,,
+46,Fenrir,9,2,Red,Tome,,,,,
+47,Fenrir+,13,2,Red,Tome,,,,,
+48,Fensalir,16,1,Blue,Lance,,,TRUE,,Inflicts Atk-4 on foes within 2 spaces through their next actions at the start of each turn.
+49,Fire,4,2,Red,Tome,,,,,
+50,Fire Breath,6,1,Red,Dragonstone,,,,,
+51,Fire Breath+,8,1,Red,Dragonstone,,,,,
+52,Firesweep Bow,7,2,Colorless,Bow,"Movement,Flier",,,,Effective against flying units. Unit and enemies cannot use counterattacks.
+53,Firesweep Bow+,11,2,Colorless,Bow,"Movement,Flier",,,,Effective against flying units. Unit and enemies cannot use counterattacks.
+54,Flametongue,11,1,Red,Dragonstone,,,,,
+55,Flametongue+,15,1,Red,Dragonstone,,,,,
+56,Flux,4,2,Red,Tome,,,,,
+57,Fujin Yumi,14,2,Colorless,Bow,"Movement,Flier",,TRUE,,Effective against flying units. Unit can pass though foes if own HP ≥ 50%.
+58,Fólkvangr,16,1,Red,Sword,,,TRUE,,Grants Atk+5 at start of turn if unit's HP ≤ 50%.
+59,Gravity,6,2,Colorless,Staff,,,,,
+60,Green Egg+,11,2,Green,Tome,,,,,"If unit initiates attack, unit recovers 4 HP after the battle."
+61,Gronnblade,9,2,Green,Tome,,blade,,,Slows Special trigger (cooldown count+1). Adds total bonuses on unit to damage dealt.
+62,Gronnblade+,13,2,Green,Tome,,blade,,,Slows Special trigger (cooldown count+1). Adds total bonuses on unit to damage dealt.
+63,Gronnraven,7,2,Green,Tome,"Color,Colorless",,,,Grants weapon advantage vs. colorless foes.
+64,Gronnraven+,11,2,Green,Tome,"Color,Colorless",,,,Grants weapon advantage vs. colorless foes.
+65,Gronnwolf,6,2,Green,Tome,"Movement,Cavalry",,,,Effective against cavalry units.
+66,Gronnwolf+,10,2,Green,Tome,"Movement,Cavalry",,,,Effective against cavalry units.
+67,Hammer,8,1,Green,Axe,"Movement,Armored",,,,Effective against armored units.
+68,Hammer+,12,1,Green,Axe,"Movement,Armored",,,,Effective against armored units.
+69,Hauteclere,16,1,Green,Axe,,killer,TRUE,,Accelerates Special trigger (cooldown count-1).
+70,Heavy Spear,8,1,Blue,Lance,"Movement,Armored",,,,Effective against armored units.
+71,Heavy Spear+,12,1,Blue,Lance,"Movement,Armored",,,,Effective against armored units.
+72,Iron Axe,6,1,Green,Axe,,,,,
+73,Iron Bow,4,2,Colorless,Bow,"Movement,Flier",,,,Effective against flying units.
+74,Iron Dagger,3,2,Colorless,Dagger,,,,,"After combat, inflicts Def/Res-3 on foe through its next action."
+75,Iron Lance,6,1,Blue,Lance,,,,,
+76,Iron Sword,6,1,Red,Sword,,,,,
+77,Killer Axe,7,1,Green,Axe,,killer,,,Accelerates Special trigger (cooldown count-1).
+78,Killer Axe+,11,1,Green,Axe,,killer,,,Accelerates Special trigger (cooldown count-1).
+79,Killer Bow,5,2,Colorless,Bow,"Movement,Flier",killer,,,Effective against flying units. Accelerates Special trigger (cooldown count-1).
+80,Killer Bow+,9,2,Colorless,Bow,"Movement,Flier",killer,,,Effective against flying units. Accelerates Special trigger (cooldown count-1).
+81,Killer Lance,7,1,Blue,Lance,,killer,,,Accelerates Special trigger (cooldown count-1).
+82,Killer Lance+,11,1,Blue,Lance,,killer,,,Accelerates Special trigger (cooldown count-1).
+83,Killing Edge,11,1,Red,Sword,,killer,,,Accelerates Special trigger (cooldown count-1).
+84,Killing Edge+,11,1,Red,Sword,,killer,,,Accelerates Special trigger (cooldown count-1).
+85,Light Breath,9,1,Blue,Dragonstone,,,,,Grants adjacent allies Def/Res+4 through their next actions after any combat this unit initiates.
+86,Light Breath+,13,1,Blue,Dragonstone,,,,,Grants adjacent allies Def/Res+4 through their next actions after any combat this unit initiates.
+87,Lightning Breath,7,1,Red,Dragonstone,,,,,Enables counterattack regardless of attacker's range. Slows Special trigger (cooldown count+1).
+88,Lightning Breath+,11,1,Red,Dragonstone,,,,,Enables counterattack regardless of attacker's range. Slows Special trigger (cooldown count+1).
+89,Mystletainn,16,1,Red,Sword,,,TRUE,,Accelerates Special trigger (cooldown count-1).
+90,Naga,14,2,Green,Tome,"Weapon Type,Dragonstone",,TRUE,,Effective against dragons. Grants Def/Res+2 when this unit is attacked.
+91,Nosferatu,9,2,,,,n/a,,,
+92,Nosferatu+,13,2,,,,n/a,,,
+93,Nóatún,16,1,Green,Axe,,,TRUE,,Unit may move adjacent to any ally when HP ≤ 40%
+94,Pain,3,2,Colorless,Staff,,,,,
+95,Panic,7,2,Colorless,Staff,,,,,
+96,Parthia,14,2,Colorless,Bow,"Movement,Flier",,TRUE,,Effective against flying units. Grants Res+4 during combat if initiating attack.
+97,Poison Dagger,2,2,Colorless,Dagger,,,,,Effective against infantry units. Infantry foes suffer Def/Res-4 after combat through their next actions
+98,Poison Dagger+,5,2,Colorless,Dagger,,,,,Effective against infantry units. Infantry foes suffer Def/Res-6 after combat through their next actions
+99,Ragnell,16,1,Red,Sword,,,TRUE,,Enables counterattack regardless of distance if this unit is attacked.
+100,Raijinto,16,1,Red,Sword,,,TRUE,,Enables counterattack regardless of distance if this unit is attacked.
+101,Rauorblade,9,2,Red,Tome,,,,,Slows Special trigger (cooldown count+1). Adds total bonuses on unit to damage dealt.
+102,Rauorblade+,13,2,Red,Tome,,,,,Slows Special trigger (cooldown count+1). Adds total bonuses on unit to damage dealt.
+103,Rauðrraven,11,2,Red,Tome,"Color,Colorless",,,,Grants weapon advantage vs. colorless foes.
+104,Rauðrraven+,11,2,Red,Tome,"Color,Colorless",,,,Grants weapon advantage vs. colorless foes.
+105,Rauðrwolf,6,2,Red,Tome,"Movement,Cavalry",,,,Effective against cavalry units.
+106,Rauðrwolf+,10,2,Red,Tome,"Movement,Cavalry",,,,Effective against cavalry units.
+107,Rexcalibur,9,2,Green,Tome,,,,,
+108,Rexcalibur+,13,2,Green,Tome,,,,,
+109,Rogue Dagger,4,2,Colorless,Dagger,,,,,"After combat, inflicts Def/Res-3 on foe through its next action. Grants unit Def/Res+3 for 1 turn."
+110,Rogue Dagger+,7,2,Colorless,Dagger,,,,,"After combat, inflicts Def/Res-5 on foe through its next action. Grants unit Def/Res+5 for 1 turn."
+111,Ruby Sword,8,1,Red,Sword,,wta,,,"Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage."
+112,Ruby Sword+,12,1,Red,Sword,,wta,,,"Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage."
+113,Ruin,6,2,Red,Tome,,,,,
+114,Sapphire Lance,8,1,Blue,Lance,,wta,,,"Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage."
+115,Sapphire Lance+,12,1,Blue,Lance,,wta,,,"Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage."
+116,Siegfried,16,1,Red,Sword,,,TRUE,"Skill,Distant Counter",Enables counterattack regardless of distance if this unit is attacked.
+117,Sieglinde,16,1,Red,Sword,,,TRUE,,Grants adjacent allies Atk+3 through their next actions at the start of each turn.
+118,Siegmund,16,1,Blue,Lance,,,TRUE,,Grants adjacent allies Atk+3 through their next actions at the start of each turn.
+119,Silver Axe,11,1,Green,Axe,,,,,
+120,Silver Axe+,15,1,Green,Axe,,,,,
+121,Silver Bow,9,2,Colorless,Bow,"Movement,Flier",,,,Effective against flying units.
+122,Silver Bow+,13,2,Colorless,Bow,"Movement,Flier",,,,Effective against flying units.
+123,Silver Dagger,7,2,Colorless,Dagger,,,,,"After combat, inflicts Def/Res-5 on foe through its next action."
+124,Silver Dagger+,10,2,Colorless,Dagger,,,,,"After combat, inflicts Def/Res-7 on foe through its next action."
+125,Silver Lance,11,1,Blue,Lance,,,,,
+126,Silver Lance+,15,1,Blue,Lance,,,,,
+127,Silver Sword,11,1,Red,Sword,,,,,
+128,Silver Sword+,15,1,Red,Sword,,,,,
+129,Slow,5,2,Colorless,Staff,,,,,
+130,Smoke Dagger,6,2,Colorless,Dagger,,,,,"After combat, inflicts Def/Res-4 on foes within 2 spaces of target through their next actions."
+131,Smoke Dagger+,9,2,Colorless,Dagger,,,,,"After combat, inflicts Def/Res-6 on foes within 2 spaces of target through their next actions."
+132,Sol Katti,16,1,Red,Sword,,,TRUE,,"If wielder initiates attack at HP ≤ 50%, any follow-up occurs immediately."
+133,Steel Axe,8,1,Green,Axe,,,,,
+134,Steel Bow,6,2,Colorless,Bow,"Movement,Flier",,,,Effective against flying units.
+135,Steel Dagger,5,2,Colorless,Dagger,,,,,"After combat, inflicts Def/Res-3 on foe through its next action."
+136,Steel Lance,8,1,Blue,Lance,,,,,
+137,Steel Sword,8,1,Red,Sword,,,,,
+138,Thoron,9,2,Blue,Tome,,,,,
+139,Thunder,4,2,Blue,Tome,,,,,
+140,Tyrfing,16,1,Red,Sword,,,TRUE,,Grants Def+4 in battle if unit's HP ≤ 50%.
+141,Wind,4,2,Green,Tome,,,,,
+142,Wo Dao,9,1,Red,Sword,,,,,Grants +10 to damage when Special triggers.
+143,Wo Dao +,13,1,Red,Sword,,,,,Grants +10 to damage when Special triggers.
+144,Yato,16,1,Red,Sword,,,TRUE,,Grants Spd+4 during combat if unit initiates attack.

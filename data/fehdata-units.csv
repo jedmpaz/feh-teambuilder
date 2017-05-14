@@ -121,5 +121,6 @@ ID,Name,Color,Weapon Type,Movement,Range,Damage Type,HP,ATK,SPD,DEF,RES,Total,Bo
 120,Ursula,Blue,Tome,Cavalry,Ranged,Magic,35,29,32,19,30,145,,,Blárwolf+,,Growing Thunder,Death Blow 3,,Threaten Res 3
 121,Virion,Colorless,Bow,Infantry,Ranged,Physical,46,31,31,26,13,147,"DEF,RES",,Silver Bow+,,Astra,Defiant Res 3,Seal Spd 3,
 122,Wrys,Colorless,Staff,Infantry,Ranged,Magic,42,24,23,23,37,149,ATK,,Slow,Rehabilitate,Heavenly Light,,Live to Serve 3,
-123,Xander-S,Blue,Lance,Cavalry,Melee,Physical,40,25,28,35,26,154,"ATK,RES","HP,SPD",Carrot Lance+,Swap,,,,Fortify Def 3
-124,Zephiel,Red,Sword,Armored,Melee,Physical,55,35,16,38,24,168,,,Eckesachs,,Reprisal,Life and Death 3,Wary Fighter 3,
+123,Xander,Red,Sword,Cavalry,Melee,Physical,44,32,24,37,17,154,,,Siegfried,,Blazing Light,Armored Blow 3,,Spur Def 3
+124,Xander-S,Blue,Lance,Cavalry,Melee,Physical,40,25,28,35,26,154,"ATK,RES","HP,SPD",Carrot Lance+,Swap,,,,Fortify Def 3
+125,Zephiel,Red,Sword,Armored,Melee,Physical,55,35,16,38,24,168,,,Eckesachs,,Reprisal,Life and Death 3,Wary Fighter 3,

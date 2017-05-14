@@ -75,6 +75,120 @@ function start() {
         .orient("left")
         .scale(y);
 
+    d3.csv("data/fehdata-weapons.csv", function(error, data) {
+        if(error) throw error;
+        for (var i in data) {
+            var weapon = data[i].Name;
+            if (data[i].Effective != "") {
+                data[i].Effective = data[i].Effective.split(",");
+            } else {
+                data[i].Effective = "none";
+            }
+            if(data[i].Legendary == "TRUE") {
+                data[i].Legendary = true;
+            } else {
+                data[i].Legendary = false;
+            }
+            data[i].Mt = +data[i].Mt;
+            data[i].Range = +data[i].Range;
+            data[i].Skill = data[i].Skill.split(",");
+            weapons[weapon] = data[i];
+        }
+        console.log(weapons);
+    });
+
+    d3.csv("data/fehdata-assists.csv", function(error, data) {
+        if(error) throw error;
+        for (var i in data) {
+            var assist = data[i].Name;
+            if(data[i].Restriction == "") {
+                data[i].Restriction = "none";
+            } else {
+                data[i].Restriction = data[i].Restriction.split(",");
+            }
+            if(data[i].Exclusive == "") {
+                data[i].Exclusive = "none";
+            } else if (data[i].Exclusive != "Unit") {
+                data[i].Exclusive = data[i].Exclusive.split(",");
+            }
+            assists[assist] = data[i];
+        }
+        console.log(assists);
+    });
+
+    d3.csv("data/fehdata-specials.csv", function(error, data) {
+        if(error) throw error;
+        for (var i in data) {
+            var special = data[i].Name;
+            data[i].Turns = +data[i].Turns;
+            if(data[i].Restriction == "") {
+                data[i].Restriction = "none";
+            } else {
+                data[i].Restriction = data[i].Restriction.split(",");
+            }
+            if(data[i].Exclusive == "") {
+                data[i].Exclusive = "none";
+            } else {
+                data[i].Exclusive = data[i].Exclusive.split(",");
+            }
+            specials[special] = data[i];
+        }
+        console.log(specials);
+    });
+
+    d3.csv("data/fehdata-skills-a.csv", function(error, data) {
+        if(error) throw error;
+        for (var i in data) {
+            var skillA = data[i].Name;
+            if(data[i].Restriction == "") {
+                data[i].Restriction = "none";
+            } else {
+                data[i].Restriction = data[i].Restriction.split(",");
+            }
+            if(data[i].Exclusive == "") {
+                data[i].Exclusive = "none";
+            } else {
+                data[i].Exclusive = data[i].Exclusive.split(",");
+            }
+            skillsA[skillA] = data[i];
+        }
+        console.log(skillsA);
+    });
+
+    d3.csv("data/fehdata-skills-b.csv", function(error, data) {
+        if(error) throw error;
+        for (var i in data) {
+            var skillB = data[i].Name;
+            if(data[i].Restriction == "") {
+                data[i].Restriction = "none";
+            } else {
+                data[i].Restriction = data[i].Restriction.split(",");
+            }
+            if(data[i].Exclusive == "") {
+                data[i].Exclusive = "none";
+            } else {
+                data[i].Exclusive = data[i].Exclusive.split(",");
+            }
+            skillsB[skillB] = data[i];
+        }
+        console.log(skillsB);
+    });
+
+    d3.csv("data/fehdata-skills-c.csv", function(error, data) {
+        if(error) throw error;
+        for (var i in data) {
+            var skillC = data[i].Name;
+            if(data[i].Exclusive == "") {
+                data[i].Exclusive = "none";
+            } else {
+                data[i].Exclusive = data[i].Exclusive.split(",");
+            }
+            skillsC[skillC] = data[i];
+        }
+        console.log(skillsC);
+    });
+
+    /* unit info */
     d3.csv("data/fehdata-units.csv", function(error, data) {
         if (error) throw error;
         console.log(data);
@@ -689,7 +803,7 @@ $(document).ready(function(){
         if($("#sim-container").css("display") == "none") {
             $("#build-container").fadeToggle("slow");
             $("#sim-container").fadeToggle("slow");
-            importTeam(units,team,colors);
+            importTeam(units, weapons, assists, specials, skillsA, skillsB, skillsC, team, colors);
         }
     })
 })
@@ -710,7 +824,13 @@ $(document).ready(function(){
         var skill = this.id.split("-")[1];
         hero = team[+hero.split("o")[1] - 1];
         console.log(hero);
-
+        var choice = "#"+this.id +"-choice";
+        var text;
+        if(choice.split("-")[1] == "Weapon") {
+            text = "<p>Mt: "+weapons[$(choice).val()].Mt+"</p>"
+            +"<p>Effect: "+weapons[$(choice).val()].Desc+"</p>";
+        }
+        $(toDisplay).html(text);
         $(toDisplay).slideToggle("slow");
     })
 })

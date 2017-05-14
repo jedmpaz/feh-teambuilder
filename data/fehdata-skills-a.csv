@@ -1,63 +1,63 @@
-ID,Name,Type,Effect,Desc
-1,Armored Blow 1,combat,DEF+2,Grants Def+2 druing combat if unit initiates the attack.
-2,Armored Blow 2,combat,DEF+4,Grants Def+4 druing combat if unit initiates the attack.
-3,Armored Blow 3,combat,DEF+6,Grants Def+6 druing combat if unit initiates the attack.
-4,Attack +1,stat,ATK+1,Grants Atk+1.
-5,Attack +2,stat,ATK+2,Grants Atk+2.
-6,Attack +3,stat,ATK+3,Grants Atk+3.
-7,Attack Def +1,stat,"ATK+1,DEF+1",Grants Atk/Def+1.
-8,Attack Def +2,stat,"ATK+2,DEF+2",Grants Atk/Def+2.
-9,Close Counter,range,Melee,Enables unit to counterattack regardless of distance to attacker.
-10,Darting Blow 1,combat,SPD+2,Grants Spd+2 during combat if unit initiates the attack.
-11,Darting Blow 2,combat,SPD+4,Grants Spd+4 during combat if unit initiates the attack.
-12,Darting Blow 3,combat,SPD+6,Grants Spd+6 during combat if unit initiates the attack.
-13,Death Blow 1,combat,ATK+2,Grants Atk+2 if unit initiates combat.
-14,Death Blow 2,combat,ATK+4,Grants Atk+4 if unit initiates combat.
-15,Death Blow 3,combat,ATK+6,Grants Atk+6 if unit initiates combat.
-16,Defense +1,stat,DEF+1,Grants Def+1.
-17,Defense +2,stat,DEF+2,Grants Def+2.
-18,Defense +3,stat,DEF+3,Grants Def+3.
-19,Defiant Atk 1,defiant,ATK+3,Grants Atk +3 at start of turn if unit's HP ≤ 50%
-20,Defiant Atk 2,defiant,ATK+5,Grants Atk +5 at start of turn if unit's HP ≤ 50%
-21,Defiant Atk 3,defiant,ATK+7,Grants Atk +7 at start of turn if unit's HP ≤ 50%
-22,Defiant Def 1,defiant,DEF+3,Grants Def+3 at start of turn if unit's HP < 50%
-23,Defiant Def 2,defiant,DEF+5,Grants Def+5 at start of turn if unit's HP < 50%
-24,Defiant Def 3,defiant,DEF+7,Grants Def+7 at start of turn if unit's HP < 50%
-25,Defiant Res 1,defiant,RES+3,Grants Res+3 at start of turn if unit's HP ≤ 50%.
-26,Defiant Res 2,defiant,RES+5,Grants Res+5 at start of turn if unit's HP ≤ 50%.
-27,Defiant Res 3,defiant,RES+7,Grants Res+7 at start of turn if unit's HP ≤ 50%.
-28,Defiant Spd 1,defiant,SPD+3,Grants Spd+3 at start of turn if unit's HP ≤ 50%.
-29,Defiant Spd 2,defiant,SPD+5,Grants Spd+5 at start of turn if unit's HP ≤ 50%.
-30,Defiant Spd 3,defiant,SPD+7,Grants Spd+7 at start of turn if unit's HP ≤ 50%.
-31,Distant Counter,range,Ranged,Enables unit to counterattack regardless of distance to attacker.
-32,Fortress Def 1,stat,"ATK+-3,DEF+3",Grants Def+3. Inflicts Atk-3.
-33,Fortress Def 2,stat,"ATK+-4,DEF+4",Grants Def+4. Inflicts Atk-3.
-34,Fortress Def 3,stat,"ATK+-5,DEF+5",Grants Def+5. Inflicts Atk-3.
-35,Fury 1,fury,1,Grants Atk/Spd/Def/Res+1. Unit takes 2 damage after combat.
-36,Fury 2,fury,2,Grants Atk/Spd/Def/Res+2. Unit takes 4 damage after combat.
-37,Fury 3,fury,3,Grants Atk/Spd/Def/Res+3. Unit takes 6 damage after combat.
-38,Heavy Blade 1,cooldown,"ATK,5","If unit's Atk - foe's Atk ≥ 5, unit gains Special cooldown charge +1 attack."
-39,Heavy Blade 2,cooldown,"ATK,3","If unit's Atk - foe's Atk ≥ 3, unit gains Special cooldown charge +1 attack."
-40,Heavy Blade 3,cooldown,"ATK,1","If unit's Atk - foe's Atk ≥ 1, unit gains Special cooldown charge +1 attack."
-41,HP +3,stat,HP+3,Grants +3 to max HP.
-42,HP +4,stat,HP+4,Grants +4 to max HP.
-43,HP +5,stat,HP+5,Grants +5 to max HP.
-44,Iote's Shield,resist,,"Neutralizes ""effective against"" bonuses."
-45,Life and Death 1,stat,"ATK+3,SPD+3,DEF+-3,RES+-3",Grants Atk/Spd+3. Inflicts Def/Res-3.
-46,Life and Death 2,stat,"ATK+4,SPD+4,DEF+-4,RES+-4",Grants Atk/Spd+4. Inflicts Def/Res-4.
-47,Life and Death 3,stat,"ATK+5,SPD+5,DEF+-5,RES+-5",Grants Atk/Spd+5. Inflicts Def/Res-5.
-48,Resistance +1,stat,RES+3,Grants Res+1
-49,Resistance +2,stat,RES+4,Grants Res+2
-50,Resistance +3,stat,RES+5,Grants Res+3
-51,Speed +1,stat,SPD+3,Grants Spd+1
-52,Speed +2,stat,SPD+4,Grants Spd+2
-53,Speed +3,stat,SPD+5,Grants Spd+3
-54,Svalinn Shield,resist,,"Neutralizes ""effective against"" bonuses."
-55,Swift Sparrow 1,combat,"ATK+2,SPD+2","If unit initiates combat, unit granted Atk/Spd+2 during battle."
-56,Swift Sparrow 2,combat,"ATK+4,SPD+4","If unit initiates combat, unit granted Atk/Spd+4 during battle."
-57,Triangle Adept 1,wta,0.1,"Gives Atk+10% if weapon-triangle advantage, Atk-10% if disadvantage."
-58,Triangle Adept 2,wta,0.15,"Gives Atk+15% if weapon-triangle advantage, Atk-15% if disadvantage."
-59,Triangle Adept 3,wta,0.2,"Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage."
-59,Warding Blow 1,combat,RES+2,Grants Res+2 during combat if unit initiates the attack.
-59,Warding Blow 2,combat,RES+4,Grants Res+4 during combat if unit initiates the attack.
-59,Warding Blow 3,combat,RES+6,Grants Res+6 during combat if unit initiates the attack.
+ID,Name,Type,Effect,Restriction,Exclusive,Desc
+1,Armored Blow 1,combat,DEF+2,"Weapon Type,Staff",,Grants Def+2 during combat if unit initiates the attack.
+2,Armored Blow 2,combat,DEF+4,"Weapon Type,Staff",,Grants Def+4 during combat if unit initiates the attack.
+3,Armored Blow 3,combat,DEF+6,"Weapon Type,Staff",,Grants Def+6 during combat if unit initiates the attack.
+4,Attack +1,stat,ATK+1,,,Grants Atk+1.
+5,Attack +2,stat,ATK+2,,,Grants Atk+2.
+6,Attack +3,stat,ATK+3,,,Grants Atk+3.
+7,Attack Def +1,stat,"ATK+1,DEF+1",,,Grants Atk/Def+1.
+8,Attack Def +2,stat,"ATK+2,DEF+2",,,Grants Atk/Def+2.
+9,Close Counter,range,Melee,"Range,Melee",,Enables unit to counterattack regardless of distance to attacker.
+10,Darting Blow 1,combat,SPD+2,"Weapon Type,Staff",,Grants Spd+2 during combat if unit initiates the attack.
+11,Darting Blow 2,combat,SPD+4,"Weapon Type,Staff",,Grants Spd+4 during combat if unit initiates the attack.
+12,Darting Blow 3,combat,SPD+6,"Weapon Type,Staff",,Grants Spd+6 during combat if unit initiates the attack.
+13,Death Blow 1,combat,ATK+2,"Weapon Type,Staff",,Grants Atk+2 if unit initiates combat.
+14,Death Blow 2,combat,ATK+4,"Weapon Type,Staff",,Grants Atk+4 if unit initiates combat.
+15,Death Blow 3,combat,ATK+6,"Weapon Type,Staff",,Grants Atk+6 if unit initiates combat.
+16,Defense +1,stat,DEF+1,,,Grants Def+1.
+17,Defense +2,stat,DEF+2,,,Grants Def+2.
+18,Defense +3,stat,DEF+3,,,Grants Def+3.
+19,Defiant Atk 1,defiant,ATK+3,,,Grants Atk +3 at start of turn if unit's HP ≤ 50%
+20,Defiant Atk 2,defiant,ATK+5,,,Grants Atk +5 at start of turn if unit's HP ≤ 50%
+21,Defiant Atk 3,defiant,ATK+7,,,Grants Atk +7 at start of turn if unit's HP ≤ 50%
+22,Defiant Def 1,defiant,DEF+3,,,Grants Def+3 at start of turn if unit's HP < 50%
+23,Defiant Def 2,defiant,DEF+5,,,Grants Def+5 at start of turn if unit's HP < 50%
+24,Defiant Def 3,defiant,DEF+7,,,Grants Def+7 at start of turn if unit's HP < 50%
+25,Defiant Res 1,defiant,RES+3,,,Grants Res+3 at start of turn if unit's HP ≤ 50%.
+26,Defiant Res 2,defiant,RES+5,,,Grants Res+5 at start of turn if unit's HP ≤ 50%.
+27,Defiant Res 3,defiant,RES+7,,,Grants Res+7 at start of turn if unit's HP ≤ 50%.
+28,Defiant Spd 1,defiant,SPD+3,,,Grants Spd+3 at start of turn if unit's HP ≤ 50%.
+29,Defiant Spd 2,defiant,SPD+5,,,Grants Spd+5 at start of turn if unit's HP ≤ 50%.
+30,Defiant Spd 3,defiant,SPD+7,,,Grants Spd+7 at start of turn if unit's HP ≤ 50%.
+31,Distant Counter,range,Ranged,"Range,Ranged",,Enables unit to counterattack regardless of distance to attacker.
+32,Fortress Def 1,stat,"ATK+-3,DEF+3",,,Grants Def+3. Inflicts Atk-3.
+33,Fortress Def 2,stat,"ATK+-4,DEF+4",,,Grants Def+4. Inflicts Atk-3.
+34,Fortress Def 3,stat,"ATK+-5,DEF+5",,,Grants Def+5. Inflicts Atk-3.
+35,Fury 1,fury,1,"Weapon Type,Staff",,Grants Atk/Spd/Def/Res+1. Unit takes 2 damage after combat.
+36,Fury 2,fury,2,"Weapon Type,Staff",,Grants Atk/Spd/Def/Res+2. Unit takes 4 damage after combat.
+37,Fury 3,fury,3,"Weapon Type,Staff",,Grants Atk/Spd/Def/Res+3. Unit takes 6 damage after combat.
+38,Heavy Blade 1,cooldown,"ATK,5","Weapon Type,Staff",,"If unit's Atk - foe's Atk ≥ 5, unit gains Special cooldown charge +1 attack."
+39,Heavy Blade 2,cooldown,"ATK,3","Weapon Type,Staff",,"If unit's Atk - foe's Atk ≥ 3, unit gains Special cooldown charge +1 attack."
+40,Heavy Blade 3,cooldown,"ATK,1","Weapon Type,Staff",,"If unit's Atk - foe's Atk ≥ 1, unit gains Special cooldown charge +1 attack."
+41,HP +3,stat,HP+3,,,Grants +3 to max HP.
+42,HP +4,stat,HP+4,,,Grants +4 to max HP.
+43,HP +5,stat,HP+5,,,Grants +5 to max HP.
+44,Iote's Shield,resist,,,"Movement,Flying","Neutralizes ""effective against"" bonuses."
+45,Life and Death 1,stat,"ATK+3,SPD+3,DEF+-3,RES+-3",,,Grants Atk/Spd+3. Inflicts Def/Res-3.
+46,Life and Death 2,stat,"ATK+4,SPD+4,DEF+-4,RES+-4",,,Grants Atk/Spd+4. Inflicts Def/Res-4.
+47,Life and Death 3,stat,"ATK+5,SPD+5,DEF+-5,RES+-5",,,Grants Atk/Spd+5. Inflicts Def/Res-5.
+48,Resistance +1,stat,RES+3,,,Grants Res+1
+49,Resistance +2,stat,RES+4,,,Grants Res+2
+50,Resistance +3,stat,RES+5,,,Grants Res+3
+51,Speed +1,stat,SPD+3,,,Grants Spd+1
+52,Speed +2,stat,SPD+4,,,Grants Spd+2
+53,Speed +3,stat,SPD+5,,,Grants Spd+3
+54,Svalinn Shield,resist,,,"Movement,Armored","Neutralizes ""effective against"" bonuses."
+55,Swift Sparrow 1,combat,"ATK+2,SPD+2","Weapon Type,Staff",,"If unit initiates combat, unit granted Atk/Spd+2 during battle."
+56,Swift Sparrow 2,combat,"ATK+4,SPD+4","Weapon Type,Staff",,"If unit initiates combat, unit granted Atk/Spd+4 during battle."
+57,Triangle Adept 1,wta,0.1,"Color,Colorless",,"Gives Atk+10% if weapon-triangle advantage, Atk-10% if disadvantage."
+58,Triangle Adept 2,wta,0.15,"Color,Colorless",,"Gives Atk+15% if weapon-triangle advantage, Atk-15% if disadvantage."
+59,Triangle Adept 3,wta,0.2,"Color,Colorless",,"Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage."
+59,Warding Blow 1,combat,RES+2,"Weapon Type,Staff",,Grants Res+2 during combat if unit initiates the attack.
+59,Warding Blow 2,combat,RES+4,"Weapon Type,Staff",,Grants Res+4 during combat if unit initiates the attack.
+59,Warding Blow 3,combat,RES+6,"Weapon Type,Staff",,Grants Res+6 during combat if unit initiates the attack.

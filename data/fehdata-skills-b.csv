@@ -1,86 +1,86 @@
-ID,Name,Type,Effect,Desc
-1,Axebreaker 1,breaker,"Green,Axe","If unit's HP ≥ 90% in combat against an axe user, unit makes a follow-up attack and the foe cannot."
-2,Axebreaker 2,breaker,"Green,Axe","If unit's HP ≥ 70% in combat against an axe user, unit makes a follow-up attack and the foe cannot."
-3,Axebreaker 3,breaker,"Green,Axe","If unit's HP ≥ 50% in combat against an axe user, unit makes a follow-up attack and the foe cannot."
-4,B Tomebreaker 1,breaker,"Blue,Tome","If unit's HP ≥ 90% in combat against a blue tome user, unit makes a follow-up attack and foe cannot."
-5,B Tomebreaker 2,breaker,"Blue,Tome","If unit's HP ≥ 70% in combat against a blue tome user, unit makes a follow-up attack and foe cannot."
-6,B Tomebreaker 3,breaker,"Blue,Tome","If unit's HP ≥ 50% in combat against a blue tome user, unit makes a follow-up attack and foe cannot."
-7,Bowbreaker 1,breaker,"Colorless,Bow","If unit's HP ≥ 90% in combat against a bow user, unit makes a follow-up attack and foe cannot."
-8,Bowbreaker 2,breaker,"Colorless,Bow","If unit's HP ≥ 70% in combat against a bow user, unit makes a follow-up attack and foe cannot."
-9,Bowbreaker 3,breaker,"Colorless,Bow","If unit's HP ≥ 50% in combat against a bow user, unit makes a follow-up attack and foe cannot."
-10,Brash Assault 1,ba,0.3,Unit automatically makes a follow-up when at HP < 30% and attacking a foe that can counter.
-11,Brash Assault 2,ba,0.4,Unit automatically makes a follow-up when at HP < 40% and attacking a foe that can counter.
-12,Brash Assault 3,ba,0.5,Unit automatically makes a follow-up when at HP < 50% and attacking a foe that can counter.
-13,Daggerbreaker 1,breaker,"Colorless,Dagger","If unit's HP ≥ 90% in combat against a dagger user, unit makes a follow-up attack and foe cannot."
-14,Daggerbreaker 2,breaker,"Colorless,Dagger","If unit's HP ≥ 70% in combat against a dagger user, unit makes a follow-up attack and foe cannot."
-15,Daggerbreaker 3,breaker,"Colorless,Dagger","If unit's HP ≥ 50% in combat against a dagger user, unit makes a follow-up attack and foe cannot."
-16,Desperation 1,desp,0.25,"If unit initiates combat with HP ≤ 25%, follow-up attacks occur immediately after unit's attack."
-17,Desperation 2,desp,0.5,"If unit initiates combat with HP ≤ 50%, follow-up attacks occur immediately after unit's attack."
-18,Desperation 3,desp,0.75,"If unit initiates combat with HP ≤ 75%, follow-up attacks occur immediately after unit's attack."
-19,Drag Back,mobility,combat,"If unit initiates attack, the unit moves 1 space away after combat. Foe moves into unit's previous space."
-20,Escape Route 1,mobility,warp,Enables unit whose own HP ≤ 30% to wrap adjacent to any ally.
-21,Escape Route 2,mobility,warp,Enables unit whose own HP ≤ 40% to wrap adjacent to any ally.
-22,Escape Route 3,mobility,warp,Enables unit whose own HP ≤ 50% to wrap adjacent to any ally.
-23,G Tomebreaker 1,breaker,"Green,Tome","If unit's HP ≥ 90% in combat against a green tome user, unit makes a follow-up attack and foe cannot."
-24,G Tomebreaker 2,breaker,"Green,Tome","If unit's HP ≥ 70% in combat against a green tome user, unit makes a follow-up attack and foe cannot."
-25,G Tomebreaker 3,breaker,"Green,Tome","If unit's HP ≥ 50% in combat against a green tome user, unit makes a follow-up attack and foe cannot."
-26,Guard 1,cooldown,"HP,1","If unit's HP is 100% at start of combat, enemy is inflicted with Special cooldown charge-1."
-27,Guard 2,cooldown,"HP,0.9","If unit's HP is 90% at start of combat, enemy is inflicted with Special cooldown charge-1."
-28,Guard 3,cooldown,"HP,0.8","If unit's HP is 80% at start of combat, enemy is inflicted with Special cooldown charge-1."
-29,Hit and Run,mobility,combat,"If unit initiates attack, unit\nadvances 1 space after battle."
-30,Knock Back,mobility,combat,"If unit initiates attack, foe is moved 1 space away after combat"
-31,Lancebreaker 1,breaker,"Blue,Lance","If unit's HP > 90% in combat against a lance user, unit makes a follow-up attack and foe cannot."
-32,Lancebreaker 2,breaker,"Blue,Lance","If unit's HP > 70% in combat against a lance user, unit makes a follow-up attack and foe cannot."
-33,Lancebreaker 3,breaker,"Blue,Lance","If unit's HP > 50% in combat against a lance user, unit makes a follow-up attack and foe cannot."
-34,Live to Serve 1,,,
-35,Live to Serve 2,,,
-36,Live to Serve 3,,,
-37,Lunge,mobility,combat,"If unit initiates attack, after combat, unit and targeted foe swap places."
-38,Obstruct 1,mobility,,Prevents foes from moving through adjacent spaces while this unit's HP ≥ 90%. (No effect on foes with a Pass skill.)
-39,Obstruct 2,mobility,,Prevents foes from moving through adjacent spaces while this unit's HP ≥ 70%. (No effect on foes with a Pass skill.)
-40,Obstruct 3,mobility,,Prevents foes from moving through adjacent spaces while this unit's HP ≥ 50%. (No effect on foes with a Pass skill.)
-41,Pass 1,mobility,,Unit can pass through foes if its own HP ≥ 75%.
-42,Pass 2,mobility,,Unit can pass through foes if its own HP ≥ 50%.
-43,Pass 3,mobility,,Unit can pass through foes if its own HP ≥ 25%.
-44,Poison Strike 1,post-combat,4,Inflicts 4 damage to foe after any combat this unit initiates.
-45,Poison Strike 2,post-combat,7,Inflicts 7 damage to foe after any combat this unit initiates.
-46,Poison Strike 3,post-combat,10,Inflicts 10 damage to foe after any combat this unit initiates.
-47,Quick Riposte 1,qr,0.9,Unit automatically makes a follow-up attack if attacked at HP ≥ 90%.
-48,Quick Riposte 2,qr,0.8,Unit automatically makes a follow-up attack if attacked at HP ≥ 80%.
-49,Quick Riposte 3,qr,0.7,Unit automatically makes a follow-up attack if attacked at HP ≥ 70%.
-50,R Tomebreaker 1,breaker,"Red,Tome","If unit's HP ≥ 90% in combat against a red tome user, unit makes a follow-up attack and foe cannot."
-51,R Tomebreaker 2,breaker,"Red,Tome","If unit's HP ≥ 70% in combat against a red tome user, unit makes a follow-up attack and foe cannot."
-52,R Tomebreaker 3,breaker,"Red,Tome","If unit's HP ≥ 50% in combat against a red tome user, unit makes a follow-up attack and foe cannot."
-53,Renewal 1,heal,4,"At the start of every fourth turn, restores 10 HP."
-54,Renewal 2,heal,3,"At the start of every third turn, restores 10 HP."
-55,Renewal 3,heal,2,"At the start of every second turn, restores 10 HP."
-56,Seal Atk 1,seal,ATK-3,"After combat, foe suffers Atk-3 through its next action."
-57,Seal Atk 2,seal,ATK-5,"After combat, foe suffers Atk-5 through its next action."
-58,Seal Atk 3,seal,ATK-7,"After combat, foe suffers Atk-7 through its next action."
-59,Seal Def 1,seal,DEF-3,"After combat, foe suffers Def -3 through its next action."
-60,Seal Def 2,seal,DEF-5,"After combat, foe suffers Def -5 through its next action."
-61,Seal Def 3,seal,DEF-7,"After combat, foe suffers Def -7 through its next action."
-62,Seal Res 1,seal,RES-3,"After combat, foe suffers Res-3 through its next action."
-63,Seal Res 2,seal,RES-5,"After combat, foe suffers Res-5 through its next action."
-64,Seal Res 3,seal,RES-7,"After combat, foe suffers Res-7 through its next action."
-65,Seal Spd 1,seal,SPD-3,"After combat, foe suffers Spd-3 through its next action."
-66,Seal Spd 2,seal,SPD-5,"After combat, foe suffers Spd-5 through its next action."
-67,Seal Spd 3,seal,SPD-7,"After combat, foe suffers Spd-7 through its next action."
-68,Swordbreaker 1,breaker,"Red,Sword","If unit's HP ≥ 90% in combat against a sword user, unit makes a follow-up attack and foe cannot."
-69,Swordbreaker 2,breaker,"Red,Sword","If unit's HP ≥ 70% in combat against a sword user, unit makes a follow-up attack and foe cannot."
-70,Swordbreaker 3,breaker,"Red,Sword","If unit's HP ≥ 50% in combat against a sword user, unit makes a follow-up attack and foe cannot."
-71,Vantage 1,van,0.25,Unit counterattacks first when attacked at HP ≤ 25%
-72,Vantage 2,van,0.5,Unit counterattacks first when attacked at HP ≤ 50%
-73,Vantage 3,van,0.75,Unit counterattacks first when attacked at HP ≤ 75%
-74,Wary Fighter 1,wf,0.9,Prevents follow up attack in combat from unit and foes if unit's HP ≥ 90%
-75,Wary Fighter 2,wf,0.7,Prevents follow up attack in combat from unit and foes if unit's HP ≥ 70%
-76,Wary Fighter 3,wf,0.5,Prevents follow up attack in combat from unit and foes if unit's HP ≥ 50%
-77,Watersweep 1,sweep,"Magic,SPD,5","If unit initiates attack, no follow-up occurs. Against foe with magic, staff or dragonstone, if unit’s Spd - foe’s Spd ≥ 5, foe can’t counterattack."
-78,Watersweep 2,sweep,"Magic,SPD,3","If unit initiates attack, no follow-up occurs. Against foe with magic, staff or dragonstone, if unit’s Spd - foe’s Spd ≥ 3, foe can’t counterattack."
-79,Watersweep 3,sweep,"Magic,SPD,1","If unit initiates attack, no follow-up occurs. Against foe with magic, staff or dragonstone, if unit’s Spd - foe’s Spd ≥ 1, foe can’t counterattack."
-80,Windsweep 1,sweep,"Physical,SPD,5","If unit initiates attack, no follow-up occurs. Against foe with sword, lance, axe, bow, or dagger, if unit’s Spd - foe’s Spd ≥ 5, foe can’t counterattack."
-81,Windsweep 2,sweep,"Physical,SPD,3","If unit initiates attack, no follow-up occurs. Against foe with sword, lance, axe, bow, or dagger, if unit’s Spd - foe’s Spd ≥ 3, foe can’t counterattack."
-82,Windsweep 3,sweep,"Physical,SPD,1","If unit initiates attack, no follow-up occurs. Against foe with sword, lance, axe, bow, or dagger, if unit’s Spd - foe’s Spd ≥ 1, foe can’t counterattack."
-83,Wings of Mercy 1,mobility,warp,Enables unit to warp adjacent to any ally with HP ≤ 30%.
-84,Wings of Mercy 2,mobility,warp,Enables unit to warp adjacent to any ally with HP ≤ 40%.
-85,Wings of Mercy 3,mobility,warp,Enables unit to warp adjacent to any ally with HP ≤ 50%.
+ID,Name,Type,Effect,Restriction,Exclusive,Desc
+1,Axebreaker 1,breaker,"Green,Axe","Color,Blue",,"If unit's HP ≥ 90% in combat against an axe user, unit makes a follow-up attack and the foe cannot."
+2,Axebreaker 2,breaker,"Green,Axe","Color,Blue",,"If unit's HP ≥ 70% in combat against an axe user, unit makes a follow-up attack and the foe cannot."
+3,Axebreaker 3,breaker,"Green,Axe","Color,Blue",,"If unit's HP ≥ 50% in combat against an axe user, unit makes a follow-up attack and the foe cannot."
+4,B Tomebreaker 1,breaker,"Blue,Tome","Color,Red",,"If unit's HP ≥ 90% in combat against a blue tome user, unit makes a follow-up attack and foe cannot."
+5,B Tomebreaker 2,breaker,"Blue,Tome","Color,Red",,"If unit's HP ≥ 70% in combat against a blue tome user, unit makes a follow-up attack and foe cannot."
+6,B Tomebreaker 3,breaker,"Blue,Tome","Color,Red",,"If unit's HP ≥ 50% in combat against a blue tome user, unit makes a follow-up attack and foe cannot."
+7,Bowbreaker 1,breaker,"Colorless,Bow","Movement,Flying",,"If unit's HP ≥ 90% in combat against a bow user, unit makes a follow-up attack and foe cannot."
+8,Bowbreaker 2,breaker,"Colorless,Bow","Movement,Flying",,"If unit's HP ≥ 70% in combat against a bow user, unit makes a follow-up attack and foe cannot."
+9,Bowbreaker 3,breaker,"Colorless,Bow","Movement,Flying",,"If unit's HP ≥ 50% in combat against a bow user, unit makes a follow-up attack and foe cannot."
+10,Brash Assault 1,ba,0.3,,,Unit automatically makes a follow-up when at HP < 30% and attacking a foe that can counter.
+11,Brash Assault 2,ba,0.4,,,Unit automatically makes a follow-up when at HP < 40% and attacking a foe that can counter.
+12,Brash Assault 3,ba,0.5,,,Unit automatically makes a follow-up when at HP < 50% and attacking a foe that can counter.
+13,Daggerbreaker 1,breaker,"Colorless,Dagger",,,"If unit's HP ≥ 90% in combat against a dagger user, unit makes a follow-up attack and foe cannot."
+14,Daggerbreaker 2,breaker,"Colorless,Dagger",,,"If unit's HP ≥ 70% in combat against a dagger user, unit makes a follow-up attack and foe cannot."
+15,Daggerbreaker 3,breaker,"Colorless,Dagger",,,"If unit's HP ≥ 50% in combat against a dagger user, unit makes a follow-up attack and foe cannot."
+16,Desperation 1,desp,0.25,,,"If unit initiates combat with HP ≤ 25%, follow-up attacks occur immediately after unit's attack."
+17,Desperation 2,desp,0.5,,,"If unit initiates combat with HP ≤ 50%, follow-up attacks occur immediately after unit's attack."
+18,Desperation 3,desp,0.75,,,"If unit initiates combat with HP ≤ 75%, follow-up attacks occur immediately after unit's attack."
+19,Drag Back,mobility,combat,"Range,Ranged",,"If unit initiates attack, the unit moves 1 space away after combat. Foe moves into unit's previous space."
+20,Escape Route 1,mobility,warp,,,Enables unit whose own HP ≤ 30% to wrap adjacent to any ally.
+21,Escape Route 2,mobility,warp,,,Enables unit whose own HP ≤ 40% to wrap adjacent to any ally.
+22,Escape Route 3,mobility,warp,,,Enables unit whose own HP ≤ 50% to wrap adjacent to any ally.
+23,G Tomebreaker 1,breaker,"Green,Tome","Color,Blue",,"If unit's HP ≥ 90% in combat against a green tome user, unit makes a follow-up attack and foe cannot."
+24,G Tomebreaker 2,breaker,"Green,Tome","Color,Blue",,"If unit's HP ≥ 70% in combat against a green tome user, unit makes a follow-up attack and foe cannot."
+25,G Tomebreaker 3,breaker,"Green,Tome","Color,Blue",,"If unit's HP ≥ 50% in combat against a green tome user, unit makes a follow-up attack and foe cannot."
+26,Guard 1,cooldown,"HP,1",,,"If unit's HP is 100% at start of combat, enemy is inflicted with Special cooldown charge-1."
+27,Guard 2,cooldown,"HP,0.9",,,"If unit's HP is 90% at start of combat, enemy is inflicted with Special cooldown charge-1."
+28,Guard 3,cooldown,"HP,0.8",,,"If unit's HP is 80% at start of combat, enemy is inflicted with Special cooldown charge-1."
+29,Hit and Run,mobility,combat,"Range,Ranged",,"If unit initiates attack, unit\nadvances 1 space after battle."
+30,Knock Back,mobility,combat,"Range,Ranged",,"If unit initiates attack, foe is moved 1 space away after combat"
+31,Lancebreaker 1,breaker,"Blue,Lance","Color,Red",,"If unit's HP > 90% in combat against a lance user, unit makes a follow-up attack and foe cannot."
+32,Lancebreaker 2,breaker,"Blue,Lance","Color,Red",,"If unit's HP > 70% in combat against a lance user, unit makes a follow-up attack and foe cannot."
+33,Lancebreaker 3,breaker,"Blue,Lance","Color,Red",,"If unit's HP > 50% in combat against a lance user, unit makes a follow-up attack and foe cannot."
+34,Live to Serve 1,,,,"Weapon Type,Staff",
+35,Live to Serve 2,,,,"Weapon Type,Staff",
+36,Live to Serve 3,,,,"Weapon Type,Staff",
+37,Lunge,mobility,combat,"Range,Ranged",,"If unit initiates attack, after combat, unit and targeted foe swap places."
+38,Obstruct 1,mobility,,,,Prevents foes from moving through adjacent spaces while this unit's HP ≥ 90%. (No effect on foes with a Pass skill.)
+39,Obstruct 2,mobility,,,,Prevents foes from moving through adjacent spaces while this unit's HP ≥ 70%. (No effect on foes with a Pass skill.)
+40,Obstruct 3,mobility,,,,Prevents foes from moving through adjacent spaces while this unit's HP ≥ 50%. (No effect on foes with a Pass skill.)
+41,Pass 1,mobility,,,,Unit can pass through foes if its own HP ≥ 75%.
+42,Pass 2,mobility,,,,Unit can pass through foes if its own HP ≥ 50%.
+43,Pass 3,mobility,,,,Unit can pass through foes if its own HP ≥ 25%.
+44,Poison Strike 1,post-combat,4,"Weapon Type,Staff",,Inflicts 4 damage to foe after any combat this unit initiates.
+45,Poison Strike 2,post-combat,7,"Weapon Type,Staff",,Inflicts 7 damage to foe after any combat this unit initiates.
+46,Poison Strike 3,post-combat,10,"Weapon Type,Staff",,Inflicts 10 damage to foe after any combat this unit initiates.
+47,Quick Riposte 1,qr,0.9,,,Unit automatically makes a follow-up attack if attacked at HP ≥ 90%.
+48,Quick Riposte 2,qr,0.8,,,Unit automatically makes a follow-up attack if attacked at HP ≥ 80%.
+49,Quick Riposte 3,qr,0.7,,,Unit automatically makes a follow-up attack if attacked at HP ≥ 70%.
+50,R Tomebreaker 1,breaker,"Red,Tome","Color,Green",,"If unit's HP ≥ 90% in combat against a red tome user, unit makes a follow-up attack and foe cannot."
+51,R Tomebreaker 2,breaker,"Red,Tome","Color,Green",,"If unit's HP ≥ 70% in combat against a red tome user, unit makes a follow-up attack and foe cannot."
+52,R Tomebreaker 3,breaker,"Red,Tome","Color,Green",,"If unit's HP ≥ 50% in combat against a red tome user, unit makes a follow-up attack and foe cannot."
+53,Renewal 1,heal,4,,,"At the start of every fourth turn, restores 10 HP."
+54,Renewal 2,heal,3,,,"At the start of every third turn, restores 10 HP."
+55,Renewal 3,heal,2,,,"At the start of every second turn, restores 10 HP."
+56,Seal Atk 1,seal,ATK-3,"Weapon Type,Staff",,"After combat, foe suffers Atk-3 through its next action."
+57,Seal Atk 2,seal,ATK-5,"Weapon Type,Staff",,"After combat, foe suffers Atk-5 through its next action."
+58,Seal Atk 3,seal,ATK-7,"Weapon Type,Staff",,"After combat, foe suffers Atk-7 through its next action."
+59,Seal Def 1,seal,DEF-3,"Weapon Type,Staff",,"After combat, foe suffers Def -3 through its next action."
+60,Seal Def 2,seal,DEF-5,"Weapon Type,Staff",,"After combat, foe suffers Def -5 through its next action."
+61,Seal Def 3,seal,DEF-7,"Weapon Type,Staff",,"After combat, foe suffers Def -7 through its next action."
+62,Seal Res 1,seal,RES-3,"Weapon Type,Staff",,"After combat, foe suffers Res-3 through its next action."
+63,Seal Res 2,seal,RES-5,"Weapon Type,Staff",,"After combat, foe suffers Res-5 through its next action."
+64,Seal Res 3,seal,RES-7,"Weapon Type,Staff",,"After combat, foe suffers Res-7 through its next action."
+65,Seal Spd 1,seal,SPD-3,"Weapon Type,Staff",,"After combat, foe suffers Spd-3 through its next action."
+66,Seal Spd 2,seal,SPD-5,"Weapon Type,Staff",,"After combat, foe suffers Spd-5 through its next action."
+67,Seal Spd 3,seal,SPD-7,"Weapon Type,Staff",,"After combat, foe suffers Spd-7 through its next action."
+68,Swordbreaker 1,breaker,"Red,Sword","Color,Green",,"If unit's HP ≥ 90% in combat against a sword user, unit makes a follow-up attack and foe cannot."
+69,Swordbreaker 2,breaker,"Red,Sword","Color,Green",,"If unit's HP ≥ 70% in combat against a sword user, unit makes a follow-up attack and foe cannot."
+70,Swordbreaker 3,breaker,"Red,Sword","Color,Green",,"If unit's HP ≥ 50% in combat against a sword user, unit makes a follow-up attack and foe cannot."
+71,Vantage 1,van,0.25,,,Unit counterattacks first when attacked at HP ≤ 25%
+72,Vantage 2,van,0.5,,,Unit counterattacks first when attacked at HP ≤ 50%
+73,Vantage 3,van,0.75,,,Unit counterattacks first when attacked at HP ≤ 75%
+74,Wary Fighter 1,wf,0.9,,"Movement,Armored",Prevents follow up attack in combat from unit and foes if unit's HP ≥ 90%
+75,Wary Fighter 2,wf,0.7,,"Movement,Armored",Prevents follow up attack in combat from unit and foes if unit's HP ≥ 70%
+76,Wary Fighter 3,wf,0.5,,"Movement,Armored",Prevents follow up attack in combat from unit and foes if unit's HP ≥ 50%
+77,Watersweep 1,sweep,"Magic,SPD,5","Weapon Type,Staff",,"If unit initiates attack, no follow-up occurs. Against foe with magic, staff or dragonstone, if unit’s Spd - foe’s Spd ≥ 5, foe can’t counterattack."
+78,Watersweep 2,sweep,"Magic,SPD,3","Weapon Type,Staff",,"If unit initiates attack, no follow-up occurs. Against foe with magic, staff or dragonstone, if unit’s Spd - foe’s Spd ≥ 3, foe can’t counterattack."
+79,Watersweep 3,sweep,"Magic,SPD,1","Weapon Type,Staff",,"If unit initiates attack, no follow-up occurs. Against foe with magic, staff or dragonstone, if unit’s Spd - foe’s Spd ≥ 1, foe can’t counterattack."
+80,Windsweep 1,sweep,"Physical,SPD,5","Weapon Type,Staff",,"If unit initiates attack, no follow-up occurs. Against foe with sword, lance, axe, bow, or dagger, if unit’s Spd - foe’s Spd ≥ 5, foe can’t counterattack."
+81,Windsweep 2,sweep,"Physical,SPD,3","Weapon Type,Staff",,"If unit initiates attack, no follow-up occurs. Against foe with sword, lance, axe, bow, or dagger, if unit’s Spd - foe’s Spd ≥ 3, foe can’t counterattack."
+82,Windsweep 3,sweep,"Physical,SPD,1","Weapon Type,Staff",,"If unit initiates attack, no follow-up occurs. Against foe with sword, lance, axe, bow, or dagger, if unit’s Spd - foe’s Spd ≥ 1, foe can’t counterattack."
+83,Wings of Mercy 1,mobility,warp,,,Enables unit to warp adjacent to any ally with HP ≤ 30%.
+84,Wings of Mercy 2,mobility,warp,,,Enables unit to warp adjacent to any ally with HP ≤ 40%.
+85,Wings of Mercy 3,mobility,warp,,,Enables unit to warp adjacent to any ally with HP ≤ 50%.

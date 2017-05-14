@@ -213,12 +213,15 @@ th, td {
     shape-rendering: crispEdges;
 }
 
-#sim-team {
+#hero1, #hero2, #hero3, #hero4 {
+    border: 2px solid black;
+    padding: 10px;
     margin: 10px;
+    border-radius: 20px;
 }
 
-#sim-heroes > td {
-    padding: 10px;
+#sim-team {
+    margin: 10px;
 }
 
 .boon-bane {
@@ -230,7 +233,7 @@ th, td {
 #hero3-skills > div,
 #hero4-skills > div {
     margin: 4px 2px;
-    width: 200px;
+    width: 210px;
     display: block;
 }
 
@@ -239,7 +242,7 @@ th, td {
 #hero3-stat-table,
 #hero4-stat-table {
     border: none;
-    width: 200px;
+    width: 210px;
     text-align: center;
     margin: 1px;
     margin-bottom: 5px;

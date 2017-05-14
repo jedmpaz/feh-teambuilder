@@ -1,49 +1,49 @@
-ID,Name,Turns,Tag,Effect,Desc
-1,Aegis,3,reduction,"Ranged,0.5",Reduces damage inflicted by attacks from foes 2 spaces away by 50%.
-2,Aether,5,aether,,Resolve combat as if foe suffered Def/Res-50%. Unit recovers HP=half damage dealt.
-3,Astra,5,boost,"total,1.5",Grant +150% to damage dealt
-4,Blazing Flame,5,aoe,1.5,"Before combat this unit initiates, foes in an area near target take damage equal to 1.5 x (unit's ATK minus foe's DEF or RES)."
-5,Blazing Light,5,aoe,1.5,"Before combat this unit initiates, foes in an area near target take damage equal to 1.5 x (unit's Atk minus foe's Def or Res)."
-6,Blazing Thunder,5,aoe,1.5,"Before combat this unit initiates, foes in an area near target take damage equal to 1.5 x (unit's ATK minus foe's DEF or RES)."
-7,Blazing Wind,5,aoe,1.5,"Before combat this unit initiates, foes in an area near target take damage equal to 1.5x (unit's Atk minus foe's Def or Res)."
-8,Bonfire,3,boost,"DEF,0.5",Boosts damage dealt by 50% of unit's Def
-9,Buckler,3,reduction,"Melee,0.3",Reduces damage inflicted by attacks from adjacent foes by 30%.
-10,Chilling Wind,4,boost,"RES,0.5",Boosts damage dealt by 50% of unit's res
-11,Daylight,4,heal,0.3,Heal 30% of damage dealt
-12,Draconic Aura,3,boost,"ATK,0.3",Grants +30% to Atk.
-13,Dragon Fang,4,boost,"ATK,0.5",Grants +50% to Atk.
-14,Dragon Gaze,4,boost,"ATK,0.3",Atk +30%
-15,Escutcheon,2,reduction,"Melee,0.3",Reduces damage inflicted by attacks from adjacent foes by 30%.
-16,Galeforce,5,galeforce,,"If this unit initiates an attack, it can take another action after combat. (Once per turn only.)"
-17,Glacies,4,boost,"RES,0.8",Boosts damage dealt by 80% of unit's res
-18,Glimmer,3,boost,"total,0.5",Grants 50% to damage dealt.
-19,Glowing Ember,4,boost,"DEF,0.5",Boosts damage dealt by 50% of unit's Def
-20,Growing Flame,5,aoe,"total,1","Before combat this unit initiates, foes in a wide area around target take damage equal to (unit's Atk minus foe's Def or Res)."
-21,Growing Light,5,aoe,"total,1","Before combat this unit initiates, foes in a wide area near target take damage equal to (unit's Atk - foe's Def or Res)"
-22,Growing Thunder,5,aoe,"total,1","Before combat initiates, foes in a wide area around the target take damage equal to (unit's Atk minus foe's Def or Res)."
-23,Growing Wind,5,aoe,"total,1","Before combat this unit initiates, foes in a wide area around the target take damage equal to (unit's Atk minus foe's Def or Res)."
-24,Heavenly Light,2,staff,,"When healing an ally with a staff, all other allies recover 10 HP."
-25,Holy Vestments,3,reduction,"Ranged,0.3",Reduces damage inflicted by attacks from foes 2 spaces away by 30%.
-26,Iceberg,3,boost,"RES,0.5",Boosts damage dealt by 50% of unit's Res.
-27,Ignis,4,boost,"DEF,0.8",Boosts damage dealt by 80% of unit's DEF.
-28,Imbue,1,staff,,"When healing an ally with a staff, increases recovered HP by 10."
-29,Kindled-Fire Balm,1,staff,,"When healing an ally with a staff, grants all allies Atk +4 for 1 turn"
-30,Luna,3,moon,0.5,Resolve combat as if foe suffered Def/Res-50%
-31,Miracle,5,miracle,,"If HP > 1, survive a lethal attack with 1 HP remaining."
-32,Moonbow,2,moon,0.3,Resolve combat as if foe suffered Def/Res-30%.
-33,New Moon,3,moon,0.3,Resolve combat as if foe suffered Def/Res-30%
-34,Night Sky,4,boost,"total,0.5",Grant +50% to damage dealt
-35,Noontime,3,heal,0.3,Heals 30% of damage dealt
-36,Pavise,3,reduction,"Melee,0.5",Reduces damage inflicted by attacks from adjacent foes by 50%.
-37,Reprisal,2,boost,"missing-health,0.3",Grants bonus to damage dealt equal to 30% of damage suffered.
-38,Retribution,3,boost,"missing-health,0.3",Grants bonus to damage dealt equal to 30% of damage suffered.
-39,Rising Flame,5,aoe,"total,1","Before combat this unit initiates, foes in an area near target take damage equal to (unit's Atk minus foe's Def or Res)."
-40,Rising Light,5,aoe,"total,1","Before combat this unit initiates, foes in an area near target take damage equal to (unit's Atk minus foe's Def or Res)."
-41,Rising Thunder,5,aoe,"total,1","Before combat this unit initiates, foes in an area near target take damage equal to (unit's ATK minus foe's DEF or RES)."
-42,Rising Wind,5,aoe,"total,1","Before combat this unit initiates, foes in an area near target take damage equal to (unit's Atk minus foe's Def or Res)."
-43,Sacred Cowl,2,reduction,"Ranged,0.3",Reduces damage inflicted by attacks from foes 2 spaces away by 30%
-44,Sol,4,heal,0.5,Heal 50% of damage dealt
-45,Solid-Earth Balm,1,staff,,"When healing an ally with a staff, grants all allies Def+4 for 1 turn."
-46,Still-Water Balm,1,staff,,"When healing an ally with a staff, grants all allies Res+4 for 1 turn."
-47,Swift-Winds Balm,1,staff,,"When healing an ally with a staff, grants all allies Spd+4 for 1 turn."
-48,Vengeance,3,boost,"missing-health,0.5",Grants bonus to damage dealt equal to 50% of damage suffered.
+ID,Name,Turns,Tag,Effect,Restriction,Exclusive,Desc
+1,Aegis,3,reduction,"Ranged,0.5","Range,Ranged",,Reduces damage inflicted by attacks from foes 2 spaces away by 50%.
+2,Aether,5,aether,,"Weapon Type,Staff",,Resolve combat as if foe suffered Def/Res-50%. Unit recovers HP=half damage dealt.
+3,Astra,5,boost,"total,1.5","Weapon Type,Staff",,Grant +150% to damage dealt
+4,Blazing Flame,5,aoe,1.5,"Weapon Type,Staff",,"Before combat this unit initiates, foes in an area near target take damage equal to 1.5 x (unit's ATK minus foe's DEF or RES)."
+5,Blazing Light,5,aoe,1.5,"Weapon Type,Staff",,"Before combat this unit initiates, foes in an area near target take damage equal to 1.5 x (unit's Atk minus foe's Def or Res)."
+6,Blazing Thunder,5,aoe,1.5,"Weapon Type,Staff",,"Before combat this unit initiates, foes in an area near target take damage equal to 1.5 x (unit's ATK minus foe's DEF or RES)."
+7,Blazing Wind,5,aoe,1.5,"Weapon Type,Staff",,"Before combat this unit initiates, foes in an area near target take damage equal to 1.5x (unit's Atk minus foe's Def or Res)."
+8,Bonfire,3,boost,"DEF,0.5","Weapon Type,Staff",,Boosts damage dealt by 50% of unit's Def
+9,Buckler,3,reduction,"Melee,0.3","Range,Ranged",,Reduces damage inflicted by attacks from adjacent foes by 30%.
+10,Chilling Wind,4,boost,"RES,0.5","Weapon Type,Staff",,Boosts damage dealt by 50% of unit's res
+11,Daylight,4,heal,0.3,"Weapon Type,Staff",,Heal 30% of damage dealt
+12,Draconic Aura,3,boost,"ATK,0.3","Weapon Type,Staff",,Grants +30% to Atk.
+13,Dragon Fang,4,boost,"ATK,0.5","Weapon Type,Staff",,Grants +50% to Atk.
+14,Dragon Gaze,4,boost,"ATK,0.3","Weapon Type,Staff",,Atk +30%
+15,Escutcheon,2,reduction,"Melee,0.3","Range,Ranged",,Reduces damage inflicted by attacks from adjacent foes by 30%.
+16,Galeforce,5,galeforce,,"Weapon Type,Staff",,"If this unit initiates an attack, it can take another action after combat. (Once per turn only.)"
+17,Glacies,4,boost,"RES,0.8","Weapon Type,Staff",,Boosts damage dealt by 80% of unit's res
+18,Glimmer,3,boost,"total,0.5","Weapon Type,Staff",,Grants 50% to damage dealt.
+19,Glowing Ember,4,boost,"DEF,0.5","Weapon Type,Staff",,Boosts damage dealt by 50% of unit's Def
+20,Growing Flame,5,aoe,"total,1","Weapon Type,Staff",,"Before combat this unit initiates, foes in a wide area around target take damage equal to (unit's Atk minus foe's Def or Res)."
+21,Growing Light,5,aoe,"total,1","Weapon Type,Staff",,"Before combat this unit initiates, foes in a wide area near target take damage equal to (unit's Atk - foe's Def or Res)"
+22,Growing Thunder,5,aoe,"total,1","Weapon Type,Staff",,"Before combat initiates, foes in a wide area around the target take damage equal to (unit's Atk minus foe's Def or Res)."
+23,Growing Wind,5,aoe,"total,1","Weapon Type,Staff",,"Before combat this unit initiates, foes in a wide area around the target take damage equal to (unit's Atk minus foe's Def or Res)."
+24,Heavenly Light,2,staff,,,"Weapon Type,Staff","When healing an ally with a staff, all other allies recover 10 HP."
+25,Holy Vestments,3,reduction,"Ranged,0.3","Range,Ranged",,Reduces damage inflicted by attacks from foes 2 spaces away by 30%.
+26,Iceberg,3,boost,"RES,0.5","Weapon Type,Staff",,Boosts damage dealt by 50% of unit's Res.
+27,Ignis,4,boost,"DEF,0.8","Weapon Type,Staff",,Boosts damage dealt by 80% of unit's DEF.
+28,Imbue,1,staff,,,"Weapon Type,Staff","When healing an ally with a staff, increases recovered HP by 10."
+29,Kindled-Fire Balm,1,staff,,,"Weapon Type,Staff","When healing an ally with a staff, grants all allies Atk +4 for 1 turn"
+30,Luna,3,moon,0.5,"Weapon Type,Staff",,Resolve combat as if foe suffered Def/Res-50%
+31,Miracle,5,miracle,,,,"If HP > 1, survive a lethal attack with 1 HP remaining."
+32,Moonbow,2,moon,0.3,"Weapon Type,Staff",,Resolve combat as if foe suffered Def/Res-30%.
+33,New Moon,3,moon,0.3,"Weapon Type,Staff",,Resolve combat as if foe suffered Def/Res-30%
+34,Night Sky,4,boost,"total,0.5","Weapon Type,Staff",,Grant +50% to damage dealt
+35,Noontime,3,heal,0.3,"Weapon Type,Staff",,Heals 30% of damage dealt
+36,Pavise,3,reduction,"Melee,0.5","Range,Ranged",,Reduces damage inflicted by attacks from adjacent foes by 50%.
+37,Reprisal,2,boost,"missing-health,0.3","Weapon Type,Staff",,Grants bonus to damage dealt equal to 30% of damage suffered.
+38,Retribution,3,boost,"missing-health,0.3","Weapon Type,Staff",,Grants bonus to damage dealt equal to 30% of damage suffered.
+39,Rising Flame,5,aoe,"total,1","Weapon Type,Staff",,"Before combat this unit initiates, foes in an area near target take damage equal to (unit's Atk minus foe's Def or Res)."
+40,Rising Light,5,aoe,"total,1","Weapon Type,Staff",,"Before combat this unit initiates, foes in an area near target take damage equal to (unit's Atk minus foe's Def or Res)."
+41,Rising Thunder,5,aoe,"total,1","Weapon Type,Staff",,"Before combat this unit initiates, foes in an area near target take damage equal to (unit's ATK minus foe's DEF or RES)."
+42,Rising Wind,5,aoe,"total,1","Weapon Type,Staff",,"Before combat this unit initiates, foes in an area near target take damage equal to (unit's Atk minus foe's Def or Res)."
+43,Sacred Cowl,2,reduction,"Ranged,0.3","Range,Ranged",,Reduces damage inflicted by attacks from foes 2 spaces away by 30%
+44,Sol,4,heal,0.5,"Weapon Type,Staff",,Heal 50% of damage dealt
+45,Solid-Earth Balm,1,staff,,,"Weapon Type,Staff","When healing an ally with a staff, grants all allies Def+4 for 1 turn."
+46,Still-Water Balm,1,staff,,,"Weapon Type,Staff","When healing an ally with a staff, grants all allies Res+4 for 1 turn."
+47,Swift-Winds Balm,1,staff,,,"Weapon Type,Staff","When healing an ally with a staff, grants all allies Spd+4 for 1 turn."
+48,Vengeance,3,boost,"missing-health,0.5","Weapon Type,Staff",,Grants bonus to damage dealt equal to 50% of damage suffered.
