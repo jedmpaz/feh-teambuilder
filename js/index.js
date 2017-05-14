@@ -551,6 +551,8 @@ function start() {
         })
         console.log(units);
     });
+
+    loadData(units, weapons, assists, specials, skillsA, skillsB, skillsC, team, colors);
 }
 
 /* Stat, Color Buttons Functions */
@@ -803,28 +805,23 @@ $(document).ready(function(){
         if($("#sim-container").css("display") == "none") {
             $("#build-container").fadeToggle("slow");
             $("#sim-container").fadeToggle("slow");
-            importTeam(units, weapons, assists, specials, skillsA, skillsB, skillsC, team, colors);
+            importTeam();
         }
     })
-})
 
-$(document).ready(function(){
     $("#build-button").click(function() {
         if($("#build-container").css("display") == "none") {
             $("#sim-container").fadeToggle("slow");
             $("#build-container").fadeToggle("slow");
         }
     })
-})
 
-$(document).ready(function(){
     $(".skill-label").click(function() {
         var hero = this.id.split("-")[0];
         var toDisplay = "#"+this.id+"-info";
         var skill = this.id.split("-")[1];
         hero = team[+hero.split("o")[1] - 1];
         var choice = "#"+this.id +"-choice";
-        console.log(choice);
         var text;
         if(choice.split("-")[1] == "Weapon") {
             text = "<p>Mt: "+weapons[$(choice).val()].Mt+"</p>"

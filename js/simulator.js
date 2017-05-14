@@ -1,4 +1,49 @@
-function importTeam(units, weapons, assists, specials, skillsA, skillsB, skillsC, team, colors) {
+var units, weapons, assists, specials, skillsA, skillsB, skillsC, team, colors;
+
+var heroStats = [
+    {
+        HP: {base: 0, skill: 0},
+        ATK: {base: 0, weapon: 0, skill: 0, buff: 0, debuff: 0,spur: 0},
+        SPD: {base: 0, skill: 0, buff: 0, debuff: 0,spur: 0},
+        DEF: {base: 0, buff: 0, skill: 0, debuff: 0,spur: 0},
+        RES: {base: 0, buff: 0, skill: 0, debuff: 0,spur: 0}
+    },
+    {
+        HP: {base: 0, skill: 0},
+        ATK: {base: 0, weapon: 0, buff: 0, debuff: 0,spur: 0},
+        SPD: {base: 0, buff: 0, debuff: 0,spur: 0},
+        DEF: {base: 0, buff: 0, debuff: 0,spur: 0},
+        RES: {base: 0, buff: 0, debuff: 0,spur: 0}
+    },
+    {
+        HP: {base: 0, skill: 0},
+        ATK: {base: 0, weapon: 0, buff: 0, debuff: 0,spur: 0},
+        SPD: {base: 0, buff: 0, debuff: 0,spur: 0},
+        DEF: {base: 0, buff: 0, debuff: 0,spur: 0},
+        RES: {base: 0, buff: 0, debuff: 0,spur: 0}
+    },
+    {
+        HP: {base: 0, skill: 0},
+        ATK: {base: 0, weapon: 0, buff: 0, debuff: 0,spur: 0},
+        SPD: {base: 0, buff: 0, debuff: 0,spur: 0},
+        DEF: {base: 0, buff: 0, debuff: 0,spur: 0},
+        RES: {base: 0, buff: 0, debuff: 0,spur: 0}
+    }];
+
+function loadData(u, w, a, specials, sA, sB, sC, t, c) {
+    units = u;
+    weapons = w;
+    assists = a;
+    skillsA = sA;
+    skillsB = sB;
+    skillsC = sC;
+    team = t;
+    colors = c;
+}
+
+function importTeam() {
+
+    console.log(heroStats);
     var redSwords = [];
     var blueLances = [];
     var greenAxes = [];
@@ -40,11 +85,9 @@ function importTeam(units, weapons, assists, specials, skillsA, skillsB, skillsC
         id = "#hero" + (i+1);
         if($(id+"-name").html() != hero) {
             $(id+"-name").html(team[i]);
-            $(id+"-HP").html(units[team[i]].HP);
-            $(id+"-ATK").html(units[team[i]].ATK);
-            $(id+"-SPD").html(units[team[i]].SPD);
-            $(id+"-DEF").html(units[team[i]].DEF);
-            $(id+"-RES").html(units[team[i]].RES);
+
+            var hp, atk, spd, def, res;
+
             $(id).css("border-color", colors[units[hero].Color]);
             var weaponList;
             if(units[hero].Color == "Red" && units[hero]["Weapon Type"] == "Sword") {
@@ -163,6 +206,97 @@ function importTeam(units, weapons, assists, specials, skillsA, skillsB, skillsC
             } else {
                 $(id+"-SkillC-choice").val(units[hero].SkillC);
             }
+
+            heroStats[i].HP.base = units[team[i]].HP;
+
+            heroStats[i].ATK.base = units[team[i]].ATK;
+            heroStats[i].ATK.weapon = weapons[units[hero].Weapon].Mt;
+
+            heroStats[i].SPD.base = units[team[i]].SPD;
+
+            heroStats[i].DEF.base = units[team[i]].DEF;
+
+            heroStats[i].RES.base = units[team[i]].RES;
+
+            var increases;
+            if(skillsA[units[hero].SkillA].Type == "stat") {
+                increases = skillsA[units[hero].SkillA].Effect.split(",");
+                console.log(increases);
+                for(var j in increases) {
+                    heroStats[i][increases[j].split("+")[0]].skill = +increases[j].split("+")[1];
+                }
+            } else if(skillsA[units[hero].SkillA].Type == "fury") {
+                heroStats[i].ATK.skill = +skillsA[units[hero].SkillA].Effect;
+                heroStats[i].SPD.skill = +skillsA[units[hero].SkillA].Effect;
+                heroStats[i].DEF.skill = +skillsA[units[hero].SkillA].Effect;
+                heroStats[i].RES.skill = +skillsA[units[hero].SkillA].Effect;
+            }
+
+            $(id+"-HP").html(heroStats[i].HP.base + heroStats[i].HP.skill);
+            $(id+"-ATK").html(heroStats[i].ATK.base + heroStats[i].ATK.weapon + heroStats[i].ATK.skill);
+            $(id+"-SPD").html(heroStats[i].SPD.base + heroStats[i].SPD.skill + (weapons[$(id+"-Weapon-choice").val()].tag == "brave" ? -5 : 0));
+            $(id+"-DEF").html(heroStats[i].DEF.base + heroStats[i].DEF.skill);
+            $(id+"-RES").html(heroStats[i].RES.base + heroStats[i].RES.skill);
         }
     }
 }
+
+$(document).ready(function(){
+    $(".sim-selector").change(function() {
+        var hero = this.id.split("-")[0];
+        var i = +hero.split("o")[1] - 1;
+        hero = team[+hero.split("o")[1] - 1];
+        var skill = this.id.split("-")[1];
+        if(skill == "Weapon") {
+            heroStats[i].ATK.weapon = weapons[$(this).val()].Mt;
+            $(id+"-ATK").html(heroStats[i].ATK.base + heroStats[i].ATK.weapon + heroStats[i].ATK.skill);
+        } else if(skill == "SkillA") {
+            var increases;
+            if(skillsA[$(this).val()].Type == "stat") {
+                increases = skillsA[$(this).val()].Effect.split(",");
+                console.log(increases);
+                for(var j in increases) {
+                    heroStats[i][increases[j].split("+")[0]].skill = +increases[j].split("+")[1];
+                    $(id+"-"+increases[j].split("+")[0]).html(
+                        heroStats[i][increases[j].split("+")[0]].base
+                        + heroStats[i][increases[j].split("+")[0]].skill
+                        + (weapons[$(id+"-Weapon-choice").val()].tag == "brave" ? -5 : 0)
+                        + (increases[j].split("+")[0] == "ATK" ? weapons[$(id+"-Weapon-choice").val()].Mt : 0)
+                    )
+                }
+            } else if(skillsA[$(this).val()].Type == "fury") {
+                heroStats[i].ATK.skill = +skillsA[$(this).val()].Effect;
+                heroStats[i].SPD.skill = +skillsA[$(this).val()].Effect;
+                heroStats[i].DEF.skill = +skillsA[$(this).val()].Effect;
+                heroStats[i].RES.skill = +skillsA[$(this).val()].Effect;
+                $(id+"-ATK").html(heroStats[i].ATK.base + heroStats[i].ATK.weapon + heroStats[i].ATK.skill);
+                $(id+"-SPD").html(heroStats[i].SPD.base + heroStats[i].SPD.skill + (weapons[$(id+"-Weapon-choice").val()].tag == "brave" ? -5 : 0));
+                $(id+"-DEF").html(heroStats[i].DEF.base + heroStats[i].DEF.skill);
+                $(id+"-RES").html(heroStats[i].RES.base + heroStats[i].RES.skill);
+            }
+        } else if(skill == "Special") {
+            $(id+"-totalcharge").html("/ "+specials[$(this).val()].Turns);
+        }
+        var text;
+        var toDisplay = "#"+this.id.split("-")[0]+"-"+this.id.split("-")[1]+"-info";
+        var choice = "#"+this.id;
+        if(choice.split("-")[1] == "Weapon") {
+            text = "<p>Mt: "+weapons[$(choice).val()].Mt+"</p>"
+            +"<p>Effect: "+weapons[$(choice).val()].Desc+"</p>";
+        } else if(choice.split("-")[1] == "Assist") {
+            text ="<p>"+assists[$(choice).val()].Desc+"</p>";
+        } else if(choice.split("-")[1] == "Special") {
+            text ="<p>"+specials[$(choice).val()].Desc+"</p>";
+        } else if(choice.split("-")[1] == "SkillA") {
+            text ="<p>"+skillsA[$(choice).val()].Desc+"</p>";
+        } else if(choice.split("-")[1] == "SkillB") {
+            text ="<p>"+skillsB[$(choice).val()].Desc+"</p>";
+        } else if(choice.split("-")[1] == "SkillC") {
+            text ="<p>"+skillsC[$(choice).val()].Desc+"</p>";
+        } else if(choice.split("-")[1] == "SkillS") {
+            text ="<p>"+skillsS[$(choice).val()].Desc+"</p>";
+        }
+        $(toDisplay).html(text);
+    })
+});
+
