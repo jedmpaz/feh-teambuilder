@@ -807,14 +807,14 @@ $(document).ready(function(){
             $("#sim-container").fadeToggle("slow");
             importTeam();
         }
-    })
+    });
 
     $("#build-button").click(function() {
         if($("#build-container").css("display") == "none") {
             $("#sim-container").fadeToggle("slow");
             $("#build-container").fadeToggle("slow");
         }
-    })
+    });
 
     $(".skill-label").click(function() {
         var hero = this.id.split("-")[0];
@@ -825,8 +825,8 @@ $(document).ready(function(){
         var text;
         if($(choice).val() != "none") {
             if(choice.split("-")[1] == "Weapon") {
-                text = "<p>Mt: "+weapons[$(choice).val()].Mt+"</p>"
-                +"<p>Effect: "+weapons[$(choice).val()].Desc+"</p>";
+                text = "<p>Mt: "+weapons[$(choice).val()].Mt+"<br>"
+                +"Effect: "+weapons[$(choice).val()].Desc+"</p>";
             } else if(choice.split("-")[1] == "Assist") {
                 text ="<p>"+assists[$(choice).val()].Desc+"</p>";
             } else if(choice.split("-")[1] == "Special") {
@@ -843,5 +843,13 @@ $(document).ready(function(){
             $(toDisplay).html(text);
             $(toDisplay).slideToggle("slow");
         }
+    });
+
+    $(".skill-label").hover(function() {
+        var hero = this.id.split("-")[0];
+        hero = team[+hero.split("o")[1] - 1];
+        $(this).css("color", colors[units[hero].Color]);
+    }, function() {
+        $(this).css("color", "black");
     });
 })

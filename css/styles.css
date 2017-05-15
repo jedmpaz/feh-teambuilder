@@ -276,9 +276,7 @@ th, td {
     margin-left: 10px;
 }
 
-#hero1-skills > div > p,
-#hero2-skills > div > p,
-#hero3-skills > div > p,
-#hero4-skills > div > p {
-    font-size: 75%;
+.skill-info {
+    font-size: 80%;
+    padding: 5px;
 }
