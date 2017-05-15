@@ -239,6 +239,9 @@ function importTeam() {
                 heroStats[i].RES.skill = +skillsA[units[hero].SkillA].Effect;
             }
 
+            $(id+"-Boon").val("neutral");
+            $(id+"-Bane").val("neutral");
+
             $(id+"-HP").html(heroStats[i].HP.base + heroStats[i].HP.skill);
             $(id+"-ATK").html(heroStats[i].ATK.base + heroStats[i].ATK.weapon + heroStats[i].ATK.skill);
             $(id+"-SPD").html(heroStats[i].SPD.base + heroStats[i].SPD.skill + (weapons[$(id+"-Weapon-choice").val()].tag == "brave" ? -5 : 0));
@@ -267,6 +270,7 @@ $(document).ready(function(){
     /* stat changes upon selecting a new weapon/skill */
     $(".sim-selector").change(function() {
         var hero = this.id.split("-")[0];
+        var id = "#"+hero;
         var i = +hero.split("o")[1] - 1;
         hero = team[+hero.split("o")[1] - 1];
         var skill = this.id.split("-")[1];
@@ -317,12 +321,13 @@ $(document).ready(function(){
     /* boon and bane stat changes */
     $(".boon-selector").change(function() {
         var hero = this.id.split("-")[0];
+        var id = "#"+hero;
         var i = +hero.split("o")[1] - 1;
         hero = team[+hero.split("o")[1] - 1];
         var skill = $(this).val();
         increase = 3;
         for(var j in heroStats[i]) {
-            if($(id+"-Bane").val() != heroStats[i][j]) {
+            if($(id+"-Bane").val() != j) {
                 heroStats[i][j].iv = 0;
             }
         }
@@ -334,16 +339,21 @@ $(document).ready(function(){
             }
             heroStats[i][skill].iv = increase;
         }
+        if(skill == $(id+"-Bane").val()) {
+            $(id+"-Bane").val("neutral");
+        }
         updateStats(id, i);
     })
     $(".bane-selector").change(function() {
         var hero = this.id.split("-")[0];
+        var id = "#"+hero;
         var i = +hero.split("o")[1] - 1;
         hero = team[+hero.split("o")[1] - 1];
         var skill = $(this).val();
         decrease = -3;
         for(var j in heroStats[i]) {
-            if($(id+"-Bane").val() != heroStats[i][j]) {
+            if($(id+"-Boon").val() != j) {
+                console.log(j)
                 heroStats[i][j].iv = 0;
             }
         }
@@ -354,6 +364,9 @@ $(document).ready(function(){
                 }
             }
             heroStats[i][skill].iv = decrease;
+        }
+        if(skill == $(id+"-Boon").val()) {
+            $(id+"-Boon").val("neutral");
         }
         updateStats(id, i);
     })
