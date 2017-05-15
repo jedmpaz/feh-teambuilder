@@ -2,11 +2,11 @@ var units, weapons, assists, specials, skillsA, skillsB, skillsC, team, colors;
 
 var heroStats = [
     {
-        HP: {base: 0, skill: 0},
-        ATK: {base: 0, weapon: 0, skill: 0, buff: 0, debuff: 0,spur: 0},
-        SPD: {base: 0, skill: 0, buff: 0, debuff: 0,spur: 0},
-        DEF: {base: 0, buff: 0, skill: 0, debuff: 0,spur: 0},
-        RES: {base: 0, buff: 0, skill: 0, debuff: 0,spur: 0}
+        HP: {base: 0, skill: 0, iv: 0},
+        ATK: {base: 0, weapon: 0, skill: 0, iv: 0, buff: 0, debuff: 0, spur: 0},
+        SPD: {base: 0, skill: 0, iv: 0, buff: 0, debuff: 0,spur: 0},
+        DEF: {base: 0, skill: 0, iv: 0, buff: 0, debuff: 0,spur: 0},
+        RES: {base: 0, skill: 0, iv: 0, buff: 0, debuff: 0,spur: 0}
     },
     {
         HP: {base: 0, skill: 0},
@@ -30,10 +30,11 @@ var heroStats = [
         RES: {base: 0, buff: 0, debuff: 0,spur: 0}
     }];
 
-function loadData(u, w, a, specials, sA, sB, sC, t, c) {
+function loadData(u, w, a, s, sA, sB, sC, t, c) {
     units = u;
     weapons = w;
     assists = a;
+    specials = s;
     skillsA = sA;
     skillsB = sB;
     skillsC = sC;
@@ -113,6 +114,7 @@ function importTeam() {
             }
 
             /* update weapons menu */
+            $(id+"-Weapon-choice").empty();
             if(weapons[units[hero].Weapon].Legendary) {
                 $(id+"-Weapon-choice").append($("<option></option>").attr("value", units[hero].Weapon).text(units[hero].Weapon));
             }
@@ -122,6 +124,7 @@ function importTeam() {
             $(id+"-Weapon-choice").val(units[hero].Weapon);
 
             /* update assists menu */
+            $(id+"-Assist-choice").empty();
             for(var j in assists) {
                 if(assists[j].Restriction == "none" && assists[j].Exclusive == "none") {
                     $(id+"-Assist-choice").append($("<option></option>").attr("value", assists[j].Name).text(assists[j].Name));
@@ -141,6 +144,7 @@ function importTeam() {
             }
 
             /* update specials menu */
+            $(id+"-Special-choice").empty();
             for(var j in specials) {
                 if(specials[j].Restriction == "none" && specials[j].Exclusive == "none") {
                     $(id+"-Special-choice").append($("<option></option>").attr("value", specials[j].Name).text(specials[j].Name));
@@ -159,6 +163,7 @@ function importTeam() {
             }
 
             /* update A-skills menu */
+            $(id+"-SkillA-choice").empty();
             for(var j in skillsA) {
                 if(skillsA[j].Restriction == "none" && skillsA[j].Exclusive == "none") {
                     $(id+"-SkillA-choice").append($("<option></option>").attr("value", skillsA[j].Name).text(skillsA[j].Name));
@@ -176,6 +181,7 @@ function importTeam() {
             }
 
             /* update B-skills menu */
+            $(id+"-SkillB-choice").empty();
             for(var j in skillsB) {
                 if(skillsB[j].Restriction == "none" && skillsB[j].Exclusive == "none") {
                     $(id+"-SkillB-choice").append($("<option></option>").attr("value", skillsB[j].Name).text(skillsB[j].Name));
@@ -193,6 +199,7 @@ function importTeam() {
             }
 
             /* update C-skills menu */
+            $(id+"-SkillC-choice").empty();
             for(var j in skillsC) {
                 if(skillsC[j].Exclusive == "none") {
                     $(id+"-SkillC-choice").append($("<option></option>").attr("value", skillsC[j].Name).text(skillsC[j].Name));
@@ -241,7 +248,23 @@ function importTeam() {
     }
 }
 
+function updateStats(id, i) {
+    for(var skill in heroStats[i]) {
+        $(id+"-"+skill).html(
+            heroStats[i][skill].base
+            +heroStats[i][skill].skill
+            +heroStats[i][skill].iv
+            +(skill != "HP" ? heroStats[i][skill].buff : 0)
+            +(skill != "HP" ? heroStats[i][skill].debuff : 0)
+            +(skill != "HP" ? heroStats[i][skill].spur : 0)
+            +(skill == "ATK" ? heroStats[i].ATK.weapon : 0)
+            +(skill == "ATK" && weapons[$(id+"-Weapon-choice").val()].tag == "brave" ? -5 : 0)
+        )
+    }
+}
+
 $(document).ready(function(){
+    /* stat changes upon selecting a new weapon/skill */
     $(".sim-selector").change(function() {
         var hero = this.id.split("-")[0];
         var i = +hero.split("o")[1] - 1;
@@ -249,7 +272,7 @@ $(document).ready(function(){
         var skill = this.id.split("-")[1];
         if(skill == "Weapon") {
             heroStats[i].ATK.weapon = weapons[$(this).val()].Mt;
-            $(id+"-ATK").html(heroStats[i].ATK.base + heroStats[i].ATK.weapon + heroStats[i].ATK.skill);
+            updateStats(id, i);
         } else if(skill == "SkillA") {
             var increases;
             if(skillsA[$(this).val()].Type == "stat") {
@@ -257,22 +280,14 @@ $(document).ready(function(){
                 console.log(increases);
                 for(var j in increases) {
                     heroStats[i][increases[j].split("+")[0]].skill = +increases[j].split("+")[1];
-                    $(id+"-"+increases[j].split("+")[0]).html(
-                        heroStats[i][increases[j].split("+")[0]].base
-                        + heroStats[i][increases[j].split("+")[0]].skill
-                        + (weapons[$(id+"-Weapon-choice").val()].tag == "brave" ? -5 : 0)
-                        + (increases[j].split("+")[0] == "ATK" ? weapons[$(id+"-Weapon-choice").val()].Mt : 0)
-                    )
+                    updateStats(id, i);
                 }
             } else if(skillsA[$(this).val()].Type == "fury") {
                 heroStats[i].ATK.skill = +skillsA[$(this).val()].Effect;
                 heroStats[i].SPD.skill = +skillsA[$(this).val()].Effect;
                 heroStats[i].DEF.skill = +skillsA[$(this).val()].Effect;
                 heroStats[i].RES.skill = +skillsA[$(this).val()].Effect;
-                $(id+"-ATK").html(heroStats[i].ATK.base + heroStats[i].ATK.weapon + heroStats[i].ATK.skill);
-                $(id+"-SPD").html(heroStats[i].SPD.base + heroStats[i].SPD.skill + (weapons[$(id+"-Weapon-choice").val()].tag == "brave" ? -5 : 0));
-                $(id+"-DEF").html(heroStats[i].DEF.base + heroStats[i].DEF.skill);
-                $(id+"-RES").html(heroStats[i].RES.base + heroStats[i].RES.skill);
+                updateStats(id, i);
             }
         } else if(skill == "Special") {
             $(id+"-totalcharge").html("/ "+specials[$(this).val()].Turns);
@@ -297,6 +312,50 @@ $(document).ready(function(){
             text ="<p>"+skillsS[$(choice).val()].Desc+"</p>";
         }
         $(toDisplay).html(text);
+    })
+
+    /* boon and bane stat changes */
+    $(".boon-selector").change(function() {
+        var hero = this.id.split("-")[0];
+        var i = +hero.split("o")[1] - 1;
+        hero = team[+hero.split("o")[1] - 1];
+        var skill = $(this).val();
+        increase = 3;
+        for(var j in heroStats[i]) {
+            if($(id+"-Bane").val() != heroStats[i][j]) {
+                heroStats[i][j].iv = 0;
+            }
+        }
+        if(skill != "neutral") {
+            for(var j in units[hero].Boon4) {
+                if(skill == units[hero].Boon4[j]) {
+                    increase = 4;
+                }
+            }
+            heroStats[i][skill].iv = increase;
+        }
+        updateStats(id, i);
+    })
+    $(".bane-selector").change(function() {
+        var hero = this.id.split("-")[0];
+        var i = +hero.split("o")[1] - 1;
+        hero = team[+hero.split("o")[1] - 1];
+        var skill = $(this).val();
+        decrease = -3;
+        for(var j in heroStats[i]) {
+            if($(id+"-Bane").val() != heroStats[i][j]) {
+                heroStats[i][j].iv = 0;
+            }
+        }
+        if(skill != "neutral") {
+            for(var j in units[hero].Bane4) {
+                if(skill == units[hero].Bane4[j]) {
+                    decrease = -4;
+                }
+            }
+            heroStats[i][skill].iv = decrease;
+        }
+        updateStats(id, i);
     })
 });
 
