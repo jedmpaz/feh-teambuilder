@@ -9,25 +9,25 @@ var heroStats = [
         RES: {base: 0, skill: 0, iv: 0, buff: 0, debuff: 0,spur: 0}
     },
     {
-        HP: {base: 0, skill: 0},
-        ATK: {base: 0, weapon: 0, buff: 0, debuff: 0,spur: 0},
-        SPD: {base: 0, buff: 0, debuff: 0,spur: 0},
-        DEF: {base: 0, buff: 0, debuff: 0,spur: 0},
-        RES: {base: 0, buff: 0, debuff: 0,spur: 0}
+        HP: {base: 0, skill: 0, iv: 0},
+        ATK: {base: 0, weapon: 0, skill: 0, iv: 0, buff: 0, debuff: 0, spur: 0},
+        SPD: {base: 0, skill: 0, iv: 0, buff: 0, debuff: 0,spur: 0},
+        DEF: {base: 0, skill: 0, iv: 0, buff: 0, debuff: 0,spur: 0},
+        RES: {base: 0, skill: 0, iv: 0, buff: 0, debuff: 0,spur: 0}
     },
     {
-        HP: {base: 0, skill: 0},
-        ATK: {base: 0, weapon: 0, buff: 0, debuff: 0,spur: 0},
-        SPD: {base: 0, buff: 0, debuff: 0,spur: 0},
-        DEF: {base: 0, buff: 0, debuff: 0,spur: 0},
-        RES: {base: 0, buff: 0, debuff: 0,spur: 0}
+        HP: {base: 0, skill: 0, iv: 0},
+        ATK: {base: 0, weapon: 0, skill: 0, iv: 0, buff: 0, debuff: 0, spur: 0},
+        SPD: {base: 0, skill: 0, iv: 0, buff: 0, debuff: 0,spur: 0},
+        DEF: {base: 0, skill: 0, iv: 0, buff: 0, debuff: 0,spur: 0},
+        RES: {base: 0, skill: 0, iv: 0, buff: 0, debuff: 0,spur: 0}
     },
     {
-        HP: {base: 0, skill: 0},
-        ATK: {base: 0, weapon: 0, buff: 0, debuff: 0,spur: 0},
-        SPD: {base: 0, buff: 0, debuff: 0,spur: 0},
-        DEF: {base: 0, buff: 0, debuff: 0,spur: 0},
-        RES: {base: 0, buff: 0, debuff: 0,spur: 0}
+        HP: {base: 0, skill: 0, iv: 0},
+        ATK: {base: 0, weapon: 0, skill: 0, iv: 0, buff: 0, debuff: 0, spur: 0},
+        SPD: {base: 0, skill: 0, iv: 0, buff: 0, debuff: 0,spur: 0},
+        DEF: {base: 0, skill: 0, iv: 0, buff: 0, debuff: 0,spur: 0},
+        RES: {base: 0, skill: 0, iv: 0, buff: 0, debuff: 0,spur: 0}
     }];
 
 function loadData(u, w, a, s, sA, sB, sC, t, c) {
@@ -261,7 +261,7 @@ function updateStats(id, i) {
             +(skill != "HP" ? heroStats[i][skill].debuff : 0)
             +(skill != "HP" ? heroStats[i][skill].spur : 0)
             +(skill == "ATK" ? heroStats[i].ATK.weapon : 0)
-            +(skill == "ATK" && weapons[$(id+"-Weapon-choice").val()].tag == "brave" ? -5 : 0)
+            +(skill == "SPD" && weapons[$(id+"-Weapon-choice").val()].Tag == "brave" ? -5 : 0)
         )
     }
 }
