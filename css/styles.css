@@ -213,11 +213,25 @@ th, td {
     shape-rendering: crispEdges;
 }
 
+.sim-container {
+    width 100%;
+}
+
+#battle-sim-controls {
+    border: 2px solid black;
+    width: 23%;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 10px;
+}
+
 #hero1, #hero2, #hero3, #hero4 {
     border: 2px solid black;
     padding: 10px;
     margin: 10px;
+    width: 17%;
     border-radius: 20px;
+
 }
 
 #sim-team {
@@ -233,16 +247,17 @@ th, td {
 #hero3-skills > div,
 #hero4-skills > div {
     margin: 4px 2px;
-    width: 210px;
+    width: 100%;
     display: block;
 }
 
 #hero1-stat-table,
 #hero2-stat-table,
 #hero3-stat-table,
-#hero4-stat-table {
+#hero4-stat-table,
+#sim-modifiers {
     border: none;
-    width: 210px;
+    width: 100%;
     text-align: center;
     margin: 1px;
     margin-bottom: 5px;
@@ -255,7 +270,9 @@ th, td {
 #hero3-stat-table > tbody > tr > th,
 #hero3-stat-table > tbody > tr > td,
 #hero4-stat-table > tbody > tr > th,
-#hero4-stat-table > tbody > tr > td {
+#hero4-stat-table > tbody > tr > td,
+#sim-modifiers > tbody > tr > th,
+#sim-modifiers > tbody > tr > td {
     border: none;
     text-align: center;
 }
@@ -266,7 +283,7 @@ th, td {
 }
 
 .sim-selector {
-    width: 150px;
+    width: 70%;
     float: right;
     size: 8;
     overflow: auto;
@@ -279,4 +296,24 @@ th, td {
 .skill-info {
     font-size: 80%;
     padding: 5px;
+}
+
+#sim-mode {
+    background: transparent;
+    border: none;
+    width: 100%;
+    outline: none;
+}
+
+#sim-unit-select {
+    background: transparent;
+    border: none;
+    width: 100%;
+    outline: none;
+}
+
+.boon-selector, .bane-selector {
+    width: 30%;
+    float:right;
+    margin:2px;
 }

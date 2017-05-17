@@ -815,41 +815,4 @@ $(document).ready(function(){
             $("#build-container").fadeToggle("slow");
         }
     });
-
-    $(".skill-label").click(function() {
-        var hero = this.id.split("-")[0];
-        var toDisplay = "#"+this.id+"-info";
-        var skill = this.id.split("-")[1];
-        hero = team[+hero.split("o")[1] - 1];
-        var choice = "#"+this.id +"-choice";
-        var text;
-        if($(choice).val() != "none") {
-            if(choice.split("-")[1] == "Weapon") {
-                text = "<p>Mt: "+weapons[$(choice).val()].Mt+"<br>"
-                +"Effect: "+weapons[$(choice).val()].Desc+"</p>";
-            } else if(choice.split("-")[1] == "Assist") {
-                text ="<p>"+assists[$(choice).val()].Desc+"</p>";
-            } else if(choice.split("-")[1] == "Special") {
-                text ="<p>"+specials[$(choice).val()].Desc+"</p>";
-            } else if(choice.split("-")[1] == "SkillA") {
-                text ="<p>"+skillsA[$(choice).val()].Desc+"</p>";
-            } else if(choice.split("-")[1] == "SkillB") {
-                text ="<p>"+skillsB[$(choice).val()].Desc+"</p>";
-            } else if(choice.split("-")[1] == "SkillC") {
-                text ="<p>"+skillsC[$(choice).val()].Desc+"</p>";
-            } else if(choice.split("-")[1] == "SkillS") {
-                text ="<p>"+skillsS[$(choice).val()].Desc+"</p>";
-            }
-            $(toDisplay).html(text);
-            $(toDisplay).slideToggle("slow");
-        }
-    });
-
-    $(".skill-label").hover(function() {
-        var hero = this.id.split("-")[0];
-        hero = team[+hero.split("o")[1] - 1];
-        $(this).css("color", colors[units[hero].Color]);
-    }, function() {
-        $(this).css("color", "black");
-    });
 })
