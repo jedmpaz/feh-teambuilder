@@ -203,6 +203,9 @@
                         <span id="hero1-totalcharge">/ 3</span>
                     </div>
                 </div>
+                <div id="hero1-single-results" style="display:none">
+
+                </div>
             </div>
         </fieldset>
     </div>
@@ -329,6 +332,9 @@
                         <input id="hero2-charge" class="special-charge" type="number" value="0" min="0" max="5">
                         <span id="hero2-totalcharge">/ 3</span>
                     </div>
+                </div>
+                <div id="hero2-single-results" style="display:none">
+
                 </div>
             </div>
         </fieldset>
@@ -457,6 +463,9 @@
                         <span id="hero3-totalcharge">/ 3</span>
                     </div>
                 </div>
+                <div id="hero3-single-results" style="display:none">
+
+                </div>
             </div>
         </fieldset>
     </div>
@@ -584,6 +593,9 @@
                         <span id="hero4-totalcharge">/ 3</span>
                     </div>
                 </div>
+                <div id="hero4-single-results" style="display:none">
+
+                </div>
             </div>
         </fieldset>
     </div>
@@ -596,8 +608,8 @@
                     <option value="meta">vs. Meta Builds</option>
                 </select>
             </h2></legend>
-            <h5 style="text-align:center">Run Simulator</h5>
-            <div id="sim-results-single">
+            <h4 style="text-align:center;" id="single-unit-sim">Run Simulator</h4>
+            <div id="sim-controls-single">
                 <h3><select id="sim-unit-select"></select></h3>
                 <table id="sim-modifiers">
                     <tbody>
@@ -615,28 +627,28 @@
                     <tr>
                         <td class="stat-label">ATK</td>
                         <td><span id="simhero-ATK">-</span></td>
-                        <td><input id="simhero-atk-buff" type="number" value="0" min="0" max="7"></td>
+                        <td><input id="simhero-atk-buff" class="sim-buff" type="number" value="0" min="0" max="7"></td>
                         <td><input id="simhero-atk-debuff" type="number" value="0" min="-7" max="0"></td>
                         <td><input id="simhero-atk-spur" type="number" value="0" min="0" max="12"></td>
                     </tr>
                     <tr>
                         <td class="stat-label">SPD</td>
                         <td><span id="simhero-SPD">-</span></td>
-                        <td><input id="simhero-spd-buff" type="number" value="0" min="0" max="7"></td>
+                        <td><input id="simhero-spd-buff" class="sim-buff" type="number" value="0" min="0" max="7"></td>
                         <td><input id="simhero-spd-debuff" type="number" value="0" min="-7" max="0"></td>
                         <td><input id="simhero-spd-spur" type="number" value="0" min="0" max="12"></td>
                     </tr>
                     <tr>
                         <td class="stat-label">DEF</td>
                         <td><span id="simhero-DEF">-</span></td>
-                        <td><input id="simhero-def-buff" type="number" value="0" min="0" max="7"></td>
+                        <td><input id="simhero-def-buff" class="sim-buff" type="number" value="0" min="0" max="7"></td>
                         <td><input id="simhero-def-debuff" type="number" value="0" min="-7" max="0"></td>
                         <td><input id="simhero-def-spur" type="number" value="0" min="0" max="12"></td>
                     </tr>
                     <tr>
                         <td class="stat-label">RES</td>
                         <td><span id="simhero-RES">-</span></td>
-                        <td><input id="simhero-res-buff" type="number" value="0" min="0" max="7"></td>
+                        <td><input id="simhero-res-buff" class="sim-buff" type="number" value="0" min="0" max="7"></td>
                         <td><input id="simhero-res-debuff" type="number" value="0" min="-7" max="0"></td>
                         <td><input id="simhero-res-spur" type="number" value="0" min="0" max="12"></td>
                     </tr>
@@ -720,12 +732,18 @@
                     </div>
                     </div>
                 </div>
+                <fieldset style="margin-top: 20px">
+                    <legend><h4>Settings</h4></legend>
+                </fieldset>
+                <div id="sim-single-results" style="display:none">
+
+                </div>
             </div>
-            <div id="sim-results-all" style="display:none">
-                <h3>Single Unit</h3>
+            <div id="sim-controls-all" style="display:none">
+                <h3>All Units</h3>
             </div>
-            <div id="sim-results-meta" style="display:none">
-                <h3>Single Unit</h3>
+            <div id="sim-controls-meta" style="display:none">
+                <h3>All Units</h3>
             </div>
         </fieldset>
     </div>
