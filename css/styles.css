@@ -317,3 +317,12 @@ th, td {
     float:right;
     margin:2px;
 }
+
+.sim-results {
+    margin-top: 20px;
+}
+
+.sim-results > div {
+    font-size: 75%;
+    padding: 5px;
+}

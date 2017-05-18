@@ -258,11 +258,18 @@ function importTeam() {
             $(id+"-Boon").val("neutral");
             $(id+"-Bane").val("neutral");
 
-            $(id+"-HP").html(heroStats[i].HP.base + heroStats[i].HP.skill);
-            $(id+"-ATK").html(heroStats[i].ATK.base + heroStats[i].ATK.weapon + heroStats[i].ATK.skill);
-            $(id+"-SPD").html(heroStats[i].SPD.base + heroStats[i].SPD.skill + (weapons[$(id+"-Weapon-choice").val()].Tag == "brave" ? -5 : 0));
-            $(id+"-DEF").html(heroStats[i].DEF.base + heroStats[i].DEF.skill);
-            $(id+"-RES").html(heroStats[i].RES.base + heroStats[i].RES.skill);
+            for(var skill in heroStats[i]) {
+                total = heroStats[i][skill].base
+                    +heroStats[i][skill].skill
+                    +heroStats[i][skill].iv
+                    +(skill != "HP" ? heroStats[i][skill].buff : 0)
+                    +(skill != "HP" ? heroStats[i][skill].debuff : 0)
+                    +(skill != "HP" ? heroStats[i][skill].spur : 0)
+                    +(skill == "ATK" ? heroStats[i].ATK.weapon : 0)
+                    +(skill == "SPD" && weapons[$(id+"-Weapon-choice").val()].Tag == "brave" ? -5 : 0);
+                heroStats[i][skill].total = total;
+                $(id+"-"+skill).html(total)
+            }
         }
     }
 }
@@ -423,11 +430,18 @@ function simHeroStats() {
     $(id+"-Boon").val("neutral");
     $(id+"-Bane").val("neutral");
 
-    $(id+"-HP").html(simSingleHero.HP.base + simSingleHero.HP.skill);
-    $(id+"-ATK").html(simSingleHero.ATK.base + simSingleHero.ATK.weapon + simSingleHero.ATK.skill);
-    $(id+"-SPD").html(simSingleHero.SPD.base + simSingleHero.SPD.skill + (weapons[$(id+"-Weapon-choice").val()].Tag == "brave" ? -5 : 0));
-    $(id+"-DEF").html(simSingleHero.DEF.base + simSingleHero.DEF.skill);
-    $(id+"-RES").html(simSingleHero.RES.base + simSingleHero.RES.skill);
+    for(var skill in simSingleHero) {
+        total = simSingleHero[skill].base
+            +simSingleHero[skill].skill
+            +simSingleHero[skill].iv
+            +(skill != "HP" ? simSingleHero[skill].buff : 0)
+            +(skill != "HP" ? simSingleHero[skill].debuff : 0)
+            +(skill != "HP" ? simSingleHero[skill].spur : 0)
+            +(skill == "ATK" ? simSingleHero.ATK.weapon : 0)
+            +(skill == "SPD" && weapons[$(id+"-Weapon-choice").val()].Tag == "brave" ? -5 : 0);
+        simSingleHero[skill].total = total;
+        $(id+"-"+skill).html(total)
+    }
 }
 
 
@@ -435,7 +449,7 @@ function simHeroStats() {
 function updateStats(id, i) {
     var total;
     if(id == "#simhero") {
-        for(var skill in heroStats[i]) {
+        for(var skill in simSingleHero) {
             total = simSingleHero[skill].base
                 +simSingleHero[skill].skill
                 +simSingleHero[skill].iv
@@ -473,41 +487,53 @@ function calcAttack(attacker, defender, i) {
         atk = heroStats[i].ATK.total;
         heroID = "#hero"+(+i+1);
     }
-    console.log(heroID);
-    console.log($(heroID+"-SkillA-choice").val());
     var results = "";
-    if($(heroID+"-SkillA-choice").val().includes("Death Blow")) {
-        console.log("DEATH BLOWOOOOO")
-        var combatBonus = +skillsA[$(heroID+"-SkillA-choice").val()].Effect.split("+")[1];
-        atk += +skillsA[$(heroID+"-SkillA-choice").val()].Effect.split("+")[1];
-        results += "<p>"+attacker+" gains "+combatBonus+" ATK from "+$(heroID+"-SkillA-choice").val()+"</p>";
-    } else if($(heroID+"-SkillA-choice").val().includes("Swift Sparrow")) {
-        atk += +skillsA[$(heroID+"-SkillA-choice").val()].Effect.split(",")[0].split("+")[1];
-        results += "<p>"+attacker+" gains "+combatBonus+" ATK from "+$(heroID+"-SkillA-choice").val()+"</p>";
+    if(heroID != "#simhero") {
+        if($(heroID+"-SkillA-choice").val().includes("Death Blow")) {
+            var combatBonus = +skillsA[$(heroID+"-SkillA-choice").val()].Effect.split("+")[1];
+            atk += +skillsA[$(heroID+"-SkillA-choice").val()].Effect.split("+")[1];
+            results += "<p>"+attacker+" gains "+combatBonus+" ATK from "+$(heroID+"-SkillA-choice").val()+"</p>";
+        } else if($(heroID+"-SkillA-choice").val().includes("Swift Sparrow")) {
+            atk += +skillsA[$(heroID+"-SkillA-choice").val()].Effect.split(",")[0].split("+")[1];
+            results += "<p>"+attacker+" gains "+combatBonus+" ATK from "+$(heroID+"-SkillA-choice").val()+"</p>";
+        }
     }
     var attackerWTA = 1;
     var effective = 1;
-    console.log(weapons[$(heroID+"-Weapon-choice").val()]);
-    if(weapons[$(heroID+"-Weapon-choice").val()].Effective != "none") {
-        if(weapons[$(heroID+"-Weapon-choice").val()].Effective[1] == units[defender].Movement) {
-            effective = 1.5;
-            results += "<p>"+attacker+"'s ATK is multiplied by "+effective+" because "+$(heroID+"-Weapon-choice").val()+" is effective vs "+units[defender].Movement+" Units</p>";
+    if(heroID == "#simhero") {
+        if(weapons[$("#simhero-Weapon-choice").val()].Effective != "none") {
+            if(weapons[$("#simhero-Weapon-choice").val()].Effective[1] == units[attacker].Movement) {
+                effective = 1.5;
+                results += "<p>"+defender+"'s ATK is multiplied by "+effective+" because "+$("#simhero-Weapon-choice").val()+" is effective vs "+units[attacker].Movement+" Units</p>";
+            }
+            if(weapons[$("#simhero-Weapon-choice").val()].Effective[1] == units[attacker]["Weapon Type"]) {
+                effective = 1.5;
+                results += "<p>"+defender+"'s ATK is multiplied by "+effective+" because "+$("#simhero-Weapon-choice").val()+" is effective vs Dragons</p>";
+            }
         }
-        if(weapons[$(heroID+"-Weapon-choice").val()].Effective[1] == units[defender]["Weapon Type"]) {
-            effective = 1.5;
-            results += "<p>"+attacker+"'s ATK is multiplied by "+effective+" because "+$(heroID+"-Weapon-choice").val()+" is effective vs Dragons</p>";
+    } else {
+        if(weapons[$(heroID+"-Weapon-choice").val()].Effective != "none") {
+            if(weapons[$(heroID+"-Weapon-choice").val()].Effective[1] == units[defender].Movement) {
+                effective = 1.5;
+                results += "<p>"+attacker+"'s ATK is multiplied by "+effective+" because "+$(heroID+"-Weapon-choice").val()+" is effective vs "+units[defender].Movement+" Units</p>";
+            }
+            if(weapons[$(heroID+"-Weapon-choice").val()].Effective[1] == units[defender]["Weapon Type"]) {
+                effective = 1.5;
+                results += "<p>"+attacker+"'s ATK is multiplied by "+effective+" because "+$(heroID+"-Weapon-choice").val()+" is effective vs Dragons</p>";
+            }
         }
     }
+
     switch(units[attacker].Color) {
         case "Red":
             switch(units[defender].Color) {
                 case "Blue":
                     attackerWTA = 0.8;
-                    results += "<p>"+attacker+"'s ATK is multiplied by "+attackerWTA+" due to WTA</p>";
+                    results += "<p>"+attacker+"'s ATK is multiplied by "+attackerWTA+" due to Weapon Triangle Advantage</p>";
                     break;
                 case "Green":
                     attackerWTA = 1.2;
-                    results += "<p>"+attacker+"'s ATK is multiplied by "+attackerWTA+" due to WTA</p>";
+                    results += "<p>"+attacker+"'s ATK is multiplied by "+attackerWTA+" due to Weapon Triangle Advantage</p>";
                     break;
             }
             break;
@@ -515,11 +541,11 @@ function calcAttack(attacker, defender, i) {
             switch(units[defender].Color) {
                 case "Green":
                     attackerWTA = 0.8;
-                    results += "<p>"+attacker+"'s ATK is multiplied by "+attackerWTA+" due to WTA</p>";
+                    results += "<p>"+attacker+"'s ATK is multiplied by "+attackerWTA+" due to Weapon Triangle Advantage</p>";
                     break;
                 case "Red":
                     attackerWTA = 1.2;
-                    results += "<p>"+attacker+"'s ATK is multiplied by "+attackerWTA+" due to WTA</p>";
+                    results += "<p>"+attacker+"'s ATK is multiplied by "+attackerWTA+" due to Weapon Triangle Advantage</p>";
                     break;
             }
             break;
@@ -527,18 +553,90 @@ function calcAttack(attacker, defender, i) {
             switch(units[defender].Color) {
                 case "Red":
                     attackerWTA = 0.8;
-                    results += "<p>"+attacker+"'s ATK is multiplied by "+attackerWTA+" due to WTA</p>";
+                    results += "<p>"+attacker+"'s ATK is multiplied by "+attackerWTA+" due to Weapon Triangle Advantage</p>";
                     break;
                 case "Blue":
                     attackerWTA = 1.2;
-                    results += "<p>"+attacker+"'s ATK is multiplied by "+attackerWTA+" due to WTA</p>";
+                    results += "<p>"+attacker+"'s ATK is multiplied by "+attackerWTA+" due to Weapon Triangle Advantage</p>";
                     break;
             }
             break;
     }
-    $("#sim-single-results").append(results);
-    return Math.floor(attackerWTA*effective*atk);
+    return [Math.floor(attackerWTA*effective*atk), results];
 };
+
+function calcSpeed(attacker, i) {
+    var spd;
+    var heroID;
+    var results = "";
+    if(i == "simhero") {
+        spd = simSingleHero.SPD.total;
+        heroID = "#simhero";
+    } else {
+        spd = heroStats[i].SPD.total;
+        heroID = "#hero"+(+i+1);
+    }
+    if(heroID != "#simhero") {
+        if($(heroID+"-SkillA-choice").val().includes("Darting Blow")) {
+            var combatBonus = +skillsA[$(heroID+"-SkillA-choice").val()].Effect.split("+")[1];
+            spd += +skillsA[$(heroID+"-SkillA-choice").val()].Effect.split("+")[1];
+            results += "<p>"+attacker+" gains "+combatBonus+" SPD from "+$(heroID+"-SkillA-choice").val()+"</p>";
+        }   else if($(heroID+"-SkillA-choice").val().includes("Swift Sparrow")) {
+            spd += +skillsA[$(heroID+"-SkillA-choice").val()].Effect.split(",")[1].split("+")[1];
+            results += "<p>"+attacker+" gains "+combatBonus+" SPD from "+$(heroID+"-SkillA-choice").val()+"</p>";
+        }
+    }
+    return [spd,results];
+}
+
+function calcDefense(attacker, i) {
+    var def;
+    var heroID;
+    var results = "";
+    if(i == "simhero") {
+        def = simSingleHero.DEF.total;
+        heroID = "#simhero";
+    } else {
+        def = heroStats[i].DEF.total;
+        heroID = "#hero"+(+i+1);
+    }
+    console.log("DEF: " + def);
+    if(heroID != "#simhero") {
+        if($(heroID+"-SkillA-choice").val().includes("Armored Blow")) {
+            var combatBonus = +skillsA[$(heroID+"-SkillA-choice").val()].Effect.split("+")[1];
+            def += +skillsA[$(heroID+"-SkillA-choice").val()].Effect.split("+")[1];
+            results += "<p>"+attacker+" gains "+combatBonus+" DEF from "+$(heroID+"-SkillA-choice").val()+"</p>";
+        }
+    }
+    console.log("DEF: " + def);
+    return [def,results];
+}
+
+function calcResistance(attacker, i) {
+    var res;
+    var heroID;
+    var results = "";
+    if(i == "simhero") {
+        def = simSingleHero.RES.total;
+        heroID = "#simhero";
+    } else {
+        def = heroStats[i].RES.total;
+        heroID = "#hero"+(+i+1);
+    }
+    if(heroID != "#simhero") {
+        if($(heroID+"-SkillA-choice").val().includes("Warding Blow")) {
+            var combatBonus = +skillsA[$(heroID+"-SkillA-choice").val()].Effect.split("+")[1];
+            def += +skillsA[$(heroID+"-SkillA-choice").val()].Effect.split("+")[1];
+            results += "<p>"+attacker+" gains "+combatBonus+" RES from "+$(heroID+"-SkillA-choice").val()+"</p>";
+        }
+    }
+    return [res,results];
+}
+
+function victory(attacker, defender, attackerRemainingHP) {
+    var results = ("<p>"+attacker+" wins, "+attackerRemainingHP+" HP remaining</p>");
+    return results;
+}
 
 function combat() {
     var heroID;
@@ -560,77 +658,140 @@ function combat() {
     var defenderRemainingHP;
     var attackerWTA;
     var defenderWTA;
+    var attackerCharges;
+    var defenderCharges;
+    var attackerTotalCharges;
+    var defenderTotalCharges;
     var defender = $("#sim-unit-select").val();
     for(var i in team) {
         results = "";
         attacker = team[i];
         heroID = "#hero"+(+i+1);
+        attackerCharges = +$(heroID+"-charge").val();
+        defenderCharges = +$("#simhero-charge").val();
+        attackerTotalCharges = +$(heroID+"-totalcharge").html().split(" ")[1];
+        defenderTotalCharges = +$("#simhero-totalcharge").html().split(" ")[1];
         attackerRemainingHP = heroStats[i].HP.total;
         defenderRemainingHP = simSingleHero.HP.total;
+
         attackerATKinCombat = calcAttack(attacker, defender, i);
-        defenderDEFinCombat = simSingleHero.DEF.total;
-        if(heroStats[i].SPD.total - simSingleHero.SPD.total >= 5) {
+        results += attackerATKinCombat[1];
+        attackerATKinCombat = attackerATKinCombat[0];
+
+        attackerSPDinCombat = calcSpeed(attacker, i);
+        results += attackerSPDinCombat[1];
+        attackerSPDinCombat = attackerSPDinCombat[0];
+        defenderSPDinCombat = calcSpeed(defender, "simhero")[0];
+
+        attackerDEFinCombat = calcDefense(attacker, i);
+        results += attackerDEFinCombat[1];
+        attackerDEFinCombat = attackerDEFinCombat[0];
+        defenderDEFinCombat = calcDefense(defender, "simhero")[0];
+
+        attackerRESinCombat = calcResistance(attacker, i);
+        results += attackerRESinCombat[1];
+        attackerRESinCombat = attackerRESinCombat[0];
+        defenderRESinCombat = calcResistance(defender, "simhero")[0];
+
+        if(attackerSPDinCombat - defenderSPDinCombat >= 5) {
             attackerDouble = true;
-        } else if (simSingleHero.SPD.total - heroStats[i].SPD.total >= 5) {
+        } else if (defenderSPDinCombat - attackerSPDinCombat >= 5) {
             defenderDouble = true;
         } else if ($("#simhero-SkillB-choice").val().includes("Quick Riposte")) {
             defenderDouble = true;
         }
 
         /* attacker -> defender */
-        damageDealt = attackerATKinCombat - defenderDEFinCombat;
+        damageDealt = (attackerATKinCombat - defenderDEFinCombat >= 0 ? attackerATKinCombat - defenderDEFinCombat : 0);
+        if(attackerCharges == attackerTotalCharges) {
+            results += "<p>"+attacker+" activates "+$(heroID+"-Special-choice").val()+"</p>";
+            var boost = specialHandler(attacker, $(heroID+"-Special-choice").val());
+            damageDealt += boost;
+            results += "<p>"+attacker+" deals an additional "+boost+" damage!</p>";
+            attackerCharges == 0;
+        }
         results += "<p>"+attacker+" deals "+damageDealt+" damage to "+defender+"</p>";
-        defenderRemainingHP -= damageDealt;
+        defenderRemainingHP = (defenderRemainingHP - damageDealt >=0 ? defenderRemainingHP - damageDealt : 0);
         results += "<p>"+attacker+": "+attackerRemainingHP+" HP // "+defender+": "+defenderRemainingHP+" HP</p>"
-        if(weapons[$(heroID+"-Weapon-choice").val()].Tag == "brave") {
+        if(defenderRemainingHP == 0) {
+            results+=victory(attacker, defender, attackerRemainingHP);
+            counter = false;
+            attackerDouble = false;
+        } else if(weapons[$(heroID+"-Weapon-choice").val()].Tag == "brave") {
             results += "<p>"+attacker+" attacks again immediately due to "+$(heroID+"-Weapon-choice").val()+"</p>";
             results += "<p>"+attacker+" deals "+damageDealt+" damage to "+defender+"</p>";
-            defenderRemainingHP -= damageDealt;
-            results += "<p>"+attacker+": "+attackerRemainingHP+" HP // "+defender+": "+defenderRemainingHP+" HP</p>"
+            defenderRemainingHP = (defenderRemainingHP - damageDealt >=0 ? defenderRemainingHP - damageDealt : 0);
+            results += "<p>"+attacker+": "+attackerRemainingHP+" HP // "+defender+": "+defenderRemainingHP+" HP</p>";
+            if(defenderRemainingHP == 0) {
+                results+=victory(attacker, defender, attackerRemainingHP);
+                counter = false;
+                attackerDouble = false;
+            }
         }
 
         /* check to see if defender can counter */
-        if(units[attacker].Range == "Melee" && units[defender].Range != "Melee" && units[defender].SkillA != "Distant Counter") {
+        if(units[attacker].Range == "Melee" && units[defender].Range != "Melee" && units[defender].SkillA != "Close Counter") {
             counter = false;
         }
-
-        if(units[attacker].Range == "Ranged" && units[defender].Range != "Ranged" && units[defender].SkillA != "Close Counter") {
+        if(units[attacker].Range == "Ranged" && units[defender].Range != "Ranged" && units[defender].SkillA != "Distant Counter") {
             counter = false;
         }
 
         /* defender -> attacker */
         if(counter) {
             defenderATKinCombat = calcAttack(defender, attacker, "simhero");
-            attackerDEFinCombat = heroStats[i].DEF.total;
-            damageDealt = defenderATKinCombat - attackerDEFinCombat;
+            results += defenderATKinCombat[1];
+            defenderATKinCombat = defenderATKinCombat[0];
+            damageDealt = (defenderATKinCombat - attackerDEFinCombat >= 0 ? defenderATKinCombat - attackerDEFinCombat : 0);
             results += "<p>"+defender+" counterattacks and deals "+damageDealt+" damage to "+attacker+"</p>";
-            attackerRemainingHP -= damageDealt;
+            attackerRemainingHP = (attackerRemainingHP - damageDealt >=0 ? attackerRemainingHP - damageDealt : 0);
             results += "<p>"+attacker+": "+attackerRemainingHP+" HP // "+defender+": "+defenderRemainingHP+" HP</p>"
+            if(attackerRemainingHP == 0) {
+                results+=victory(defender, attacker, defenderRemainingHP);
+                counter = false;
+                attackerDouble = false;
+            }
         }
 
         /* attacker double */
         if(attackerDouble) {
             results += "<p>"+attacker+" makes a follow-up attack</p>";
-            damageDealt = attackerATKinCombat - defenderDEFinCombat;
+            damageDealt = (attackerATKinCombat - defenderDEFinCombat >= 0 ? attackerATKinCombat - defenderDEFinCombat : 0);
             results += "<p>"+attacker+" deals "+damageDealt+" damage to "+defender+"</p>";
-            defenderRemainingHP -= damageDealt;
-            results += "<p>"+attacker+": "+attackerRemainingHP+" HP // "+defender+": "+defenderRemainingHP+" HP</p>"
-            if(weapons[$(heroID+"-Weapon-choice").val()].Tag == "brave") {
+            defenderRemainingHP = (defenderRemainingHP - damageDealt >=0 ? defenderRemainingHP - damageDealt : 0);
+            results += "<p>"+attacker+": "+attackerRemainingHP+" HP // "+defender+": "+defenderRemainingHP+" HP</p>";
+            if(defenderRemainingHP == 0) {
+                results+=victory(attacker, defender, attackerRemainingHP);
+                counter = false;
+                attackerDouble = false;
+            } else if (weapons[$(heroID+"-Weapon-choice").val()].Tag == "brave") {
                 results += "<p>"+attacker+" attacks again immediately due to "+$(heroID+"-Weapon-choice").val()+"</p>";
                 results += "<p>"+attacker+" deals "+damageDealt+" damage to "+defender+"</p>";
                 defenderRemainingHP -= damageDealt;
-                results += "<p>"+attacker+": "+attackerRemainingHP+" HP // "+defender+": "+defenderRemainingHP+" HP</p>"
+                results += "<p>"+attacker+": "+attackerRemainingHP+" HP // "+defender+": "+defenderRemainingHP+" HP</p>";
+                if(defenderRemainingHP == 0) {
+                    results+=victory(attacker, defender, attackerRemainingHP);
+                    counter = false;
+                    attackerDouble = false;
+                }
             }
+        }
+
+        if ($("#simhero-SkillB-choice").val().includes("Quick Riposte")) {
+            results += "<p>"+defender+" activates Quick Riposte</p>";
+            defenderDouble = true;
         }
 
         /* defender double OR quick riposte */
         if(counter && defenderDouble) {
-            defenderATKinCombat = calcAttack(defender, attacker, "simhero");
-            attackerDEFinCombat = heroStats[i].DEF.total;
-            damageDealt = defenderATKinCombat - attackerDEFinCombat;
+            results += "<p>"+attacker+" makes a follow-up attack</p>";
+            damageDealt = (defenderATKinCombat - attackerDEFinCombat >= 0 ? defenderATKinCombat - attackerDEFinCombat : 0);
             results += "<p>"+defender+" makes a follow-up counterattacks and deals "+damageDealt+" damage to "+attacker+"</p>";
-            attackerRemainingHP -= damageDealt;
-            results += "<p>"+attacker+": "+attackerRemainingHP+" HP // "+defender+": "+defenderRemainingHP+" HP</p>"
+            attackerRemainingHP = (attackerRemainingHP - damageDealt >=0 ? attackerRemainingHP - damageDealt : 0);
+            results += "<p>"+attacker+": "+attackerRemainingHP+" HP // "+defender+": "+defenderRemainingHP+" HP</p>";
+            if(attackerRemainingHP == 0) {
+                results+=victory(defender, attacker, defenderRemainingHP);
+            }
         }
 
         if($(heroID+"-SkillA-choice").val().includes("Fury")) {
@@ -643,6 +804,15 @@ function combat() {
         if($(heroID+"-single-results").css("display") == "none") {
             $(heroID+"-single-results").slideToggle("slow");
         }
+    }
+}
+
+function specialHandler(hero, special) {
+    if(specials[special].Tag == "boost") {
+        var stat = specials[special].Effect.split(",")[0];
+        var mult = +specials[special].Effect.split(",")[1];
+        var boost = units[hero][stat]*mult;
+        return Math.floor(boost);
     }
 }
 
@@ -711,6 +881,7 @@ $(document).ready(function(){
             }
         } else if(skill == "Special") {
             $(id+"-totalcharge").html("/ "+specials[$(this).val()].Turns);
+            $(id+"-totalcharge").val(specials[$(this).val()].Turns);
         }
         var text;
         var toDisplay = "#"+this.id.split("-")[0]+"-"+this.id.split("-")[1]+"-info";
@@ -835,6 +1006,10 @@ $(document).ready(function(){
     })
     $("#single-unit-sim").click(function() {
         $("#sim-single-results").empty();
+        $("#hero1-single-results").empty();
+        $("#hero2-single-results").empty();
+        $("#hero3-single-results").empty();
+        $("#hero4-single-results").empty();
         combat();
     })
 });
