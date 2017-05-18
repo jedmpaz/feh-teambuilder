@@ -664,6 +664,9 @@ function combat() {
     var defenderTotalCharges;
     var defender = $("#sim-unit-select").val();
     for(var i in team) {
+        attackerDouble = false;
+        defenderDouble = false;
+        counter = true;
         results = "";
         attacker = team[i];
         heroID = "#hero"+(+i+1);
